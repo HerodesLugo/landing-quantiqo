@@ -1,0 +1,184 @@
+"use client";
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import HoverGlass from "../../threeJs/HoverGlass";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { useSectionStore } from "@/shared/store/useSectionStore";
+import ButtonCTA from "@/shared/components/landing-proposal/footer-section/ButtonCTA";
+import NavItems from "@/shared/components/landing-proposal/footer-section/NavItems";
+import IconStack from "@/shared/components/landing-proposal/hero-section/common/IconStack";
+
+interface FooterProps {
+  isActive: boolean;
+}
+
+const LOCATIONS = [
+  {
+    title: "HEADQUARTERS",
+    content: (
+      <>WORLD TRADE CENTER OF VALENCIA, FLOOR 5, OFFICE 5-E. J-507165930</>
+    ),
+  },
+  {
+    title: "MAIN LOCATION",
+    content: <>JUMEIRAH LAKES TOWERS DUBAI UNITED ARAB EMIRATES</>,
+  },
+];
+
+const Footer = ({ isActive }: FooterProps) => {
+  const container = useRef<HTMLElement>(null);
+  const tl = useRef<gsap.core.Timeline | null>(null);
+  const { setSectionActiveName } = useSectionStore();
+
+  useEffect(() => {
+    if (isActive) {
+      setSectionActiveName("FOOTER");
+    }
+
+    return () => {
+      setSectionActiveName("");
+    };
+  }, [isActive]);
+
+  useGSAP(
+    () => {
+      // 1. Selectores
+      const cta = gsap.utils.toArray<HTMLElement>(".anim-cta");
+      const middleRow = gsap.utils.toArray<HTMLElement>(".anim-middle"); // Agrupamos fila media
+      const bottomRow = gsap.utils.toArray<HTMLElement>(".anim-bottom"); // Agrupamos fila inferior
+
+      // 2. Estado Inicial (Desplazado MUCHO hacia abajo)
+      // Usamos yPercent para que sea relativo a su propio tamaño, o pixeles fijos grandes
+      gsap.set([cta, middleRow, bottomRow], {
+        autoAlpha: 0, // Mantenemos opacity 0 inicial para evitar flash of unstyled content
+        y: 150, // Desplazamiento vertical fuerte
+      });
+
+      // 3. Construcción de la Timeline
+      tl.current = gsap.timeline({
+        paused: true,
+        defaults: { ease: "power4.out" }, // Curva de desaceleración fuerte
+      });
+
+      tl.current
+        // A. CTA (El botón grande sube primero con fuerza)
+        .to(cta, {
+          autoAlpha: 1,
+          y: 0,
+          duration: 1.2,
+        })
+        // B. Fila del Medio (Logo y Texto suben un poco después)
+        .to(
+          middleRow,
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.1, // Pequeño retraso entre izquierda y derecha si hay varios
+          },
+          "-=0.8", // Empieza antes de que termine el CTA
+        )
+        // C. Fila Inferior (Links y Direcciones suben al final)
+        .to(
+          bottomRow,
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.1,
+          },
+          "-=0.8",
+        );
+    },
+    { scope: container },
+  );
+
+  useGSAP(() => {
+    if (isActive) {
+      tl.current?.timeScale(1).play();
+    } else {
+      tl.current?.timeScale(2).reverse();
+    }
+  }, [isActive]);
+
+  return (
+    <section
+      ref={container}
+      id="footer"
+      className={`h-screen sm:p-20 p-5 max-sm:pb-32 transition-transform duration-700 ease-in-out overflow-hidden fixed inset-0  ${isActive ? "translate-y-0  " : "translate-y-full opacity-0"}`}
+    >
+      {isActive && <HoverGlass />}
+
+      <div className="relative  flex h-full flex-col items-center sm:justify-between">
+        <ButtonCTA />
+
+        <div className="flex w-full justify-between sm:mt-10  max-sm:flex-col">
+          {/* Usamos la misma clase anim-middle para ambos lados para que suban coordinados */}
+
+          <div className="flex flex-col sm:gap-5 anim-middle will-change-transform max-sm:mb-6">
+            <Image
+              src="/images/footer/quantiqo_tm.png"
+              alt="quantiqo_tm"
+              className="h-16 max-w-xs object-contain max-sm:w-[9.5625rem]"
+              height={70}
+              width={368}
+            />
+            <span className="justify-start text-base font-normal text-neutral-400">
+              ALL RIGHTS RESERVED
+            </span>
+          </div>
+          {/* anim-middle will-change-transform */}
+          <div className="w-full mb-6 sm:hidden">
+            <NavItems />
+          </div>
+          <div className="flex w-full flex-col items-start sm:items-center pt-3  ">
+            <div className="flex flex-col items-start">
+              <h2 className="sm:justify-start  max-sm:text-left tracking-[5px] text-primary-100 text-4xl max-sm:text-2xl text-center max-sm:mb-3">
+                <span className="font-light">WE IMPULSE </span>
+                <span className="font-medium">SUCCESS STORIES</span>
+                <span className="font-light"> HAPPEN.</span>
+              </h2>
+
+              <div className=" w-full max-w-[776px] mix-blend-overlay  text-white text-2xl font-normal  tracking-[4.80px] max-sm:text-sm">
+                MORE THAN 1 MILLION USERS AND 2 MILLION REVENUE GENERATED BY OUR
+                CLIENTS
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 3. BOTTOM ROW */}
+        <div className="flex w-full sm:gap-20  relative z-20 sm:pr-20 items-end justify-between mt-10 max-sm:flex-col">
+          <div className="max-sm:w-full max-sm:hidden">
+            <NavItems />
+          </div>
+
+          <div className=" items-start w-full justify-end sm:gap-16 max-sm:gap-6 flex max-sm:flex-col anim-bottom will-change-transform ">
+            {LOCATIONS.map((loc) => (
+              <div
+                key={loc.title}
+                className="inline-flex flex-col w-full  items-start justify-start sm:gap-6 max-sm:gap-2"
+              >
+                <h3 className="self-stretch justify-start text-2xl font-semibold tracking-[3.20px] text-white max-sm:text-lg">
+                  {loc.title}
+                </h3>
+                <div className="h-px w-full bg-white" />
+                <div className="flex flex-col items-start justify-start gap-2 w-full ">
+                  <address className="sm:w-72 justify-start text-sm font-normal uppercase not-italic text-neutral-400 leading-relaxed w-full">
+                    {loc.content}
+                  </address>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="w-full  pt-8 sm:hidden">
+          <IconStack />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Footer;

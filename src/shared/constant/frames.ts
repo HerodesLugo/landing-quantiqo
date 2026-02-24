@@ -1,0 +1,3 @@
+export const TUNNEL_BASE_URL = "https://firebasestorage.googleapis.com/v0/b/portalfi-e8ac3.firebasestorage.app/o/quantiqo%2Fimages%2Ftunnel-low%2F0001.webp?alt=media&token=7810b607-1845-48d3-98a7-51d6f584470c";
+
+export const HERO_BASE_URL = "https://firebasestorage.googleapis.com/v0/b/portalfi-e8ac3.firebasestorage.app/o/quantiqo%2Fimages%2Fhero%2F0001.webp?alt=media&token=73670a66-de6b-4b43-8af8-7e9a37e1bc9c";

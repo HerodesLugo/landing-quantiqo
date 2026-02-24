@@ -1,0 +1,19 @@
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
+@layer components {
+  .btn-brilliant {
+    @apply  group-hover:bg-white-alternative/80 transition-all duration-500;
+  }
+}
+
+@layer base {
+  /* @media (max-height: 890px) {
+    html {
+      @apply lg:text-[85%]
+    }
+ } */
+}

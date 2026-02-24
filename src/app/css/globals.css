@@ -1,0 +1,272 @@
+@import "tailwindcss";
+@import "./fontello.css";
+@import "./layer.css";
+
+/* En tu CSS global o globals.css */
+.scene {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.services-track {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+.services-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+}
+
+.swiper-scrollbar {
+  visibility: hidden !important;
+}
+
+.carousel-track--forward,
+.carousel-track--reverse {
+  animation-duration: var(--carousel-duration, 45000ms);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.carousel-track--forward {
+  animation-name: carousel-forward;
+}
+
+.carousel-track--reverse {
+  animation-name: carousel-backward;
+}
+
+@keyframes carousel-forward {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes carousel-backward {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@theme {
+  @keyframes glitch {
+    0% {
+      transform: translate(0);
+      opacity: 0;
+      filter: hue-rotate(0deg);
+    }
+    10% {
+      transform: translate(-2px, 2px);
+      opacity: 0.3;
+    }
+    20% {
+      transform: translate(2px, -2px);
+      opacity: 0.5;
+    }
+    30% {
+      transform: translate(-2px, -2px);
+      opacity: 0.7;
+    }
+    40% {
+      transform: translate(2px, 2px);
+      opacity: 0.85;
+    }
+    50%,
+    100% {
+      transform: translate(0);
+      opacity: 1;
+      filter: hue-rotate(0deg);
+    }
+  }
+
+  @keyframes slideAbsorb {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+      filter: blur(10px);
+    }
+    60% {
+      transform: translateX(-5%);
+      opacity: 1;
+      filter: blur(0px);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+      filter: blur(0px);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes glitchTransition {
+    0% {
+      transform: translateY(30px) translateX(0);
+      opacity: 0;
+      filter: brightness(2) contrast(2) blur(5px);
+    }
+    5% {
+      transform: translateY(-8px) translateX(-10px);
+      opacity: 0.2;
+      filter: brightness(1.8) contrast(3) blur(3px) hue-rotate(90deg);
+    }
+    10% {
+      transform: translateY(8px) translateX(10px);
+      opacity: 0.3;
+      filter: brightness(0.3) contrast(4) blur(2px) hue-rotate(-90deg);
+    }
+    15% {
+      transform: translateY(-5px) translateX(-5px);
+      opacity: 0.4;
+      filter: brightness(1.5) contrast(2) blur(2px) saturate(0);
+    }
+    20% {
+      transform: translateY(5px) translateX(5px);
+      opacity: 0.5;
+      filter: brightness(0.5) contrast(3) blur(1px) saturate(3);
+    }
+    30% {
+      transform: translateY(-3px) translateX(-3px);
+      opacity: 0.7;
+      filter: brightness(1.2) contrast(1.5) blur(1px) saturate(1);
+    }
+    45% {
+      transform: translateY(2px) translateX(2px);
+      opacity: 0.85;
+      filter: brightness(1) contrast(1.2) blur(0.5px) saturate(1);
+    }
+    60% {
+      transform: translateY(-1px) translateX(0);
+      opacity: 0.95;
+      filter: brightness(1) contrast(1) blur(0px) saturate(1);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+      filter: brightness(1) contrast(1) blur(0px) saturate(1);
+    }
+  }
+
+  --animate-glitch-transition: glitchTransition 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+  --animate-fade-in: fade-in 1s ease-in-out;
+  --animate-glitch: glitch 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --animate-slide-absorb: slideAbsorb 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --breakpoint-lp: 1462px; /* TODO: FIND BETTER NAME */
+  --breakpoint-2xl: 100rem;
+
+  /* colors */
+  --color-dark: #131414;
+  --color-white-alternative: #ebebeb;
+
+  --color-primary-100: #e1f9fd;
+  --color-primary-200: #d0f4f9;
+  --color-primary-300: #70d5f0;
+  --color-primary-400: #71b4bf;
+  --color-primary-500: #139dc7;
+  --color-primary-600: #137ea7;
+  --color-primary-700: #166588;
+  --color-primary-800: #1b536f;
+  --color-primary-900: #1b465e;
+  --color-primary-950: #0c2c40;
+
+  --color-base-50: #ffffff;
+  --color-base-100: #ebebeb;
+  --color-base-200: #c8c8c8;
+  --color-base-300: #9b9b9b;
+  --color-base-400: #656565;
+  --color-base-500: #313131;
+  --color-base-600: #222222;
+  --color-base-700: #161616;
+  --color-base-800: #101010;
+  --color-base-900: #03080c;
+
+  --color-base-blue-50: #2c3340;
+  --color-base-blue-100: #4a5e87;
+  --color-base-blue-200: #414e65;
+  --color-base-blue-300: #353e4f;
+  --color-base-blue-400: #2c3340;
+  --color-base-blue-500: #1f2530;
+
+  --color-base-purple-100: #464f6e;
+  --color-base-purple-200: #363d55;
+
+  --color-secondary-100: #8f9ea0;
+  --color-secondary-200: #363636;
+
+  --color-tertiary-100: #c4e1e5;
+
+  --color-gray-dust-100: #a4a4a4;
+  /* Typography: */
+  /* --- REFERENCIA: 1rem = 16px --- */
+  /* --- RANGO ACTIVO: 1280px -> 1920px --- */
+
+  /* Fórmula: calc( MIN + (MAX - MIN) * ((100vw - 1280px) / (1920 - 1280)) ) */
+
+  /* 1. TEXTOS PEQUEÑOS */
+  /* 1280px: 10px | 1920px: 12px */
+  --text-xxs: clamp(0.625rem, 0.375rem + 0.31vw, 0.75rem);
+
+  /* 1280px: 11px | 1920px: 13px */
+  --text-xs: clamp(0.6875rem, 0.4375rem + 0.31vw, 0.8125rem);
+
+  /* 2. TEXTOS DE LECTURA */
+  /* 1280px: 12px | 1920px: 14px (Reducción notable para laptops) */
+  --text-sm: clamp(0.75rem, 0.5rem + 0.31vw, 0.875rem);
+
+  /* 1280px: 13px | 1920px: 16px (El estándar base) */
+  --text-base: clamp(0.8125rem, 0.4375rem + 0.47vw, 1rem);
+
+  /* 1280px: 15px | 1920px: 18px */
+  --text-lg: clamp(0.9375rem, 0.5625rem + 0.47vw, 1.125rem);
+
+  /* 3. TÍTULOS (La reducción aquí es más agresiva para que no rompan el layout en 1280) */
+
+  /* 1280px: 18px | 1920px: 24px */
+  --text-xl: clamp(1.125rem, 0.375rem + 0.94vw, 1.5rem);
+
+  /* 1280px: 24px | 1920px: 32px */
+  --text-3xl: clamp(1.5rem, 0.5rem + 1.25vw, 2rem);
+
+  /* 1280px: 30px | 1920px: 40px */
+  --text-4xl: clamp(1.875rem, 0.625rem + 1.56vw, 2.5rem);
+
+  /* 1280px: 36px | 1920px: 56px (Gran salto) */
+  --text-5xl: clamp(2.25rem, -0.25rem + 3.13vw, 3.5rem);
+
+  /* 1280px: 48px | 1920px: 72px (Reducción muy significativa) */
+  --text-6xl: clamp(3rem, 0rem + 3.75vw, 4.5rem);
+}
