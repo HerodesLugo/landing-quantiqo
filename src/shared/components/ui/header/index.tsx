@@ -2,18 +2,26 @@
 import { useSectionStore } from "@/shared/store/useSectionStore";
 import Logo from "../icon/Logo";
 import Sidebar from "../sidebar";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import HamburguerIcon from "@/shared/components/ui/icon/Hamburguer";
 import Button from "@/shared/components/ui/button";
 import ChevronIcon from "@/shared/components/ui/icon/Chevron";
 import SubMenu from "@/shared/components/ui/header/SubMenu";
 import { NAV_MENU } from "@/shared/components/ui/header/data";
+import { useClickOutside } from "@/shared/hooks/useClickOutside";
 
 
 const Header: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
   const { sectionActiveName } = useSectionStore();
+  const navRef = useRef<HTMLDivElement>(null);
+  
+  useClickOutside(navRef, () => {
+    if (activeSubMenu !== null) {
+      setActiveSubMenu(null);
+    }
+  });
   
   const handleToggle = () => setToggleMenu((prev) => !prev);
   const handleMouseEnter = (id: number) => setActiveSubMenu(id);
@@ -29,7 +37,7 @@ const Header: React.FC = () => {
 
       <div className="flex gap-12 items-center  ">
         <div className="flex gap-12 items-center max-xl:hidden">
-          <div className="flex gap-12 relative">
+          <div ref={navRef} className="flex gap-12 relative">
             {NAV_MENU.map((menu) => {
               const isHovered = activeSubMenu === menu.id;
               const hasSubMenu = !!menu.subMenu;

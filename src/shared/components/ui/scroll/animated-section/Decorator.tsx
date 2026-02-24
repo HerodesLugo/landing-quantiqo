@@ -43,12 +43,12 @@ const Decorators = ({
       {/* Indicador de scroll e iconos (solo para primera sección) */}
       {showScrollIndicator && (
         <div
-          className={`absolute max-sm:flex-row z-20 flex flex-col gap-10 sm:right-20  max-sm:inset-x-0 sm:bottom-16 bottom-14 pointer-events-auto transition-opacity duration-300 ${
+          className={`absolute max-sm:flex-row z-[200] flex flex-col gap-10 sm:right-20  max-sm:inset-x-0 sm:bottom-16 bottom-14 pointer-events-auto transition-opacity duration-300 ${
             isLastFrame ? "opacity-0" : "opacity-100"
           }`}
         >
           <ScrollIndicator sections={5} activeSlideUI={activeCheckpoint} />
-          <div className=" max-sm:absolute max-sm:right-5 max-sm:-bottom-1">
+          <div className=" max-sm:absolute  max-sm:right-5 max-sm:-bottom-1">
             <IconStack />
           </div>
         </div>
@@ -56,7 +56,7 @@ const Decorators = ({
 
       {/* IconStack para secciones sin indicador (OutsideTunnel) */}
       {showIconStack && (
-        <div className={`absolute z-20 flex flex-col gap-10 right-5  sm:right-20 sm:bottom-16 bottom-12 pointer-events-auto transition-opacity duration-500 ${isFooter ? "max-sm:hidden" : ""}`}>
+        <div className={`absolute z-[200] flex flex-col gap-10 right-5  sm:right-20 sm:bottom-16 bottom-12 pointer-events-auto transition-opacity duration-500 ${isFooter ? "max-sm:hidden" : ""}`}>
           <IconStack />
         </div>
       )}

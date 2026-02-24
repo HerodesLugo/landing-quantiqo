@@ -40,7 +40,7 @@ export const ProjectCarousel = ({
                 cursor-pointer transition-all duration-[800ms] ease-out ${
                   showExpanded
                     ? "2xl:h-[46.25rem] h-[37.5rem] w-full max-sm:px-5 sm:px-40 max-sm:h-[31rem]"
-                    : "2xl:h-[35rem] h-[31.25rem]  w-[49.6875rem] max-sm:w-[22.5rem] max-sm:h-[26rem] max-xl:w-[37.5rem] max-xl:h-[28.125rem]"
+                    : "2xl:h-[32rem] h-[31.25rem]  w-[49.6875rem] max-sm:w-[22.5rem] max-sm:h-[26rem] max-xl:w-[37.5rem] max-xl:h-[28.125rem]"
                 }
               `}
               style={{

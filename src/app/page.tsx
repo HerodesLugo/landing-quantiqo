@@ -1,10 +1,7 @@
 "use client";
 import SectionScroller from "@/shared/components/ui/scroll/SectionScroller";
 import AnimatedSection from "@/shared/components/ui/scroll/animated-section/AnimatedSection";
-import {
-  HERO_FRAMES,
-  OUTSIDE_FRAMES,
-} from "@/shared/components/landing-proposal/hero-section/data";
+import { HERO_FRAMES, OUTSIDE_FRAMES } from "@/shared/components/landing-proposal/hero-section/data";
 import {
   FIRST_SECTION_CONFIG,
   SECOND_SECTION_CONFIG,

@@ -1,10 +1,11 @@
+import { SOCIALS } from "@/shared/constant/socials";
 import Link from "next/link";
 
 const IconStack = () => {
   return (
-    <div className="flex  justify-between relative text-base items-center text-white">
+    <div className="flex  justify-between relative z-50 text-base items-center text-white">
       <div className="flex gap-5 max-sm:flex-row flex-col-reverse items-center pointer-events-auto">
-        <Link href="" className="hover:text-primary-100 transition-colors duration-300 ">
+        <Link href={SOCIALS.TWITTER} target="_blank" className="hover:text-primary-100 transition-colors duration-300 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
@@ -19,7 +20,7 @@ const IconStack = () => {
             />
           </svg>
         </Link>
-        <Link href="" className="hover:text-primary-100 transition-colors duration-300 ">
+        <Link href={SOCIALS.BEHANCE} target="_blank" className="hover:text-primary-100 transition-colors duration-300 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width={24}
@@ -37,7 +38,7 @@ const IconStack = () => {
           </svg>
         </Link>
 
-        <Link href="" className="hover:text-primary-100 transition-colors duration-300 ">
+        <Link href={SOCIALS.LINKEDIN} target="_blank" className="hover:text-primary-100 transition-colors duration-300 ">
           <svg
             width={24}
             height={24}

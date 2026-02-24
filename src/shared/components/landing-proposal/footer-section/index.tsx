@@ -118,6 +118,7 @@ const Footer = ({ isActive }: FooterProps) => {
 
           <div className="flex flex-col sm:gap-5 anim-middle will-change-transform max-sm:mb-6">
             <Image
+            
               src="/images/footer/quantiqo_tm.png"
               alt="quantiqo_tm"
               className="h-16 max-w-xs object-contain max-sm:w-[9.5625rem]"
