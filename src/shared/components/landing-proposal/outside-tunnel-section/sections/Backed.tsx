@@ -4,6 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import UiSection from "@/shared/components/landing-proposal/hero-section/UiSection";
 import Image from "next/image";
+import { TestimonialMarquee } from "@/shared/components/landing-proposal/outside-tunnel-section/sections/testimonials/TestimonialMarquee";
 
 interface BackedProps {
   isActive: boolean;
@@ -131,7 +132,6 @@ const Backed = ({ isActive }: BackedProps) => {
         ref={container}
         className="flex flex-col h-full justify-center max-sm:justify-between "
       >
-        
         <div className="flex items-center gap-8 justify-center ">
           <div className="text-center justify-start text-white text-8xl 2xl:text-9xl max-sm:text-7xl font-bold">
             +{counter}
@@ -158,13 +158,13 @@ const Backed = ({ isActive }: BackedProps) => {
             <Image
               src="/images/backed/peoples.svg"
               alt="peoples"
-              className="2xl:w-[42.8125rem] w-[27rem] max-sm:w-[20rem] max-sm:mx-auto"
+              className="2xl:w-[31.8125rem] w-[27rem] max-sm:w-[20rem] max-sm:mx-auto"
               height={125}
               width={685}
             />
           </div>
 
-          <div className="flex flex-col max-sm:w-[20rem] ">
+          <div className="flex flex-col max-sm:w-[20rem] max-sm:items-center">
             <div className="anim-experts-title will-change-transform justify-start text-white text-3xl  max-sm:text-xl font-bold uppercase tracking-[2.83px]">
               +20 Experts
             </div>
@@ -172,6 +172,9 @@ const Backed = ({ isActive }: BackedProps) => {
               Between all our departments
             </div>
           </div>
+        </div>
+        <div className="sm:hidden anim-experts-subtitle">
+          <TestimonialMarquee />
         </div>
       </div>
     </UiSection>

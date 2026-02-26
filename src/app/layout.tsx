@@ -27,7 +27,7 @@ export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
     <html lang="en">
       <body
         cz-shortcut-listen="true"
-        className={`${HOST_GROTESK.className} bg-black  text-white min-h-screen`}
+        className={`${HOST_GROTESK.className} bg-black  text-white h-dvh`}
       >
         <Header />
         {children}

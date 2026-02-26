@@ -31,7 +31,7 @@ const Projects = forwardRef<ScrollableSectionHandle, ProjectsProps>(
       <section
         ref={containerRef}
         id="projects"
-        className="h-screen flex flex-col gap-8 justify-center relative w-full"
+        className="h-dvh flex flex-col gap-8 justify-center relative w-full"
       >
         {/* Background Overlay */}
         <div className="absolute inset-0 bg-black/60 backdrop-blur-[19px]" />

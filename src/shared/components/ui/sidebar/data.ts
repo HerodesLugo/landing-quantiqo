@@ -1,3 +1,5 @@
+import { SOCIALS } from "@/shared/constant/socials";
+
 export type DropdownCol = {
   title: string;
   items: { label: string; href: string }[];
@@ -76,7 +78,7 @@ export const SIDEBAR_ROUTES: SidebarRoute[] = [
 ];
 
 export const SOCIAL_LINKS = [
-  { label: "X", href: "/discord" },
-  { label: "Linkedin", href: "/Linkedin" },
-  { label: "Behance", href: "/Behance" },
+  { label: "X", href: SOCIALS.TWITTER },
+  { label: "Linkedin", href: SOCIALS.LINKEDIN },
+  { label: "Behance", href: SOCIALS.BEHANCE },
 ];

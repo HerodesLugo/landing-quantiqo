@@ -20,7 +20,7 @@ const Sidebar = ({ isActive, setToggleMenu }: SidebarProps) => {
       className="fixed inset-0 z-50 pointer-events-none opacity-0"
       aria-hidden={!isActive}
     >
-      <div className="h-screen w-full bg-black relative flex flex-col justify-between sm:px-20 sm:py-20 pointer-events-auto max-sm:px-5 max-sm:py-5">
+      <div className="h-dvh w-full bg-black relative flex flex-col justify-between sm:px-20 sm:py-20 pointer-events-auto max-sm:px-5 max-sm:py-5">
         {/* --- HEADER --- */}
         <SidebarHeader onClose={() => setToggleMenu(false)} />
 

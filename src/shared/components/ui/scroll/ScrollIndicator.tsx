@@ -5,7 +5,7 @@ interface Props {
 const ScrollIndicator = ({ activeSlideUI, sections }: Props) => {
   return (
     <div
-      className={`  transition-opacity flex bottom-60 gap-3.5  sm:flex-col  mx-auto justify-center ${activeSlideUI <= 5 ? "opacity-100 " : "opacity-0"}`}>
+      className={`  transition-opacity flex bottom-60 gap-3.5  sm:flex-col  sm:mx-auto justify-center ${activeSlideUI <= 5 ? "opacity-100 " : "opacity-0"}`}>
       {Array.from({ length: sections }).map((_, i) => (
         <div key={i} className="flex  items-center">
           <div

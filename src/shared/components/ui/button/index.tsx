@@ -15,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({
   type = "button",
   onMouseOver,
   onMouseLeave,
+  ...props
 }) => {
   const [isClient, setIsClient] = useState(false);
   const variantClasses = variantClass({ variant, size });
@@ -40,6 +41,7 @@ const Button: React.FC<ButtonProps> = ({
       onMouseOver={onMouseOver}
       onMouseLeave={onMouseLeave}
       onFocus={onMouseOver}
+      {...props}
     >
       <span className="bg-primary-100 absolute size-full  rounded-full transition-all duration-500 ease-in-out group-hover:mr-0 flex items-center mr-32 "></span>
       <span className="tracking-[2.4px] sm:tracking-[3.6px] absolute left-6 ">{children}</span>

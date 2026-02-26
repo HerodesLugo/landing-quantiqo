@@ -42,9 +42,9 @@ const Tunnel = forwardRef<ScrollableSectionHandle>((props, ref) => {
         />
       </div>
 
-      <div className="absolute bottom-10 max-sm:left-5 sm:bottom-40 z-50 sm:inset-x-0">
+      {/* <div className="absolute bottom-10 max-sm:left-5 sm:bottom-40 z-50 sm:inset-x-0">
         <ScrollDown />
-      </div>
+      </div> */}
     </div>
   );
 });

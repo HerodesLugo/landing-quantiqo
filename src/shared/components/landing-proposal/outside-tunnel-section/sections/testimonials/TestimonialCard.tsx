@@ -11,7 +11,7 @@ interface TestimonialProps {
 
 const TestimonialCard = ({ data }: { data: TestimonialProps }) => {
   return (
-    <div className="2xl:w-[636.30px]  w-[33.25rem] max-sm:p-4 sm:p-10 flex flex-col  max-w-full z-20 2xl:h-[588.57px] h-[510.57px] relative rounded-3xl outline-[0.83px]  outline-offset-[-0.83px] outline-base-purple-200  overflow-hidden flex-shrink-0 transition-all duration-500 max-sm:w-[20rem] max-sm:h-[320px] max-xl:h-[460px] max-xl:w-[500px]">
+    <div className="2xl:w-[36.25rem]  w-[33.25rem] max-sm:p-4 sm:p-10 flex flex-col  max-w-full z-20 2xl:h-[33.7856rem] h-[31.9106rem] relative rounded-3xl outline-[0.83px]  outline-offset-[-0.83px] outline-base-purple-200  overflow-hidden flex-shrink-0 transition-all duration-500 max-sm:w-[20rem] max-sm:h-[320px] max-xl:h-[460px] max-xl:w-[500px]">
       <div className="flex gap-4 sm:gap-7 max-sm:mt-4 items-center ">
         <div className="size-32 bg-zinc-300 rounded-full max-sm:size-12">
           <Image
@@ -34,11 +34,11 @@ const TestimonialCard = ({ data }: { data: TestimonialProps }) => {
 
       <div className="w-full h-px opacity-30 sm:my-8 bg-neutral-400 my-3" />
 
-      <div className="flex items-center sm:gap-8">
-        <div className="grid grid-cols-2 gap-x-1.5 sm:gap-x-24 gap-y-4 w-full">
+      <div className="flex items-center">
+        <div className="grid grid-cols-2 gap-x-1.5 gap-y-4 w-full">
           {data.stats.map((stat, i) => (
             <div key={i} className="flex flex-col">
-              <span className="text-white text-2xl 2xl:text-3xl font-semibold max-sm:text-sm">
+              <span className="text-white text-2xl 2xl:text-xl font-semibold max-sm:text-sm">
                 {stat.value}
               </span>
               <span className="text-base-200 text-xs font-normal mt-1 ">
@@ -48,7 +48,7 @@ const TestimonialCard = ({ data }: { data: TestimonialProps }) => {
           ))}
         </div>
 
-        <div className="sm:w-56 text-cyan-100  text-xl 2xl:text-2xl font-normal leading-tight max-sm:text-sm">
+        <div className=" text-cyan-100  text-xl 2xl:text-lg font-normal leading-tight max-w-[11rem] max-sm:text-sm">
           “{data.quote}”
         </div>
       </div>
@@ -70,7 +70,7 @@ const TestimonialCard = ({ data }: { data: TestimonialProps }) => {
         </div>
       </div>
 
-      <div className="sm:right-10 items-center sm:gap-5 flex top-[21px] absolute text-cyan-100 text-lg font-bold tracking-[2px] sm:tracking-[3.60px] cursor-pointer hover:text-white transition-colors max-sm:text-[.5rem] right-3 gap-1.5">
+      <div className="sm:right-10 items-center sm:gap-5 flex top-[21px] absolute text-cyan-100 text-sm font-bold tracking-[2px] sm:tracking-[3.60px] cursor-pointer hover:text-white transition-colors max-sm:text-[.5rem] right-3 gap-1.5">
         <span className="icon-arrow-up-right" />{" "}
         <span className="shrink-0">CASE STUDY</span>
       </div>

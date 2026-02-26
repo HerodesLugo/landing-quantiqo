@@ -18,7 +18,7 @@ export interface SubMenuData {
 
 const SubMenu = ({ data }: { data: SubMenuData }) => {
   return (
-    <div className="absolute flex left-0 top-10 backdrop-blur-md border border-base-purple-100/50 bg-base-purple-200/50 rounded-l-[25px] rounded-r-[1.5625rem]">
+    <div className="absolute flex left-0 top-10 backdrop-blur-md border border-base-purple-100/50 bg-[rgba(52,_55,_66,_0.50)] rounded-l-[25px] rounded-r-[1.5625rem]">
       <div className="backdrop-blur-md bg-base-purple-200/50 p-8 pr-0 flex flex-col items-start gap-7  z-20 rounded-[1.5625rem] relative">
         <div className="text-xs text-white/60 tracking-[2.0px]  font-medium uppercase">
           {data.leftColumn.title}
@@ -28,7 +28,7 @@ const SubMenu = ({ data }: { data: SubMenuData }) => {
             {data.leftColumn.items.map((item, index) => (
               <div
                 key={index}
-                className="text-sm text-white tracking-[4px] whitespace-nowrap cursor-pointer hover:text-primary-100 transition-all hover:scale-105"
+                className="text-sm text-white tracking-[4px] whitespace-nowrap cursor-pointer"
               >
                 {item.label.toUpperCase()}
               </div>
@@ -49,7 +49,7 @@ const SubMenu = ({ data }: { data: SubMenuData }) => {
             {data.rightColumn.items.map((item, index) => (
               <div
                 key={index}
-                className="text-xs text-white tracking-[4px] whitespace-nowrap cursor-pointer hover:text-primary-100 transition-colors"
+                className="text-xs text-white tracking-[4px] whitespace-nowrap cursor-pointer"
               >
                 {item.label.toUpperCase()}
               </div>

@@ -17,9 +17,9 @@ export const SolutionAccordionItem = ({
 }: SolutionAccordionItemProps) => {
   if (isMobileSlider) {
     return (
-      <div className="flex flex-col anim-accordion-title will-change-transform items-start w-full">
+      <div className="flex flex-col bg-amber-800 anim-accordion-title will-change-transform items-start  sm:w-full">
         <div className="flex items-center gap-2 sm:mb-6">
-          <div className="text-left uppercase tracking-[3px] text-white sm:text-2xl font-normal">
+          <div className="text-left uppercase tracking-[3px] text-white text-2xl font-normal">
             {solution.title}
           </div>
         </div>
@@ -39,14 +39,14 @@ export const SolutionAccordionItem = ({
   }
 
   return (
-    <div className="flex flex-col items-end">
+    <div className="flex flex-col items-start sm:items-end anim-accordion-title will-change-transform">
       <button
         onClick={onClick}
-        className="anim-accordion-title will-change-transform flex items-center gap-2 cursor-pointer group"
+        className=" flex items-center gap-2 cursor-pointer group"
       >
         <div
           className={clsx(
-            "text-right uppercase tracking-[3px] transition-all duration-300 max-sm:text-sm",
+            "text-left sm:text-right uppercase tracking-[3px] transition-all duration-300 max-sm:text-lg",
             isExpanded
               ? "text-primary-100 text-4xl font-normal tracking-[4.04px]"
               : "text-base-300 text-2xl font-light",
@@ -86,13 +86,13 @@ export const SolutionAccordionItem = ({
           isExpanded ? "max-h-96 opacity-100 mt-5" : "max-h-0 opacity-0",
         )}
       >
-        <div className="flex flex-col w-96 items-end gap-5">
-          <div className="text-right text-base-300 text-sm font-light max-sm:text-[.625rem]">
+        <div className="flex flex-col sm:w-96 sm:items-end gap-2.5 sm:gap-5">
+          <div className="text-left sm:text-right text-base-300 text-sm font-light ">
             {solution.description}
           </div>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-3 sm:grid-cols-2 gap-6">
             {solution.points.map((point) => (
-              <QuantiqoLabel key={point} label={point} />
+              <QuantiqoLabel classNameLabel="" key={point} label={point} />
             ))}
           </div>
         </div>

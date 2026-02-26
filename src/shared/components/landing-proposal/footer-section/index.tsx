@@ -106,7 +106,7 @@ const Footer = ({ isActive }: FooterProps) => {
     <section
       ref={container}
       id="footer"
-      className={`h-screen sm:p-20 p-5 max-sm:pb-32 transition-transform duration-700 ease-in-out overflow-hidden fixed inset-0  ${isActive ? "translate-y-0  " : "translate-y-full opacity-0"}`}
+      className={`h-dvh sm:p-20 p-5 max-sm:pb-32 transition-transform duration-700 ease-in-out overflow-hidden fixed inset-0  ${isActive ? "translate-y-0  " : "translate-y-full opacity-0"}`}
     >
       {isActive && <HoverGlass />}
 

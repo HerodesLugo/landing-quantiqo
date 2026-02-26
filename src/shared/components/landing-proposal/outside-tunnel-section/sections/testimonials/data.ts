@@ -3,7 +3,7 @@ export const TESTIMONIALS_DATA = [
     id: 1,
     name: "JHON D.",
     role: "CTO AT FINTECH. IO",
-    quote: "Exceptional delivery speed and code quality.",
+    quote: "“Lorem ipsum dolot sit ament at loram quo nat.”",
     feedback:
       "The architecture proposed by the team allowed us to scale 10x in just three months without technical debt. A true partnership.",
     stats: [
@@ -17,7 +17,7 @@ export const TESTIMONIALS_DATA = [
     id: 2,
     name: "JHON D.",
     role: "CTO AT FINTECH. IO",
-    quote: "Exceptional delivery speed and code quality.",
+    quote: "“Lorem ipsum dolot sit ament at loram quo nat.”",
     feedback:
       "The architecture proposed by the team allowed us to scale 10x in just three months without technical debt. A true partnership.",
     stats: [
@@ -31,7 +31,7 @@ export const TESTIMONIALS_DATA = [
     id: 3,
     name: "JHON D.",
     role: "CTO AT FINTECH. IO",
-    quote: "Exceptional delivery speed and code quality.",
+    quote: "“Lorem ipsum dolot sit ament at loram quo nat.”",
     feedback:
       "The architecture proposed by the team allowed us to scale 10x in just three months without technical debt. A true partnership.",
     stats: [
@@ -45,7 +45,7 @@ export const TESTIMONIALS_DATA = [
     id: 4,
     name: "JHON D.",
     role: "CTO AT FINTECH. IO",
-    quote: "Exceptional delivery speed and code quality.",
+    quote: "“Lorem ipsum dolot sit ament at loram quo nat.”",
     feedback:
       "The architecture proposed by the team allowed us to scale 10x in just three months without technical debt. A true partnership.",
     stats: [
@@ -58,15 +58,13 @@ export const TESTIMONIALS_DATA = [
 ];
 
 export const MARQUEE_LOGOS = [
+  "accelera",
   "aurion",
   "carbon",
   "fenix",
-  "fivo",
-  "garbo",
-  "intenxt",
-  "linus",
+  "lode",
   "nest",
-  "portafil",
-  "rise",
-  "sozialens",
+  "sozialens"
 ];
+
+

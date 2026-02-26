@@ -40,7 +40,7 @@ const SectionScroller = ({ children }: SectionScrollerProps) => {
   return (
     <main
       ref={containerRef}
-      className="h-screen w-full overflow-hidden relative"
+      className="h-dvh w-full overflow-hidden relative"
     >
       {sections.map((child, i) => (
         <div

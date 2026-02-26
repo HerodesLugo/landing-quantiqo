@@ -1,4 +1,5 @@
 import IconStack from "@/shared/components/landing-proposal/hero-section/common/IconStack";
+import ScrollDown from "@/shared/components/landing-proposal/hero-section/common/ScrollDown";
 import ScrollIndicator from "@/shared/components/ui/scroll/ScrollIndicator";
 import { useSectionStore } from "@/shared/store/useSectionStore";
 
@@ -17,17 +18,17 @@ const Decorators = ({
   activeCheckpoint,
   showIconStack,
 }: DecoratorsProps) => {
-    const { sectionActiveName } = useSectionStore();
-    const isFooter = sectionActiveName === "FOOTER";
-  
+  const { sectionActiveName } = useSectionStore();
+  const isFooter = sectionActiveName === "FOOTER";
+  const isHome = sectionActiveName === "HOME";
+
   return (
     <>
       {/* Decoraciones opcionales (solo para primera sección tipo HeroMain) */}
       {showDecorations && (
         <>
           <div
-          // 
-            className={`transition-opacity duration-300 mix-blend-overlay sm:w-xl bg-white w-[17.5rem] absolute left-32 sm:left-56 bottom-11 z-50 h-px ${
+            className={`transition-opacity duration-300 mix-blend-overlay sm:w-lg bg-white w-[17.5rem] absolute left-32 sm:left-56 bottom-11 z-50 h-px ${
               isLastFrame ? "opacity-100" : "opacity-0"
             }`}
           />
@@ -40,10 +41,18 @@ const Decorators = ({
         </>
       )}
 
+      <div className={`absolute flex justify-center inset-x-0 sm:bottom-16 bottom-14 z-[200]  transition-opacity ${isFooter ? "opacity-0" : "opacity-100"}`}>
+        <div
+          className="w-max"
+        >
+          <ScrollDown showText={isHome} />
+        </div>
+      </div>
+
       {/* Indicador de scroll e iconos (solo para primera sección) */}
       {showScrollIndicator && (
-        <div
-          className={`absolute max-sm:flex-row z-[200] flex flex-col gap-10 sm:right-20  max-sm:inset-x-0 sm:bottom-16 bottom-14 pointer-events-auto transition-opacity duration-300 ${
+          <div
+          className={`absolute max-sm:flex-row z-[200] flex flex-col gap-10 sm:right-20  max-sm:pl-5 max-sm:inset-x-0 sm:bottom-16 bottom-14 pointer-events-auto transition-opacity duration-300 ${
             isLastFrame ? "opacity-0" : "opacity-100"
           }`}
         >
@@ -52,13 +61,18 @@ const Decorators = ({
             <IconStack />
           </div>
         </div>
+
       )}
 
       {/* IconStack para secciones sin indicador (OutsideTunnel) */}
       {showIconStack && (
-        <div className={`absolute z-[200] flex flex-col gap-10 right-5  sm:right-20 sm:bottom-16 bottom-12 pointer-events-auto transition-opacity duration-500 ${isFooter ? "max-sm:hidden" : ""}`}>
-          <IconStack />
-        </div>
+        <>
+          <div
+            className={`absolute z-[200] flex flex-col gap-10 right-5  sm:right-20 sm:bottom-16 bottom-12 pointer-events-auto transition-opacity duration-500 ${isFooter ? "max-sm:hidden" : ""}`}
+          >
+            <IconStack />
+          </div>
+        </>
       )}
     </>
   );

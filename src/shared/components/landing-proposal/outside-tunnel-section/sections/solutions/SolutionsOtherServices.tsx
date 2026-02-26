@@ -1,4 +1,4 @@
-import Button from "@/shared/components/ui/button";
+import TalkButton from "@/shared/components/ui/button/TalkButton";
 import { OTHER_SERVICES_LIST } from "./data";
 
 export const SolutionsOtherServices = () => {
@@ -20,9 +20,9 @@ export const SolutionsOtherServices = () => {
         </div>
       </div>
 
-      <Button className="anim-button h-16 flex relative overflow-hidden sm:w-[16.875rem] w-[13rem] max-sm:text-base max-sm:h-14 ">
-        BOOK NOW
-      </Button>
+      <TalkButton className="anim-button h-16 flex relative overflow-hidden sm:w-[16.875rem] w-[13rem] max-sm:text-base max-sm:h-14 ">
+        {"Let's Talk "}{" "}
+      </TalkButton>
     </div>
   );
 };

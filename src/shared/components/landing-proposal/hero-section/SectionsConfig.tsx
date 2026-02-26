@@ -23,7 +23,7 @@ export const FIRST_SECTION_CONFIG: SectionConfig[] = [
   {
     checkpoint: HERO_CHECKPOINTS.FIRST,
     component: ({ isActive }: { isActive: boolean }) => (
-      <UiLayout scrollDown={isActive} />
+      <UiLayout scrollDown={isActive} isActive={isActive} />
     ),
   },
   {
@@ -54,6 +54,7 @@ export const FIRST_SECTION_CONFIG: SectionConfig[] = [
 ];
 
 export const SECOND_SECTION_CONFIG: SectionConfig[] = [
+  
   {
     checkpoint: OUTSIDE_CHECKPOINTS.TUNNEL,
     component: Tunnel,

@@ -6,9 +6,10 @@ export const SolutionsAccordion = () => {
   const [activeTitle, setActiveTitle] = useState<SolutionTitle | "">("");
 
   return (
-    <div className="max-sm:absolute inset-0 flex justify-center items-center">
-      <div className="flex flex-col">
-        <nav className="flex flex-col gap-6 text-right w-full max-w-2xl">
+    <div className=" flex justify-start sm:justify-center">
+      <div className="flex flex-col  ">
+        
+        <nav className="flex flex-col gap-6 text-left sm:text-right sm:w-full sm:max-w-2xl">
           {SOLUTIONS_DATA.map((solution) => {
             const isExpanded = activeTitle === solution.title;
 
@@ -26,6 +27,7 @@ export const SolutionsAccordion = () => {
             );
           })}
         </nav>
+
       </div>
     </div>
   );

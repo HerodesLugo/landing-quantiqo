@@ -2,6 +2,11 @@
 @import "./fontello.css";
 @import "./layer.css";
 
+
+html {
+  overflow: hidden;
+  overscroll-behavior: contain;
+}
 /* En tu CSS global o globals.css */
 .scene {
   perspective: 2000px;

@@ -24,6 +24,7 @@ export const SidebarFooter = ({ isActive }: SidebarFooterProps) => {
             <React.Fragment key={link.label}>
               <Link
                 href={link.href}
+                target="_blank"
                 tabIndex={isActive ? 0 : -1}
                 className="justify-start text-white max-sm:text-xs font-medium hover:text-primary-200 transition-all duration-200 hover:-translate-y-1"
               >

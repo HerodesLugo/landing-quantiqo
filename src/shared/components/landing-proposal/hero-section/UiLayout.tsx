@@ -1,17 +1,30 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import Button from "@/shared/components/ui/button";
-import ScrollDown from "@/shared/components/landing-proposal/hero-section/common/ScrollDown";
+import TalkButton from "@/shared/components/ui/button/TalkButton";
+import { useSectionStore } from "@/shared/store/useSectionStore";
 
 interface UiLayoutProps {
   scrollDown: boolean;
+  isActive: boolean;
 }
 
-const UiLayout = ({ scrollDown }: UiLayoutProps) => {
+const UiLayout = ({ scrollDown, isActive }: UiLayoutProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
+
+  const { setSectionActiveName } = useSectionStore();
+
+  useEffect(() => {
+    if (isActive) {
+      setSectionActiveName("HOME");
+    }
+
+    return () => {
+      setSectionActiveName("");
+    };
+  }, [isActive]);
 
   useGSAP(
     () => {
@@ -48,10 +61,10 @@ const UiLayout = ({ scrollDown }: UiLayoutProps) => {
           stagger: 0.1,
           ease: "power2.out",
         },
-        "-=0.5"
+        "-=0.5",
       );
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   useGSAP(() => {
@@ -65,28 +78,27 @@ const UiLayout = ({ scrollDown }: UiLayoutProps) => {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-50 flex  flex-col justify-end sm:max-w-[calc(100%-8.25rem)] mx-auto py-16 max-sm:pt-28 max-sm:px-5"
+      className="fixed inset-0 z-50 flex  flex-col justify-end sm:max-w-[calc(100%-8.25rem)] mx-auto py-24 max-sm:pt-28 max-sm:px-5"
     >
       <div className="flex justify-between sm:items-end max-sm:h-full  max-sm:flex-col">
         <div className="flex flex-col items-start gap-4 sm:gap-8 relative z-50">
-          
-          <div className=" text-2xl sm:text-5xl flex flex-col sm:gap-3 font-medium uppercase tracking-[5px]">
-            <div className="title-line will-change-transform">
+          <div className="text-5xl max-sm:text-3xl flex flex-col font-medium uppercase tracking-[5px]">
+            <div className="title-line will-change-transform sm:leading-16 leading-normal">
               The <span className="text-primary-100">full-service </span>
             </div>
-            <div className="title-line will-change-transform">
+            <div className="title-line will-change-transform sm:leading-16 leading-normal">
               <span className="text-primary-100">agency </span> that your
             </div>
-            <div className="title-line will-change-transform">
+            <div className="title-line will-change-transform sm:leading-16 leading-normal">
               business deserves
             </div>
           </div>
 
           <div className="flex max-sm:flex-col  max-sm:w-full sm:items-center gap-5 max-sm:max-w-[23.75rem]">
             <div className="bottom-element will-change-transform">
-              <Button className="h-16 flex relative overflow-hidden xl:w-[16.875rem] w-[13rem] max-xl:text-base max-sm:h-14 ">
-                book now
-              </Button>
+              <TalkButton className="h-16 flex relative overflow-hidden xl:w-[16.875rem] w-[13rem] max-xl:text-base max-sm:h-14 ">
+                {"Let's Talk "}
+              </TalkButton>
             </div>
             <div className="sm:w-[23.75vw] justify-start bottom-element will-change-transform">
               <span className="text-white text-base font-bold ">
@@ -101,13 +113,12 @@ const UiLayout = ({ scrollDown }: UiLayoutProps) => {
               </span>
             </div>
           </div>
-          
         </div>
       </div>
 
-      <div className="absolute bottom-24 max-sm:left-5 max-sm:bottom-10  bottom-element z-50 sm:inset-x-0">
+      {/* <div className="absolute bottom-24 max-sm:left-5 max-sm:bottom-10  bottom-element z-50 sm:inset-x-0">
         <ScrollDown />
-      </div>
+      </div> */}
     </div>
   );
 };

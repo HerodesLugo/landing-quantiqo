@@ -9,7 +9,7 @@ const SidebarMenu: React.FC<{ isOpen: boolean; onClose: () => void }> = ({
 }) => (
   <div
     onClick={(e) => e.stopPropagation()}
-    className={`bg-base-100 fixed z-50  duration-700 transition-transform sidebar-mobile right-0 h-screen bottom-0 top-0 w-full  py-4  justify-between flex flex-col  ${
+    className={`bg-base-100 fixed z-50  duration-700 transition-transform sidebar-mobile right-0 h-dvh bottom-0 top-0 w-full  py-4  justify-between flex flex-col  ${
       isOpen ? "translate-x-0" : "translate-x-full"
     }`}
   >

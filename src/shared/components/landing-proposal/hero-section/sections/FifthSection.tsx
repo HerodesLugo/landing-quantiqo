@@ -75,45 +75,23 @@ const FifthSection = ({ isActive }: SectionProps) => {
 
   return (
     <UiSection>
-      <div ref={container} className="size-full flex flex-col justify-between">
-        <div className="mt-10 sm:block hidden h-full"></div>
-        <div className="flex flex-col  sm:h-full gap-4 sm:justify-between">
-          <div className="justify-start xl:pl-20  ">
+      <div ref={container} className="size-full flex flex-col justify-center sm:gap-8 max-sm:justify-between">
+        
+        <div className="flex flex-col   gap-4 sm:justify-between">
+          <div className="justify-start  ">
             <div className="justify-start flex flex-col">
-              <span className="anim-title text-white  text-2xl sm:text-5xl font-bold uppercase tracking-[5px] sm:leading-16 block will-change-transform">
+              <span className="anim-title text-white  text-3xl sm:text-5xl font-bold uppercase tracking-[5px] leading-8 sm:leading-16 block will-change-transform">
                 full-stack
                 <br />
               </span>
-              <span className="anim-title text-primary-100  text-2xl sm:text-5xl font-light uppercase tracking-[5px] sm:leading-16 block will-change-transform">
+              <span className="anim-title text-primary-100  text-3xl sm:text-5xl font-light uppercase tracking-[5px] leading-8 sm:leading-16 block will-change-transform">
                 development
               </span>
             </div>
           </div>
-          <div className="flex flex-col max-sm:gap-3 sm:gap-4 max-sm:items-start">
-            
-            <div className="flex max-sm:gap-3 sm:gap-5 max-sm:flex-col">
-              <div className="anim-label-wrapper will-change-transform">
-                <QuantiqoLabel label="Dev Ops" />
-              </div>
-
-              <div className="anim-label-wrapper will-change-transform">
-                <QuantiqoLabel label="Development Architecture" />
-              </div>
-            </div>
-
-            <div className="flex max-sm:gap-3 sm:gap-5 sm:items-center max-sm:flex-col">
-              <div className="anim-label-wrapper will-change-transform">
-                <QuantiqoLabel label="Full Stack Development" />
-              </div>
-
-              <div className="anim-label-wrapper will-change-transform">
-                <QuantiqoLabel label="Motion and 3D Development" />
-              </div>
-            </div>
-
-          </div>
         </div>
-        <div className="flex flex-col gap-10 sm:mt-8">
+
+        <div className="flex flex-col gap-10 ">
           <div className="sm:w-[30rem] justify-start anim-text will-change-transform">
             <span className="text-white text-base font-light ">
               We specialize in crafting innovative developments tailored to your
@@ -123,9 +101,6 @@ const FifthSection = ({ isActive }: SectionProps) => {
               Our team is dedicated to delivering seamless user experiences and
               robust functionality ready to launch.
             </span>
-          </div>
-          <div className="anim-solutions will-change-transform">
-            <Solutions />
           </div>
         </div>
       </div>
