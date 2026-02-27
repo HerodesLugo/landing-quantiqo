@@ -85,5 +85,15 @@ export const useHeroAnimation = ({
     }
   };
 
-  return { handleScroll, getCurrentFrame };
+  const jumpToCheckpoint = (targetIndex: number) => {
+    if (!isLoaded) return;
+    if (targetIndex < 0 || targetIndex >= checkpoints.length) return;
+    if (isAnimating.current) {
+      gsap.killTweensOf(status.current);
+      isAnimating.current = false;
+    }
+    triggerAnimation(targetIndex, checkpoints[targetIndex]);
+  };
+
+  return { handleScroll, getCurrentFrame, jumpToCheckpoint };
 };

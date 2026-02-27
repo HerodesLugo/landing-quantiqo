@@ -1,8 +1,10 @@
 import { SubMenuData } from "@/shared/components/ui/header/SubMenu";
+import { NavigationTarget } from "@/shared/store/useSectionStore";
 
 export interface NavMenuItem {
   id: number;
   label: string;
+  navTarget?: NavigationTarget;
   subMenu?: SubMenuData;
 }
 
@@ -10,10 +12,12 @@ export const NAV_MENU: NavMenuItem[] = [
   {
     id: 1,
     label: "work",
+    navTarget: "PROJECTS",
   },
   {
     id: 2,
     label: "industries",
+    navTarget: "INDUSTRIES",
     subMenu: {
       leftColumn: {
         title: "MAIN INDUSTRIES",
@@ -41,6 +45,7 @@ export const NAV_MENU: NavMenuItem[] = [
   {
     id: 3,
     label: "solutions",
+    navTarget: "SOLUTIONS",
     subMenu: {
       leftColumn: {
         title: "MAIN SERVICES",
@@ -69,9 +74,11 @@ export const NAV_MENU: NavMenuItem[] = [
   {
     id: 4,
     label: "clients",
+    navTarget: "CLIENTS",
   },
   {
     id: 5,
     label: "about",
+    navTarget: "ABOUT",
   },
 ];

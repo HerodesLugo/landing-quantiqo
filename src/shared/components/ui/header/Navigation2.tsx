@@ -1,12 +1,15 @@
+"use client";
 import { NAV_MENU } from "@/shared/components/ui/header/data";
 import SubMenu from "@/shared/components/ui/header/SubMenu";
 import ChevronIcon from "@/shared/components/ui/icon/Chevron";
 import { useClickOutside } from "@/shared/hooks/useClickOutside";
 import { useRef, useState } from "react";
+import { useSectionStore } from "@/shared/store/useSectionStore";
 
 const Navigation = () => {
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
+  const { navigateTo } = useSectionStore();
 
   const handleMouseEnter = (id: number) => setActiveSubMenu(id);
   const handleMouseLeave = () => setActiveSubMenu(null);
@@ -17,7 +20,15 @@ const Navigation = () => {
     }
   });
 
-  
+  const handleNavClick = (menu: (typeof NAV_MENU)[number]) => {
+    // Navegar a la sección destino si existe
+    if (menu.navTarget) {
+      navigateTo(menu.navTarget);
+    }
+    // Cerrar el submenú si está abierto
+    setActiveSubMenu(null);
+  };
+
   return (
     <div className="flex gap-12 items-center max-xl:hidden">
       <div ref={navRef} className="flex gap-12 relative">
@@ -30,7 +41,10 @@ const Navigation = () => {
               className="relative h-full flex items-center"
               onMouseEnter={() => hasSubMenu && handleMouseEnter(menu.id)}
             >
-              <div className="flex items-center text-white/60 hover:text-primary-200 cursor-pointer group">
+              <div
+                className="flex items-center text-white/60 hover:text-primary-200 cursor-pointer group"
+                onClick={() => handleNavClick(menu)}
+              >
                 <div
                   className={`transition-colors duration-300 text-base font-medium uppercase tracking-[3.60px] ${isHovered ? "text-primary-200 " : ""}`}
                 >

@@ -9,7 +9,7 @@ import Navigation from "@/shared/components/ui/header/Navigation2";
 
 const Header: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-  const { sectionActiveName } = useSectionStore();
+  const { sectionActiveName , navigateTo} = useSectionStore();
 
   const handleToggle = () => setToggleMenu((prev) => !prev);
 
@@ -19,7 +19,9 @@ const Header: React.FC = () => {
         sectionActiveName == "FOOTER" && "opacity-0 pointer-events-none"
       }`}
     >
-      <Logo className="h-[3.3125rem] w-[3.75rem] max-sm:w-[2rem] max-sm:h-[1.8125rem] " />
+      <button className="cursor-pointer" onClick={() => navigateTo("HOME")}>
+        <Logo className="h-[3.3125rem] w-[3.75rem] max-sm:w-[2rem] max-sm:h-[1.8125rem] " />
+      </button>
 
       <div className="flex gap-12 items-center  ">
         <Navigation />

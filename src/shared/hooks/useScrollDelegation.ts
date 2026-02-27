@@ -57,10 +57,11 @@ export const useScrollDelegation = ({
         // Si no, delegar directamente al hero
         return heroRef.current?.onScroll(direction) ?? false;
       },
+      jumpToCheckpoint: (checkpointIndex: number) => {
+        heroRef.current?.jumpToCheckpoint?.(checkpointIndex);
+      },
     }),
-    // OBLIGATORIO: Añadir el array de dependencias para que useImperativeHandle
-    // se actualice si cambia la sección activa o la data.
-    [activeCheckpoint, sections, heroRef] 
+    [activeCheckpoint, sections, heroRef]
   );
 
   // Devolvemos sectionRefs para que el componente padre pueda enlazar el JSX

@@ -23,7 +23,7 @@ const HeroSection = forwardRef<ScrollableSectionHandle, HeroProps>(
 
     const { images, isLoaded } = useHeroImages(TOTAL_FRAMES, BASE_IMAGE_PATH);
 
-    const { handleScroll, getCurrentFrame } = useHeroAnimation({
+    const { handleScroll, getCurrentFrame, jumpToCheckpoint } = useHeroAnimation({
       checkpoints,
       totalFrames: TOTAL_FRAMES,
       isLoaded,
@@ -41,6 +41,7 @@ const HeroSection = forwardRef<ScrollableSectionHandle, HeroProps>(
 
     useImperativeHandle(ref, () => ({
       onScroll: (direction) => handleScroll(direction),
+      jumpToCheckpoint: (index) => jumpToCheckpoint(index),
     }));
 
     return (

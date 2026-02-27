@@ -7,7 +7,6 @@ import { FIRST_SECTION_CONFIG, SECOND_SECTION_CONFIG } from "@/shared/components
 import Loading from "@/shared/components/layout/Loading";
 import { useLoading } from "@/shared/hooks/useLoading";
 import useBreakpoint from "@/shared/hooks/useBreakpoint";
-// import CalendlyModal from "@/shared/components/ui/modals/CalendlyModal";
 
 const Page = () => {
   const { isLoading, progress } = useLoading();
@@ -34,7 +33,6 @@ const Page = () => {
 
   return (
     <SectionScroller>
-     {/* <CalendlyModal /> */}
       <AnimatedSection
         sections={FIRST_SECTION_CONFIG}
         showScrollIndicator

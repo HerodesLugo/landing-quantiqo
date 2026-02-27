@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { MutableRefObject, useCallback } from "react";
 import gsap from "gsap";
 import { Observer } from "gsap/Observer";
 import { useGSAP } from "@gsap/react";
@@ -13,15 +13,33 @@ interface UseSectionScrollerProps {
   containerRef: React.RefObject<HTMLDivElement | null>;
   sectionRefs: React.MutableRefObject<HTMLDivElement[]>;
   childRefs: React.MutableRefObject<(ScrollableSectionHandle | null)[]>;
+  currentIndexRef: MutableRefObject<number>;
 }
 
 export const useSectionScroller = ({
   containerRef,
   sectionRefs,
   childRefs,
+  currentIndexRef,
 }: UseSectionScrollerProps) => {
-  const currentIndexRef = useRef(0);
   const isMobile = useBreakpoint();
+
+  // Definida con useCallback para tener referencia estable entre renders
+  const gotoSection = useCallback(
+    (index: number) => {
+      const slides = sectionRefs.current;
+      if (index < 0 || index >= slides.length) return;
+
+      const currentSlide = slides[currentIndexRef.current];
+      const nextSlide = slides[index];
+
+      gsap.set(currentSlide, { zIndex: 0, autoAlpha: 0 });
+      gsap.set(nextSlide, { zIndex: 1, autoAlpha: 1 });
+
+      currentIndexRef.current = index;
+    },
+    [sectionRefs, currentIndexRef]
+  );
 
   useGSAP(
     () => {
@@ -30,18 +48,6 @@ export const useSectionScroller = ({
 
       gsap.set(slides, { zIndex: 0, autoAlpha: 0 });
       gsap.set(slides[0], { zIndex: 1, autoAlpha: 1 });
-
-      const gotoSection = (index: number) => {
-        if (index < 0 || index >= slides.length) return;
-
-        const currentSlide = slides[currentIndexRef.current];
-        const nextSlide = slides[index];
-
-        gsap.set(currentSlide, { zIndex: 0, autoAlpha: 0 });
-        gsap.set(nextSlide, { zIndex: 1, autoAlpha: 1 });
-
-        currentIndexRef.current = index;
-      };
 
       const handleScrollAttempt = (direction: "next" | "prev") => {
         const currentChildRef = childRefs.current[currentIndexRef.current];
@@ -71,6 +77,8 @@ export const useSectionScroller = ({
 
       return () => scrollObserver.kill();
     },
-    { scope: containerRef }
+    { scope: containerRef, dependencies: [gotoSection] }
   );
+
+  return { gotoSection };
 };
