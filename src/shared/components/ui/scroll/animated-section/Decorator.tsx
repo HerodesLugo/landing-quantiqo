@@ -22,13 +22,14 @@ const Decorators = ({
   const isFooter = sectionActiveName === "FOOTER";
   const isHome = sectionActiveName === "HOME";
 
+  
   return (
     <>
       {/* Decoraciones opcionales (solo para primera sección tipo HeroMain) */}
       {showDecorations && (
         <>
           <div
-            className={`transition-opacity duration-300 mix-blend-overlay sm:w-lg bg-white w-[17.5rem] absolute left-32 sm:left-56 bottom-11 z-50 h-px ${
+            className={`transition-opacity duration-300 mix-blend-overlay sm:w-[28.1vw] bg-white w-[17.5rem] absolute left-32 sm:left-56 bottom-11 z-50 h-px ${
               isLastFrame ? "opacity-100" : "opacity-0"
             }`}
           />

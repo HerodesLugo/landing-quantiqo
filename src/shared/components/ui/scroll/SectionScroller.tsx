@@ -7,18 +7,16 @@ import { SectionScrollerProps } from "./types";
 import { useSectionStore, NavigationTarget } from "@/shared/store/useSectionStore";
 import { HERO_CHECKPOINTS, OUTSIDE_CHECKPOINTS } from "@/shared/components/landing-proposal/hero-section/data";
 
-// Mapa: NavigationTarget → { sectionIndex, checkpointIndex }
-// sectionIndex 0 = FIRST_SECTION_CONFIG (Hero), 1 = SECOND_SECTION_CONFIG (Outside)
 const NAV_TARGET_MAP: Record<
   NonNullable<NavigationTarget>,
   { sectionIndex: number; checkpointIndex: number }
 > = {
-  HOME: { sectionIndex: 0, checkpointIndex: HERO_CHECKPOINTS.FIRST },
-  PROJECTS: { sectionIndex: 0, checkpointIndex: HERO_CHECKPOINTS.PROJECTS },
+  HOME:       { sectionIndex: 0, checkpointIndex: HERO_CHECKPOINTS.FIRST },
+  PROJECTS:   { sectionIndex: 0, checkpointIndex: HERO_CHECKPOINTS.PROJECTS },
   INDUSTRIES: { sectionIndex: 1, checkpointIndex: OUTSIDE_CHECKPOINTS.INDUSTRIES },
-  SOLUTIONS: { sectionIndex: 1, checkpointIndex: OUTSIDE_CHECKPOINTS.SOLUTIONS },
-  CLIENTS: { sectionIndex: 1, checkpointIndex: OUTSIDE_CHECKPOINTS.TESTIMONIALS },
-  ABOUT: { sectionIndex: 1, checkpointIndex: OUTSIDE_CHECKPOINTS.BACKED },
+  SOLUTIONS:  { sectionIndex: 1, checkpointIndex: OUTSIDE_CHECKPOINTS.SOLUTIONS },
+  CLIENTS:    { sectionIndex: 1, checkpointIndex: OUTSIDE_CHECKPOINTS.TESTIMONIALS },
+  ABOUT:      { sectionIndex: 1, checkpointIndex: OUTSIDE_CHECKPOINTS.BACKED },
 };
 
 const SectionScroller = ({ children }: SectionScrollerProps) => {
@@ -27,7 +25,7 @@ const SectionScroller = ({ children }: SectionScrollerProps) => {
   const sectionRefs = useRef<HTMLDivElement[]>([]);
   const currentIndexRef = useRef(0);
 
-  const { navigationTarget, navigateTo } = useSectionStore();
+  const { navigationTarget, navigateTo, setSectionActiveName } = useSectionStore();
 
   const sections = React.Children.toArray(children);
 
@@ -38,7 +36,6 @@ const SectionScroller = ({ children }: SectionScrollerProps) => {
     currentIndexRef,
   });
 
-  // Escuchar el navigationTarget del store y ejecutar la navegación programática
   useEffect(() => {
     if (!navigationTarget) return;
 
@@ -47,11 +44,9 @@ const SectionScroller = ({ children }: SectionScrollerProps) => {
 
     const { sectionIndex, checkpointIndex } = target;
 
-    // 1. Cambiar de AnimatedSection si es necesario
     gotoSection(sectionIndex);
+    setSectionActiveName(navigationTarget);
 
-    // 2. Saltar al checkpoint dentro de ese AnimatedSection
-    //    requestAnimationFrame garantiza que el cambio de sección se aplique antes
     const sectionRef = childRefs.current[sectionIndex];
     if (sectionRef?.jumpToCheckpoint) {
       requestAnimationFrame(() => {
@@ -59,9 +54,8 @@ const SectionScroller = ({ children }: SectionScrollerProps) => {
       });
     }
 
-    // 3. Limpiar el target para permitir futuras navegaciones al mismo destino
     navigateTo(null);
-  }, [navigationTarget, navigateTo, gotoSection]);
+  }, [navigationTarget, navigateTo, gotoSection, setSectionActiveName]);
 
   const renderChild = (child: React.ReactNode, i: number) => {
     const isValidElement = React.isValidElement(child);

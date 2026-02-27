@@ -1,4 +1,5 @@
 import ArrowUpRight from "@/shared/components/ui/icon/ArrowUpRight";
+import { NavigationTarget } from "@/shared/store/useSectionStore";
 
 interface SubMenuItem {
   label: string;
@@ -15,8 +16,15 @@ export interface SubMenuData {
   rightColumn?: SubMenuColumn;
 }
 
-
-const SubMenu = ({ data }: { data: SubMenuData }) => {
+const SubMenu = ({
+  data,
+  navTarget,
+  onNavigate,
+}: {
+  data: SubMenuData;
+  navTarget?: NavigationTarget;
+  onNavigate: (_target: NavigationTarget) => void;
+}) => {
   return (
     <div className="absolute flex left-0 top-10 backdrop-blur-md border border-base-purple-100/50 bg-[rgba(52,_55,_66,_0.50)] rounded-l-[25px] rounded-r-[1.5625rem]">
       <div className="backdrop-blur-md bg-base-purple-200/50 p-8 pr-0 flex flex-col items-start gap-7  z-20 rounded-[1.5625rem] relative">
@@ -36,9 +44,14 @@ const SubMenu = ({ data }: { data: SubMenuData }) => {
           </div>
           <div className="size-16 "></div>
         </div>
-        <div className="absolute right-4 bottom-4 flex items-center justify-center text-primary-100 cursor-pointer hover:scale-110 transition-transform">
-          <ArrowUpRight />
-        </div>
+        {navTarget && (
+          <button
+            onClick={() => onNavigate(navTarget)}
+            className="absolute right-4 bottom-4 flex items-center justify-center text-primary-100 cursor-pointer hover:scale-110 transition-transform"
+          >
+            <ArrowUpRight />
+          </button>
+        )}
       </div>
       {data.rightColumn && (
         <div className="p-8 flex flex-col items-start gap-7 rounded-r-[1.5625rem]">
@@ -62,3 +75,4 @@ const SubMenu = ({ data }: { data: SubMenuData }) => {
 };
 
 export default SubMenu;
+

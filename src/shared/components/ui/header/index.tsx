@@ -13,6 +13,7 @@ const Header: React.FC = () => {
 
   const handleToggle = () => setToggleMenu((prev) => !prev);
 
+
   return (
     <header
       className={`fixed right-0 left-0 sm:h-28 flex items-center max-sm:py-10 py-5 max-sm:px-5 sm:max-w-[calc(100%-8.25rem)] mx-auto z-[100] box-border duration-300 justify-between transition-all ${

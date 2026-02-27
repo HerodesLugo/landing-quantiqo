@@ -63,7 +63,7 @@ const Navigation = () => {
                   onMouseLeave={handleMouseLeave}
                   className="absolute top-0 pt-6 left-0"
                 >
-                  <SubMenu data={menu.subMenu!} />
+                  <SubMenu data={menu.subMenu!} navTarget={menu.navTarget} onNavigate={navigateTo} />
                 </div>
               )}
             </div>
