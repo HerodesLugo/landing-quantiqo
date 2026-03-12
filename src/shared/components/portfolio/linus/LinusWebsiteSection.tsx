@@ -1,0 +1,21 @@
+import Image from "next/image";
+import SectionLabel from "@/shared/components/portfolio/common/SectionLabel";
+
+const LinusWebsiteSection = () => (
+  <div className="flex flex-col">
+    <div className="h-[67.5rem]">
+      <Image
+        src="/images/portfolios/linus/banner-4.webp"
+        className="object-cover size-full"
+        width={5760}
+        height={3240}
+        alt="banner"
+      />
+    </div>
+    <div className="inline-flex flex-col justify-start items-start gap-1.5 mt-8">
+      <SectionLabel title="website" subtitle="UI / UX and Final Launch" />
+    </div>
+  </div>
+);
+
+export default LinusWebsiteSection;

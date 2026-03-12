@@ -3,10 +3,10 @@
 @import "./layer.css";
 
 
-html {
+/* html {
   overflow: hidden;
   overscroll-behavior: contain;
-}
+} */
 /* En tu CSS global o globals.css */
 .scene {
   perspective: 2000px;
@@ -208,6 +208,10 @@ html {
   --color-primary-900: #1b465e;
   --color-primary-950: #0c2c40;
 
+  --color-accelera: #5CDE66;
+  --color-sozialens: #1D7EFF;
+  --color-rise-labs: #80BFA8;
+  --color-intentx: #BD2738;
   --color-base-50: #ffffff;
   --color-base-100: #ebebeb;
   --color-base-200: #c8c8c8;
@@ -274,4 +278,14 @@ html {
 
   /* 1280px: 48px | 1920px: 72px (Reducción muy significativa) */
   --text-6xl: clamp(3rem, 0rem + 3.75vw, 4.5rem);
+
+  /* Fonts */
+  --font-satoshi: 'Satoshi', sans-serif;
+  --font-host: var(--font-host, 'Host Grotesk', sans-serif);
+  --font-instrument-sans: var(--font-instrument-sans, 'Instrument Sans', sans-serif);
+  --font-dm-sans: var(--font-dm-sans, 'DM Sans', sans-serif);
+  --font-bungee: var(--font-bungee, 'Bungee', cursive);
+  --font-cardo: var(--font-cardo, 'Cardo', serif);
+  --font-poppins: var(--font-poppins, 'Poppins', sans-serif);
+  --font-space-grotesk: var(--font-space-grotesk, 'Space Grotesk', sans-serif);
 }

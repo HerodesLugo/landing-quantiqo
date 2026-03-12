@@ -11,6 +11,7 @@ import IconStack from "@/shared/components/landing-proposal/hero-section/common/
 
 interface FooterProps {
   isActive: boolean;
+  className?: string;
 }
 
 const LOCATIONS = [
@@ -26,7 +27,7 @@ const LOCATIONS = [
   },
 ];
 
-const Footer = ({ isActive }: FooterProps) => {
+const Footer = ({ isActive, className }: FooterProps) => {
   const container = useRef<HTMLElement>(null);
   const tl = useRef<gsap.core.Timeline | null>(null);
   const { setSectionActiveName } = useSectionStore();
@@ -106,7 +107,7 @@ const Footer = ({ isActive }: FooterProps) => {
     <section
       ref={container}
       id="footer"
-      className={`h-dvh sm:p-20 p-5 max-sm:pb-32 transition-transform duration-700 ease-in-out overflow-hidden fixed inset-0  ${isActive ? "translate-y-0  " : "translate-y-full opacity-0"}`}
+      className={`h-dvh sm:p-20 p-5 max-sm:pb-32 transition-transform duration-700 ease-in-out overflow-hidden fixed inset-0  ${isActive ? "translate-y-0  " : "translate-y-full opacity-0"} ${className}`}
     >
       {isActive && <HoverGlass />}
 

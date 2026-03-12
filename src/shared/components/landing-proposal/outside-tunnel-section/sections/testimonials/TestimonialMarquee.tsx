@@ -5,7 +5,7 @@ import { MARQUEE_LOGOS } from "./data";
 export const TestimonialMarquee = () => {
   return (
     <div className="w-full 2xl:mt-10  sm:pr-20">
-      <Marquee speed={40}>
+      <Marquee autoFill speed={40}>
         {MARQUEE_LOGOS.map((value) => (
           <Image
             key={value}

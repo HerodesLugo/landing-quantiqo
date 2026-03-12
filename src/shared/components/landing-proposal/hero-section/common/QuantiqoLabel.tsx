@@ -8,7 +8,9 @@ interface QuantiqoLabelProps {
 const QuantiqoLabel = ({ label, classNameLabel }: QuantiqoLabelProps) => {
   return (
     <div className="flex  items-center gap-2">
+      <span className="text-primary-100">
       <Quantiqo />
+      </span>
       <div className={`text-left text-sm font-light  ${classNameLabel}`}>
         {label}
       </div>
