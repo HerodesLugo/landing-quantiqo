@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const OverflowBanner = () => {
   return (
-    <div className="h-[83.0625rem] relative overflow-hidden">
+    <div className="md:h-[83.0625rem] relative overflow-hidden max-md:hidden">
       <Image
         src="/images/portfolios/accelera/accelera-banner-6.webp"
         alt=""

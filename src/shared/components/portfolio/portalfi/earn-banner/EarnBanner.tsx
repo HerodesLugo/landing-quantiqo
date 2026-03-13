@@ -1,11 +1,9 @@
 import Image from "next/image";
 
-// ─── EarnBanner ───────────────────────────────────────────────────────────────
-// Banner with a curve overlay, radial gradient glow, watermark text "Earn",
-// and the main banner image stacked on top.
+
 
 const EarnBanner = () => (
-  <div className="flex justify-center overflow-hidden relative">
+  <div className=" hidden md:flex justify-center overflow-hidden relative">
     {/* Curve overlay */}
     <div className="absolute inset-0 flex items-center">
       <Image

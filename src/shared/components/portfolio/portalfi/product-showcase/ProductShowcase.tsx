@@ -1,14 +1,10 @@
 import Image from "next/image";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-
 type ProductItem = {
   imageSrc: string;
   title: string;
   subtitle: string;
 };
-
-// ─── Data ─────────────────────────────────────────────────────────────────────
 
 const PRODUCTS: ProductItem[] = [
   {
@@ -23,10 +19,8 @@ const PRODUCTS: ProductItem[] = [
   },
 ];
 
-// ─── Sub-component ────────────────────────────────────────────────────────────
-
 const ProductCard = ({ imageSrc, title, subtitle }: ProductItem) => (
-  <div className="w-1/2 h-[43rem] flex flex-col gap-9">
+  <div className="md:w-1/2  md:h-[43rem]  w-full flex flex-col gap-9">
     <div className="bg-dark">
       <Image
         src={imageSrc}
@@ -36,21 +30,19 @@ const ProductCard = ({ imageSrc, title, subtitle }: ProductItem) => (
         width={1569}
       />
     </div>
-    <div className="flex flex-col">
-      <div className="w-96 justify-start text-black text-4xl font-semibold font-['Host_Grotesk'] uppercase tracking-[3.60px]">
+    <div className="flex flex-col px-5">
+      <div className="w-96 justify-start text-black text-2xl md:text-4xl font-semibold font-['Host_Grotesk'] uppercase tracking-[3.60px]">
         {title}
       </div>
-      <div className="w-[836px] opacity-50 justify-start text-zinc-800 text-xl font-normal font-['Host_Grotesk']">
+      <div className="w-[836px] opacity-50 justify-start text-zinc-800  md:text-xl font-normal font-['Host_Grotesk']">
         {subtitle}
       </div>
     </div>
   </div>
 );
 
-// ─── Public component ─────────────────────────────────────────────────────────
-
 const ProductShowcase = () => (
-  <div className="flex h-[50rem] items-center gap-5 px-5 my-5">
+  <div className="flex md:h-[50rem] items-center gap-5 md:px-5 my-5 max-md:flex-col">
     {PRODUCTS.map((product) => (
       <ProductCard key={product.title} {...product} />
     ))}

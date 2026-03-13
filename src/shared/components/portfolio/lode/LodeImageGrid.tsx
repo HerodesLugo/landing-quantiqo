@@ -57,7 +57,7 @@ const LodeImageGrid = () => {
           width={3756}
         />
       </div>
-      <div className="h-[68.5rem] bg-accelera col-span-2">
+      {/* <div className="h-[68.5rem] bg-accelera col-span-2">
         <Image
           src="/images/portfolios/lode/grid-7.webp"
           alt="logo"
@@ -65,7 +65,7 @@ const LodeImageGrid = () => {
           height={2112}
           width={3756}
         />
-      </div>
+      </div> */}
     </div>
   );
 };

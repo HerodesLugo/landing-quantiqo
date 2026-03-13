@@ -2,8 +2,8 @@ import Image from "next/image";
 
 const DualBanner = () => {
   return (
-    <div className="flex h-[33.25rem] overflow-hidden gap-5">
-      <div className="w-1/4 h-full">
+    <div className="flex md:h-[33.25rem] max-md:mt-5 overflow-hidden gap-5 max-md:flex-col max-md:gap-3">
+      <div className="md:w-1/4 w-full max-md:h-[16rem] md:h-full">
         <Image
           src="/images/portfolios/sozialens/banner-download.webp"
           alt=""
@@ -12,7 +12,7 @@ const DualBanner = () => {
           width={1756}
         />
       </div>
-      <div className="h-full">
+      <div className="md:h-full max-md:h-[16rem]">
         <Image
           src="/images/portfolios/sozialens/banner-apps.webp"
           alt=""
@@ -26,3 +26,4 @@ const DualBanner = () => {
 };
 
 export default DualBanner;
+

@@ -4,10 +4,10 @@ import Image from "next/image";
 
 const SozialensVision = () => {
   return (
-    <div className="relative w-full flex items-center justify-center">
+    <div className="relative w-full flex items-center justify-center max-md:flex-col">
       <VisionSection {...SOZIALENS_VISION_DATA} />
 
-      <div className="absolute -top-1">
+      <div className="absolute -top-1 max-md:hidden">
         <Image
           src="/images/portfolios/sozialens/background-dots.png"
           alt=""
@@ -16,10 +16,11 @@ const SozialensVision = () => {
           height={878}
         />
       </div>
-      <div className="w-full justify-end flex pr-10">
+      <div className="w-full md:justify-end flex md:pr-10 justify-center">
         <Image
           src="/images/portfolios/sozialens/vision-decorator.png"
           alt="logo"
+          className="max-md:h-[14.1875rem] max-md:w-[13.9375rem]"
           height={515}
           width={505}
         />

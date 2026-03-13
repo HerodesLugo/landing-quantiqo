@@ -6,6 +6,7 @@ export interface VisionItemData {
 export interface VisionSectionProps {
   heading: string;
   decoratorSrc: string;
+  decoratorMobileSrc?: string;
   items: VisionItemData[];
   isColumn?: boolean;
 }

@@ -1,4 +1,6 @@
 import HeroPortfolio from "@/shared/components/portfolio/common/HeroPortfolio";
+import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
+import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
 import PortfolioOverview from "@/shared/components/portfolio/common/portfolio-overview/PortfolioOverview";
 import {
   ACCELERA_DATA,
@@ -14,19 +16,34 @@ import ProductShowcase from "@/shared/components/portfolio/accelera/product-show
 import CenteredBanner from "@/shared/components/portfolio/accelera/centered-banner/CenteredBanner";
 import FinalBanner from "@/shared/components/portfolio/accelera/final-banner/FinalBanner";
 
+
 const Accelera = () => {
   return (
     <>
       <HeroPortfolio src="/images/portfolios/accelera/accelera-hero.webp" />
       <PortfolioOverview {...ACCELERA_DATA} />
-      <HeroPortfolio src="/images/portfolios/accelera/banner-accelera.webp" />
+      {/* <HeroPortfolio src="/images/portfolios/accelera/banner-accelera.webp" /> */}
+      <ProjectVideo
+        src={VIDEO_ASSETS.accelera.launch}
+        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#0E160C]"
+        videoClassName="w-full h-full object-cover"
+      />
       <VisionSection {...ACCELERA_VISION_DATA} />
       <AcceleraBentoGrid />
-      <HeroPortfolio src="/images/portfolios/accelera/banner-2-accelera.webp" />
-      <FontView fontName="Instrument Sans" fontClass="font-['Instrument Sans']" gradientClass="from-green-500 to-green-200" />
-      <TypographyShowcase />
+      <div className="max-md:my-5">
+        <HeroPortfolio src="/images/portfolios/accelera/banner-2-accelera.webp" />
+      </div>
+      <div className="hidden md:block">
+        <FontView
+          fontName="Instrument Sans"
+          fontClass="font-['Instrument Sans']"
+          gradientClass="from-green-500 to-green-200"
+        />
+        <TypographyShowcase />
+      </div>
+
       <TwoImageGrid />
-      <div className="my-5">
+      <div className="md:my-5">
         <HeroPortfolio src="/images/portfolios/accelera/accelera-banner-5.webp" />
       </div>
       <OverflowBanner />

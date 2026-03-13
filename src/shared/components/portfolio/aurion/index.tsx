@@ -24,28 +24,30 @@ const Aurion = () => {
 
       <AurionVisionLayout />
 
-      <AurionBentoGrid />
+      <div className="hidden md:block">
+        <AurionBentoGrid />
 
-      <div className="h-[67.5rem] flex items-center justify-center mb-10">
-        <Image
-          src="/images/portfolios/aurion/banner-2.webp"
-          className="object-cover size-full"
-          width={7680}
-          height={4316}
-          alt="banner"
-        />
-      </div>
+        <div className="h-[67.5rem] flex items-center justify-center mb-10">
+          <Image
+            src="/images/portfolios/aurion/banner-2.webp"
+            className="object-cover size-full"
+            width={7680}
+            height={4316}
+            alt="banner"
+          />
+        </div>
 
-      <AurionProductShowcase />
+        <AurionProductShowcase />
 
-      <div className="h-[67.5rem] flex items-center justify-center mb-10">
-        <Image
-          src="/images/portfolios/aurion/banner-3.webp"
-          className="object-cover size-full"
-          width={7680}
-          height={4316}
-          alt="banner"
-        />
+        <div className="h-[67.5rem] flex items-center justify-center mb-10">
+          <Image
+            src="/images/portfolios/aurion/banner-3.webp"
+            className="object-cover size-full"
+            width={7680}
+            height={4316}
+            alt="banner"
+          />
+        </div>
       </div>
 
     </>

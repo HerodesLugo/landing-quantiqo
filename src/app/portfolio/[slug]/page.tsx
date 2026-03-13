@@ -45,7 +45,7 @@ const PortfolioPage = async ({ params }: PortfolioPageProps) => {
   }
 
   return (
-    <main className="bg-[#EEF2F6] relative">
+    <main className="bg-[#EEF2F6] relative overflow-hidden">
       <div className="max-w-[120rem] mx-auto">
         <ProjectComponent />
         <div className="relative">

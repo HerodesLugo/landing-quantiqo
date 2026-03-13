@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const RiseProductShowcase = () => {
   return (
-    <div className="flex w-full gap-5">
-      <div className="flex flex-col w-1/2 gap-8">
-        <div className=" bg-red-500  h-[37.6875rem]">
+    <div className="flex flex-col md:flex-row w-full gap-5">
+      <div className="flex flex-col w-full md:w-1/2 gap-8">
+        <div className="h-[16rem] md:h-[37.6875rem]">
           <Image
             src="/images/portfolios/rise-labs/website.webp"
             className="object-cover size-full"
@@ -14,11 +14,13 @@ const RiseProductShowcase = () => {
             alt="banner"
           />
         </div>
-        <SectionLabel title="website" subtitle="UI / UX and Final Launch" />
+        <div className="px-5 md:px-0">
+          <SectionLabel title="website" subtitle="UI / UX and Final Launch" />
+        </div>
       </div>
 
-      <div className="flex flex-col w-1/2 gap-8">
-        <div className=" bg-blue-500  h-[37.6875rem]">
+      <div className="hidden md:flex flex-col w-1/2 gap-8">
+        <div className="h-[37.6875rem]">
           <Image
             src="/images/portfolios/rise-labs/product-app.webp"
             className="object-cover size-full"

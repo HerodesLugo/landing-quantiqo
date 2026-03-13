@@ -25,6 +25,7 @@ export const ACCELERA_DATA: PortfolioOverviewProps = {
 export const ACCELERA_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
   decoratorSrc: "/images/portfolios/accelera/acelera-decorator.webp",
+  decoratorMobileSrc: "/images/portfolios/accelera/decorator-mobile.webp",
   items: [
     {
       title: "Challenge",

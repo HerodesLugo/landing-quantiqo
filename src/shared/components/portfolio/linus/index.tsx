@@ -10,6 +10,8 @@ import LinusImageGrid from "./LinusImageGrid";
 import LinusImageCollage from "./LinusImageCollage";
 import LinusWebsiteSection from "./LinusWebsiteSection";
 import LinusNftSection from "./LinusNftSection";
+import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
+import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
 
 const Linus = () => {
   return (
@@ -20,72 +22,72 @@ const Linus = () => {
         src="/images/portfolios/linus/hero.webp"
       />
       <PortfolioOverview {...LINUS_DATA} />
-      <HeroPortfolio
+      {/* <HeroPortfolio
         width={5760}
         height={3240}
         src="/images/portfolios/linus/banner-1.webp"
+      /> */}
+      <ProjectVideo
+        src={VIDEO_ASSETS.linus.video1}
+        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] my-11"
+        videoClassName="w-full h-full object-cover"
       />
-
       <LinusVisionLayout />
 
-      <LinusBentoGrid />
+      <div className="hidden md:block">
+        <LinusBentoGrid />
 
-      <HeroPortfolio
-        width={5760}
-        height={3240}
-        src="/images/portfolios/linus/banner-2.webp"
-      />
-
-      {/* {FONT VIEW INFO} HERE  */}
-      <FontView
-        fontName="DM Sans"
-        fontClass="font-['DM Sans']"
-        gradientClass=""
-      />
-
-      <LinusTypographySection />
-
-      <LinusImageGrid />
-
-      <div className="my-11">
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/linus/banner-3.webp"
+          src="/images/portfolios/linus/banner-2.webp"
         />
-      </div>
 
-      <LinusImageCollage />
+        <FontView
+          fontName="DM Sans"
+          fontClass="font-['DM Sans']"
+          gradientClass=""
+        />
 
-      <div className="flex flex-col gap-5">
-        <LinusWebsiteSection />
+        <LinusTypographySection />
 
-        <div className="h-[75rem] overflow-hidden">
-          <Image
-            src="/images/portfolios/linus/banner-5.webp"
-            className="object-cover"
+        <LinusImageGrid />
+
+        <div className="my-11">
+          <HeroPortfolio
             width={5760}
             height={3240}
-            alt="banner"
+            src="/images/portfolios/linus/banner-3.webp"
           />
         </div>
 
-        <div className="flex flex-col mb-11">
-          <div className=" overflow-hidden flex justify-center ">
-            <Image
-              src="/images/portfolios/linus/banner-7.webp"
-              className=" w-[96rem] h-[55.375rem] "
-              width={5760}
-              height={3240}
-              alt="banner"
-            />
-          </div>
-          <div className="flex flex-col gap-11">
-            <LinusNftSection />
+        <LinusImageCollage />
+
+        <div className="flex flex-col gap-5">
+          <LinusWebsiteSection />
+
+          <ProjectVideo
+            src={VIDEO_ASSETS.linus.video2}
+            containerClassName="h-[28rem] md:h-[50rem] xl:h-[75rem] bg-[#141622] my-11"
+            videoClassName="w-full h-full object-cover"
+          />
+
+          <div className="flex flex-col mb-11">
+            <div className="overflow-hidden flex justify-center">
+              <Image
+                src="/images/portfolios/linus/banner-7.webp"
+                className="w-full xl:w-[96rem] h-auto xl:h-[55.375rem] object-cover"
+                width={5760}
+                height={3240}
+                alt="banner"
+              />
+            </div>
+            <div className="flex flex-col gap-11">
+              <LinusNftSection />
+            </div>
           </div>
         </div>
       </div>
-
     </>
   );
 };

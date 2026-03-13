@@ -25,6 +25,7 @@ export const CARBON_DATA: PortfolioOverviewProps = {
 export const CARBON_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
   decoratorSrc: "/images/portfolios/CARBON/acelera-decorator.webp",
+  decoratorMobileSrc: "",
   items: [
     {
       title: "Challenge",

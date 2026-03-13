@@ -4,7 +4,7 @@ import Image from "next/image";
 // Section with a top decorator and three phones in the foreground.
 
 const ThreePhonesBanner = () => (
-  <div className="relative justify-center h-[66.3125rem] flex overflow-hidden">
+  <div className="relative justify-center h-[66.3125rem] hidden md:flex overflow-hidden">
     {/* Top decorator */}
     <div className="absolute top-0">
       <Image

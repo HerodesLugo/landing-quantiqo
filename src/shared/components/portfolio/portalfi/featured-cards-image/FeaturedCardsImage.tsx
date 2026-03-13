@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const FeaturedCardsImage = () => (
-  <div className="h-[42.625rem] my-28 relative">
+  <div className="h-[42.625rem] my-28 relative max-md:hidden">
     <div className="max-w-[101.25rem]  mx-auto">
       <Image
         src="/images/portfolios/portalfi/portalfi-cards.webp"

@@ -2,21 +2,21 @@ import Image from "next/image";
 
 const TwoImageGrid = () => {
   return (
-    <div className="h-[40rem] flex gap-5">
-      <div className="w-1/2 bg-[#1A1F22] overflow-hidden">
+    <div className="md:h-[40rem] flex gap-5 max-md:flex-col max-md:mb-5">
+      <div className="md:w-1/2 w-full bg-[#1A1F22] overflow-hidden">
         <Image
           src="/images/portfolios/accelera/accelera-grid-2.webp"
           alt=""
-          className="size-full"
+          className="size-full object-cover"
           height={1080}
           width={1920}
         />
       </div>
-      <div className="w-1/2 bg-[#1A1F22] overflow-hidden">
+      <div className="md:w-1/2 w-full bg-[#1A1F22] overflow-hidden">
         <Image
           src="/images/portfolios/accelera/accelera-grid-1.webp"
           alt=""
-          className="size-full"
+          className="size-full object-cover"
           height={1080}
           width={1920}
         />

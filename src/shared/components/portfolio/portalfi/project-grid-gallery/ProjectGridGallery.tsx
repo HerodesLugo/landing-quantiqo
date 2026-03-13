@@ -1,11 +1,8 @@
 import Image from "next/image";
 
-// ─── ProjectGridGallery ───────────────────────────────────────────────────────
-// A 12-column CSS grid displaying a gallery of project images.
-
 const ProjectGridGallery = () => {
   return (
-    <div className="h-[62.5625rem] grid grid-cols-12 grid-rows-2 gap-5 my-10">
+    <div className="h-[62.5625rem] grid grid-cols-12 grid-rows-2 gap-5 my-10 max-md:hidden">
       <div className="col-span-3 bg-blue-700 overflow-hidden">
         <Image
           src="/images/portfolios/portalfi/portalfi-card.webp"

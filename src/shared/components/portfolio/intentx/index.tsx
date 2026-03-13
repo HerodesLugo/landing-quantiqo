@@ -19,62 +19,42 @@ const Intentx = () => {
         src="/images/portfolios/intentx/hero.webp"
       />
       <PortfolioOverview {...INTENTX_DATA} />
-      <HeroPortfolio
-        width={5760}
-        height={3240}
-        src="/images/portfolios/intentx/banner-1.webp"
-      />
-
       <IntentxVisionLayout />
-      <IntentxBentoGrid />
 
-      <FontView
-        fontName="DM Sans"
-        fontClass="font-dm-sans"
-        gradientClass=""
-      />
-
-      <IntentxTypographySection />
-      <IntentxProductGrid />
-
-      <div className="my-11">
-        <HeroPortfolio
-          width={5760}
-          height={3240}
-          src="/images/portfolios/intentx/banner-1.webp"
-        />
+      <div className="hidden md:block">
+        <IntentxBentoGrid />
+        <FontView fontName="DM Sans" fontClass="font-dm-sans" gradientClass="" />
+        <IntentxTypographySection />
+        <IntentxProductGrid />
+        <div className="h-[46.875rem] mt-11 flex justify-center">
+          <Image
+            src="/images/portfolios/intentx/tablet.webp"
+            alt=""
+            width={5760}
+            height={3240}
+            className="w-[80rem] h-[46.875rem] relative -bottom-16"
+          />
+        </div>
+        <IntentxFinalGrid />
+        <div className="my-11">
+          <SectionLabel title="website" subtitle="UI / UX and Final Launch" />
+        </div>
+        <div className="h-[62.1875rem] flex justify-center">
+          <Image
+            src="/images/portfolios/intentx/banner-2.webp"
+            alt=""
+            width={5760}
+            height={3240}
+            className="w-[89.3125rem] h-[62.1875rem]"
+          />
+        </div>
+        <div className="my-11">
+          <SectionLabel
+            title="product / app"
+            subtitle="UI / UX and Final Launch"
+          />
+        </div>
       </div>
-
-      <div className="h-[46.875rem] mt-11 flex justify-center">
-        <Image
-          src="/images/portfolios/intentx/tablet.webp"
-          alt=""
-          width={5760}
-          height={3240}
-          className="w-[80rem] h-[46.875rem] relative -bottom-16"
-        />
-      </div>
-
-      <IntentxFinalGrid />
-
-      <div className="my-11">
-        <SectionLabel title="website" subtitle="UI / UX and Final Launch" />
-      </div>
-
-      <div className="h-[62.1875rem] flex justify-center">
-        <Image
-          src="/images/portfolios/intentx/banner-2.webp"
-          alt=""
-          width={5760}
-          height={3240}
-          className="w-[89.3125rem] h-[62.1875rem]"
-        />
-      </div>
-
-      <div className="my-11">
-        <SectionLabel title="product / app" subtitle="UI / UX and Final Launch" />
-      </div>
-
     </>
   );
 };

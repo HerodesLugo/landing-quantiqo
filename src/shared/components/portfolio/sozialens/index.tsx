@@ -17,14 +17,18 @@ const Sozialens = () => {
       <PortfolioOverview {...SOZIALENS_DATA} />
       <HeroPortfolio src="/images/portfolios/sozialens/banner-1.webp" />
       <SozialensVision />
+
       <DualBanner />
       <FullWidthBanner />
-      <FontView
-        fontName="DM Sans"
-        fontClass="font-['DM Sans']"
-        gradientClass="from-[#105FC9] to-[#AED0FF]"
-      />
-      <TypographyShowcase />
+      <div className="hidden md:block">
+        <FontView
+          fontName="DM Sans"
+          fontClass="font-['DM Sans']"
+          gradientClass="from-[#105FC9] to-[#AED0FF]"
+        />
+        <TypographyShowcase />
+      </div>
+
       <ProductBanner />
       <LayeredBanner />
       <FinalBanner />
