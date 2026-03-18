@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FullWidthBanner = () => {
   return (
-    <div className="md:h-[68.5rem] my-5 w-full overflow-hidden">
+    <div className="xl:h-[68.5rem] my-5 w-full overflow-hidden">
       <Image
         src="/images/portfolios/sozialens/banner-2.webp"
         alt=""

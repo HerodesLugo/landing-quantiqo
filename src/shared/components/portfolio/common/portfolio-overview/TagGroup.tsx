@@ -2,7 +2,7 @@ import TagLabel from "./TagLabel";
 import { TagGroupData } from "./types";
 
 const TagGroup = ({ title, tags, columns = 2 }: TagGroupData) => {
-  const gridColsClass = columns === 3 ? "grid-cols-2 md:grid-cols-3" : "grid-cols-2";
+  const gridColsClass = columns === 3 ? "grid-cols-2 xl:grid-cols-3" : "grid-cols-2";
   return (
     <div className="flex flex-col gap-3 md:gap-5">
       <h4 className="text-dark text-lg md:text-xl xl:text-2xl font-semibold uppercase tracking-[2.4px]">

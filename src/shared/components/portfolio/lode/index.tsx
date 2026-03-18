@@ -8,6 +8,7 @@ import LodeImageGrid from "./LodeImageGrid";
 import LodeVisionLayout from "./LodeVisionLayout";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
 import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const Lode = () => {
   return (
@@ -17,43 +18,50 @@ const Lode = () => {
         height={3240}
         src="/images/portfolios/lode/hero.webp"
       />
-      <PortfolioOverview {...LODE_DATA} />
-      <HeroPortfolio
-        width={5760}
-        height={3240}
-        src="/images/portfolios/lode/banner-1.webp"
-      />
-      <LodeVisionLayout />
+      <ScrollReveal variant="fadeUp">
+        <PortfolioOverview {...LODE_DATA} />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <HeroPortfolio
+          width={5760}
+          height={3240}
+          src="/images/portfolios/lode/banner-1.webp"
+        />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp">
+        <LodeVisionLayout />
+      </ScrollReveal>
 
-      <div className="hidden md:block">
+      <ScrollReveal variant="staggerChildren">
         <LodeImageGrid />
-      </div>
+      </ScrollReveal>
 
-      <ProjectVideo
-        src={VIDEO_ASSETS.lode.video1}
-        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] mb-11"
-        videoClassName="w-full h-full object-cover"
-      />
+      <ScrollReveal variant="fadeIn">
+        <ProjectVideo
+          src={VIDEO_ASSETS.lode.video1}
+          containerClassName="h-[220px] md:h-[48rem] xl:h-[69rem] bg-[#141622] mb-5 md:mb-11"
+          videoClassName="w-full h-full object-cover"
+        />
+      </ScrollReveal>
 
-      <div className="hidden md:block">
-        <div className="mt-11">
-          <SectionLabel title="Launch video" subtitle="Motions Graphics and 3D" />
-        </div>
+      <ScrollReveal variant="fadeUp" className="mt-5 md:mt-11">
+        <SectionLabel title="Launch video" subtitle="Motions Graphics and 3D" />
+      </ScrollReveal>
+      <ScrollReveal variant="staggerChildren">
         <LodeBentoGrid />
-        <div className="my-11">
-          <SectionLabel title="product" subtitle="UI / UX and Final Launch" />
-        </div>
-        <div className="my-11 flex justify-center items-center">
-          <Image
-            width={5760}
-            height={3240}
-            src="/images/portfolios/lode/banner-2.webp"
-            alt=""
-            className="w-full xl:w-[96.9375rem] h-auto xl:h-[71.1875rem] object-cover"
-          />
-        </div>
-      </div>
-
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp" className="my-5 md:my-11">
+        <SectionLabel title="product" subtitle="UI / UX and Final Launch" />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn" className="my-5 md:my-11 flex justify-center items-center">
+        <Image
+          width={5760}
+          height={3240}
+          src="/images/portfolios/lode/banner-2.webp"
+          alt=""
+          className="w-full 2xl:w-[96.9375rem] h-auto 2xl:h-[71.1875rem] object-cover"
+        />
+      </ScrollReveal>
     </>
   );
 };

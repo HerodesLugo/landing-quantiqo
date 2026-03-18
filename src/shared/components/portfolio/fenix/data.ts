@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const FENIX_DATA: PortfolioOverviewProps = {
-  title: "FENIX FINANCES.",
+  title: "FENIX FINANCES",
   description:
     "Fenix Finance is a marketplace where protocols compete for liquidity, users earn by voting and providing funds, and traders enjoy efficient exchange. All of this is made possible by the native yield (automatic interest) offered by the Blast network.",
   infoCard: {
@@ -24,7 +24,8 @@ export const FENIX_DATA: PortfolioOverviewProps = {
 
 export const FENIX_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/FENIX/acelera-decorator.webp",
+  decoratorSrc: "",
+  decoratorMobileSrc: "",
   items: [
     {
       title: "Challenge",

@@ -9,6 +9,7 @@ import Image from "next/image";
 import RiseVisionLayout from "./RiseVisionLayout";
 import RiseBentoGrid from "./RiseBentoGrid";
 import RiseProductShowcase from "./RiseProductShowcase";
+import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const RiseLabs = () => {
   return (
@@ -18,16 +19,24 @@ const RiseLabs = () => {
         height={3240}
         src="/images/portfolios/rise-labs/hero.webp"
       />
-      <PortfolioOverview {...RISE_LABS_DATA} />
-      <HeroPortfolio
-        width={5760}
-        height={3240}
-        src="/images/portfolios/rise-labs/banner-1.webp"
-      />
-      <RiseVisionLayout />
+      <ScrollReveal variant="fadeUp">
+        <PortfolioOverview {...RISE_LABS_DATA} />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <HeroPortfolio
+          width={5760}
+          height={3240}
+          src="/images/portfolios/rise-labs/banner-1.webp"
+        />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp">
+        <RiseVisionLayout />
+      </ScrollReveal>
 
-      <RiseBentoGrid />
-      <div className="hidden md:block">
+      <ScrollReveal variant="staggerChildren">
+        <RiseBentoGrid />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp" className="hidden 2xl:block">
         <FontView
           fontName="Host Grotesk"
           fontClass="font-['Host Grotesk']"
@@ -53,9 +62,9 @@ const RiseLabs = () => {
             gradientClass="from-rise-labs to-green-200"
           />
         </div>
-      </div>
+      </ScrollReveal>
 
-      <div className="h-[24rem] md:h-[70rem] flex items-center justify-center">
+      <ScrollReveal variant="fadeIn" className="h-[24rem] md:h-[70rem] flex items-center justify-center">
         <Image
           src="/images/portfolios/rise-labs/banner-2.webp"
           className=" md:w-[56rem] h-[20rem] w-[17.9375rem] md:h-[60.5rem] object-top"
@@ -63,9 +72,11 @@ const RiseLabs = () => {
           height={4316}
           alt="banner"
         />
-      </div>
-      <RiseProductShowcase />
-      <div className="h-[20rem] md:h-[75.1875rem] border mb-11 max-md:my-11">
+      </ScrollReveal>
+      <ScrollReveal variant="scaleIn">
+        <RiseProductShowcase />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn" className="h-[20rem] md:h-[75.1875rem] border mb-11 max-md:my-11">
         <Image
           src="/images/portfolios/rise-labs/banner-final.webp"
           className="object-cover size-full object-top"
@@ -73,7 +84,7 @@ const RiseLabs = () => {
           height={4316}
           alt="banner"
         />
-      </div>
+      </ScrollReveal>
     </>
   );
 };

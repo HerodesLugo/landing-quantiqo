@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const ProductBanner = () => {
   return (
-    <div className="md:h-[70.625rem] flex flex-col gap-9 max-md:gap-5">
+    <div className="flex flex-col gap-9 max-md:gap-5">
       <Image
         src="/images/portfolios/sozialens/banner-3.webp"
         alt=""

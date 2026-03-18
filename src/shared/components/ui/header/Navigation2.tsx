@@ -5,11 +5,15 @@ import ChevronIcon from "@/shared/components/ui/icon/Chevron";
 import { useClickOutside } from "@/shared/hooks/useClickOutside";
 import { useRef, useState } from "react";
 import { useSectionStore } from "@/shared/store/useSectionStore";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navigation = () => {
   const [activeSubMenu, setActiveSubMenu] = useState<number | null>(null);
   const navRef = useRef<HTMLDivElement>(null);
   const { navigateTo } = useSectionStore();
+  const pathname = usePathname();
+  const router = useRouter();
+  const isPortfolioPage = pathname.includes("/portfolio");
 
   const handleMouseEnter = (id: number) => setActiveSubMenu(id);
   const handleMouseLeave = () => setActiveSubMenu(null);
@@ -21,11 +25,17 @@ const Navigation = () => {
   });
 
   const handleNavClick = (menu: (typeof NAV_MENU)[number]) => {
-    // Navegar a la sección destino si existe
-    if (menu.navTarget) {
-      navigateTo(menu.navTarget);
+    if (isPortfolioPage) {
+      if (menu.navTarget) {
+        
+        navigateTo(menu.navTarget);
+        router.push("/");
+      }
+    } else {
+      if (menu.navTarget) {
+        navigateTo(menu.navTarget);
+      }
     }
-    // Cerrar el submenú si está abierto
     setActiveSubMenu(null);
   };
 

@@ -13,7 +13,7 @@ const TypographyAnnotationPanel = ({ titleFontClass = "font-sans" }: TypographyA
     <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_250px] gap-x-8 gap-y-16 items-center w-full">
       {/* Fila 1: Headline */}
       <div className="max-w-md">
-        <h1 className={`text-[52px] md:text-[64px] leading-[0.9] font-black text-white uppercase tracking-wide [-webkit-text-stroke:3px_#111] [text-shadow:4px_4px_0_#111] ${titleFontClass}`}>
+        <h1 className={`text-[52px] md:text-[48px] xl:text-[64px] leading-[0.9] font-black text-white uppercase tracking-wide [-webkit-text-stroke:3px_#111] [text-shadow:4px_4px_0_#111] ${titleFontClass}`}>
           Professional
           <br />
           Dynamic
@@ -61,7 +61,7 @@ const TypographyAnnotationPanel = ({ titleFontClass = "font-sans" }: TypographyA
     <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_250px] gap-x-8 items-start w-full">
       {/* Fila 3: Title */}
       <div className="max-w-md mb-4 md:mb-0">
-        <h2 className={`text-[28px] md:text-[32px] leading-none font-black text-white uppercase tracking-wide [-webkit-text-stroke:2px_#111] [text-shadow:3px_3px_0_#111] ${titleFontClass}`}>
+        <h2 className={`text-[28px] xl:text-[32px] leading-none font-black text-white uppercase tracking-wide [-webkit-text-stroke:2px_#111] [text-shadow:3px_3px_0_#111] ${titleFontClass}`}>
           Features Overview
         </h2>
       </div>

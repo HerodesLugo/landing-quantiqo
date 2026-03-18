@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const NEST_DATA: PortfolioOverviewProps = {
-  title: "NEST.",
+  title: "NEST",
   description:
     "Nest is a DeFi platform on Hyperliquid that merges yield strategies, automated voting, and a meme-powered identity. As the first veTokenomics ecosystem on the network, it features $HYPE staking, veHYPE creation, automated governance, and a built-in incentives engine. With a modular, fast-moving approach, HyperNest redefines how communities earn, vote, and grow together on-chain.",
   infoCard: {

@@ -3,12 +3,18 @@ import { useState, useEffect } from "react";
 const globalImageCache: Record<string, HTMLImageElement[]> = {};
 const globalLoadedStatus: Record<string, boolean> = {};
 
+const SESSION_KEY = "heroImages_loaded";
+
 export const useHeroImages = (totalFrames: number, basePath: string) => {
   const cacheKey = `${basePath}-${totalFrames}`;
-  
-  const [images, setImages] = useState<HTMLImageElement[]>(globalImageCache[cacheKey] || []);
-  const [isLoaded, setIsLoaded] = useState<boolean>(globalLoadedStatus[cacheKey] || false);
-  const [progress, setProgress] = useState<number>(globalLoadedStatus[cacheKey] ? 100 : 0);
+
+  const cachedInMemory = globalLoadedStatus[cacheKey];
+
+  const [images, setImages] = useState<HTMLImageElement[]>(
+    globalImageCache[cacheKey] || [],
+  );
+  const [isLoaded, setIsLoaded] = useState<boolean>(cachedInMemory || false);
+  const [progress, setProgress] = useState<number>(cachedInMemory ? 100 : 0);
 
   useEffect(() => {
     if (globalLoadedStatus[cacheKey]) {
@@ -25,7 +31,7 @@ export const useHeroImages = (totalFrames: number, basePath: string) => {
     const handleImageLoadOrError = (index: number, img: HTMLImageElement) => {
       loadCount++;
       loadedImages[index] = img;
-      
+
       if (!isMounted) return;
 
       setProgress(Math.round((loadCount / totalFrames) * 100));
@@ -33,6 +39,7 @@ export const useHeroImages = (totalFrames: number, basePath: string) => {
       if (loadCount === totalFrames) {
         globalImageCache[cacheKey] = loadedImages;
         globalLoadedStatus[cacheKey] = true;
+        sessionStorage.setItem(SESSION_KEY, "true");
         setImages(loadedImages);
         setIsLoaded(true);
       }
@@ -48,7 +55,7 @@ export const useHeroImages = (totalFrames: number, basePath: string) => {
       }
 
       img.onload = () => handleImageLoadOrError(i - 1, img);
-      img.onerror = () => handleImageLoadOrError(i - 1, img); // Avanzamos a pesar del error de la imagen para no bloquear
+      img.onerror = () => handleImageLoadOrError(i - 1, img);
     }
 
     return () => {

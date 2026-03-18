@@ -21,37 +21,62 @@ import FontWeightsPanel from "@/shared/components/portfolio/common/typography-se
 import ProjectGridGallery from "@/shared/components/portfolio/portalfi/project-grid-gallery/ProjectGridGallery";
 import ThreePhonesBanner from "@/shared/components/portfolio/portalfi/three-phones-banner/ThreePhonesBanner";
 import FinalBanner from "@/shared/components/portfolio/portalfi/final-banner/FinalBanner";
+import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const Portalfi = () => {
   return (
     <div className="font-satoshi">
       <HeroPortfolio src="/images/portfolios/portalfi/hero.webp" />
-      <PortfolioOverview {...PORTAL_FI_DATA} />
-      <HeroPortfolio src="/images/portfolios/portalfi/banner.webp" />
-      <VisionSection {...PORTAL_FI_VISION_DATA} />
-      <div className="hidden md:block">
+      <ScrollReveal variant="fadeUp">
+        <PortfolioOverview {...PORTAL_FI_DATA} />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <HeroPortfolio src="/images/portfolios/portalfi/banner.webp" />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp">
+        <VisionSection {...PORTAL_FI_VISION_DATA} />
+      </ScrollReveal>
+      <ScrollReveal variant="staggerChildren" className="hidden xl:block">
         <ProjectBentoGrid {...PORTAL_FI_BENTO_DATA} />
-      </div>
-      <ProjectVideo
-        src={VIDEO_ASSETS.portalfi.main}
-        containerClassName="h-[13.75rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] max-md:mb-5"
-        videoClassName="w-full h-full"
-      />
-      <div className="hidden md:block">
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <ProjectVideo
+          src={VIDEO_ASSETS.portalfi.main}
+          containerClassName="h-[13.75rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] max-md:mb-5"
+          videoClassName="w-full h-full"
+        />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp" className="hidden 2xl:block">
         <FontView fontName="Satoshi" fontClass="font-['Satoshi']" />
         <div className="flex gap-5 my-10 h-[41.375rem]">
           <TypographyPreviewPanel />
           <FontWeightsPanel FONT_VARIANTS={FONT_VARIANTS_PORTALFI} />
         </div>
-      </div>
-      <ImageGalleryStrip />
-      <FeaturedCardsImage />
-      <EarnBanner />
-      <ProductShowcase />
-      <DualPhonesBanner />
-      <ThreePhonesBanner />
-      <FinalBanner />
-      <ProjectGridGallery />
+      </ScrollReveal>
+      <ScrollReveal variant="staggerChildren">
+        <ImageGalleryStrip />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <FeaturedCardsImage />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <EarnBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="scaleIn">
+        <ProductShowcase />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <DualPhonesBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <ThreePhonesBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <FinalBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="staggerChildren">
+        <ProjectGridGallery />
+      </ScrollReveal>
     </div>
   );
 };

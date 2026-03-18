@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const LINUS_DATA: PortfolioOverviewProps = {
-  title: "LINUS.",
+  title: "LINUS",
   description:
     "Linus is a Web3-native brand rooted in culture, community, and creativity. At its core is Pengmilio, a bold and playful character leading one of the most vibrant movements in the Linea ecosystem. Linus has become a space where people connect through innovation, humor, and shared values.\n\nNow, the brand is scaling—reaching broader audiences, deepening its cultural impact, and building a self sustaining ecosystem where culture moves crypto forward.",
   infoCard: {
@@ -61,7 +61,8 @@ export const LINUS_DATA: PortfolioOverviewProps = {
 
 export const LINUS_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/LINUS/acelera-decorator.webp",
+  decoratorSrc: "",
+  decoratorMobileSrc: "",
   items: [
     {
       title: "Challenge",

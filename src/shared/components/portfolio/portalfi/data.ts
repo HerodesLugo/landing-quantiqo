@@ -5,7 +5,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const PORTAL_FI_DATA: PortfolioOverviewProps = {
-  title: "Portal-Fi.",
+  title: "portalfi",
   description:
     "PortalFi is a new gateway to finance, blending the simplicity of modern banking apps with the powerful returns of decentralized finance. Designed for users who want more from their money, it enables effortless sending, investing, and digital asset management—securely and seamlessly.\n\nWith a modern card-issuing product, Portal-Fi hired us to revamp their branding, pitch and brand assets, website, product, site and visual identity. Along with motion and 3d resources for marketing and other uses.",
   infoCard: {

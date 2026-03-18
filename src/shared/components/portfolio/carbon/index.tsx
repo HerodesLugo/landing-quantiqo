@@ -13,6 +13,8 @@ import CarbonBentoGrid from "./CarbonBentoGrid";
 import CarbonProductSection from "./CarbonProductSection";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
 import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import SectionLabel from "@/shared/components/portfolio/common/SectionLabel";
+import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const Carbon = () => {
   return (
@@ -22,15 +24,21 @@ const Carbon = () => {
         height={3240}
         src="/images/portfolios/carbon/hero.webp"
       />
-      <PortfolioOverview {...CARBON_DATA} />
-      <ProjectVideo
-        src={VIDEO_ASSETS.carbon.chain}
-        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622]"
-        videoClassName="w-full h-full object-cover"
-      />
+      <ScrollReveal variant="fadeUp">
+        <PortfolioOverview {...CARBON_DATA} />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <ProjectVideo
+          src={VIDEO_ASSETS.carbon.chain}
+          containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622]"
+          videoClassName="w-full h-full object-cover"
+        />
+      </ScrollReveal>
 
-      <CarbonVisionLayout />
-      <div className="h-[20rem] md:h-[92.375rem]">
+      <ScrollReveal variant="fadeUp">
+        <CarbonVisionLayout />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn" className="h-[20rem] md:h-[92.375rem]">
         <Image
           src="/images/portfolios/carbon/banner-2.webp"
           alt=""
@@ -38,8 +46,8 @@ const Carbon = () => {
           height={7668}
           width={6124}
         />
-      </div>
-      <div className="hidden md:block">
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp" className="hidden 2xl:block">
         <FontView
           fontName="Plus Jakarta Sans"
           fontClass="font-['Plus Jakarta Sans']"
@@ -65,8 +73,8 @@ const Carbon = () => {
             gradientClass=""
           />
         </div>
-      </div>
-      <div className="h-[14rem] md:h-[67.5rem] flex items-center justify-center mb-5 md:mb-10">
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn" className="h-[14rem] md:h-[67.5rem] flex items-center justify-center mb-5 md:mb-10">
         <Image
           src="/images/portfolios/carbon/banner-3.webp"
           className="object-cover size-full"
@@ -74,16 +82,36 @@ const Carbon = () => {
           height={4316}
           alt="banner"
         />
-      </div>
+      </ScrollReveal>
 
-      <CarbonBentoGrid />
-      <CarbonProductSection />
+      <ScrollReveal variant="staggerChildren">
+        <CarbonBentoGrid />
+      </ScrollReveal>
+      <ScrollReveal variant="scaleIn">
+        <CarbonProductSection />
+      </ScrollReveal>
 
-      <ProjectVideo
-        src={VIDEO_ASSETS.carbon.portraitDiscord}
-        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] mb-11"
-        videoClassName="w-full h-full object-cover"
-      />
+      <ScrollReveal variant="fadeIn">
+        <ProjectVideo
+          src={VIDEO_ASSETS.carbon.portraitDiscord}
+          containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] mb-11"
+          videoClassName="w-full h-full object-cover"
+        />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp" className="my-5 md:my-11 flex flex-col gap-5 max-md:px-0 px-7">
+        <div>
+          <Image
+            src="/images/portfolios/carbon/banner-6.webp"
+            alt=""
+            className="object-cover w-full max-md:h-[14rem] xl:h-[69.125rem]"
+            width={2748}
+            height={1491}
+          />
+        </div>
+        <div className="">
+          <SectionLabel title="product / app" subtitle="UI / UX and Final Launch" />
+        </div>
+      </ScrollReveal>
     </>
   );
 };

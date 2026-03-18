@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const SOZIALENS_DATA: PortfolioOverviewProps = {
-  title: "SOZIALENS.",
+  title: "SOZIALENS",
   description:
     "Sozialens is a platform that connects businesses with thematic social media accounts to boost visibility without relying on traditional influencers. It offers an intuitive interface, customizable ad campaigns, and transparent metrics—all with a secure and efficient approach to reaching broad and targeted audiences.\n\nSozialens hired us to revamp their branding, pitch and brand assets, website, product, site and visual identity. Along with motion and 3d resources for marketing and other uses.",
   infoCard: {

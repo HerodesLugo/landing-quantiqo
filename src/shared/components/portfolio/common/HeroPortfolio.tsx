@@ -8,7 +8,7 @@ interface HeroPortfolioProps {
 }
 const HeroPortfolio = ({ src, height, width }: HeroPortfolioProps) => {
   return (
-    <div className="w-full max-h-[280px] md:max-h-[600px] xl:max-h-[1001px] overflow-hidden">
+    <div className="w-full h-[390px] md:h-[600px] xl:h-[1001px] overflow-hidden">
       <Image
         src={src}
         alt="Hero"

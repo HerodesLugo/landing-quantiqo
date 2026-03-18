@@ -14,7 +14,7 @@ const ProjectInfoCard = ({
   websiteUrl,
 }: ProjectInfoCardData) => {
   return (
-    <div className="bg-white relative max-w-[90%] md:max-w-[46.25rem] flex flex-col justify-between w-full md:max-h-[36.8125rem] rounded-b-[2.5rem] md:rounded-b-none md:rounded-bl-[6.125rem] p-6 md:p-10 xl:p-14">
+    <div className="bg-white relative  max-xl:max-w-[90%] max-w-[33.75rem] max-h-[33rem] max-xl:max-h-[25rem]  2xl:max-w-[46.25rem] flex flex-col justify-between w-full 2xl:max-h-[36.8125rem] rounded-b-[2.5rem] xl:rounded-b-none xl:rounded-bl-[6.125rem] p-6 md:p-10 xl:p-14">
 
       {logoSrc && (
         <div className="flex absolute right-8 md:right-16 xl:right-20 justify-end">
@@ -23,7 +23,7 @@ const ProjectInfoCard = ({
             alt={`${industry} logo`}
             height={192}
             width={192}
-            className={`${logoClassName} object-cover !w-16 !h-16 md:!w-24 md:!h-24 xl:!w-[120px] xl:!h-[120px]`}
+            className={`${logoClassName} object-contain max-xl:size-20 `}
           />
         </div>
       )}
@@ -38,16 +38,16 @@ const ProjectInfoCard = ({
           </span>
         </div>
 
-        <div className="flex justify-between w-full md:justify-start md:gap-5">
+        <div className="flex justify-between w-full gap-3 md:gap-5 overflow-hidden">
           {stats.map((stat) => (
-            <div key={stat.label} className="flex-1 md:flex-none md:w-auto pr-1 md:pr-0">
+            <div key={stat.label} className="flex-1 min-w-0">
               <StatItem value={stat.value} label={stat.label} />
             </div>
           ))}
         </div>
       </div>
 
-      <div className="absolute right-0 -bottom-6 md:-bottom-8 md:right-10 xl:right-20">
+      <div className="absolute right-0 -bottom-6 xl:-bottom-8 xl:right-20">
         <a
           href={websiteUrl || buttonUrl || "#"}
           target={websiteUrl || buttonUrl ? "_blank" : "_self"}

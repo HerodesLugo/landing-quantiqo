@@ -35,8 +35,8 @@ const ProjectCard = ({
         />
       </div>
 
-      <div className="flex justify-between max-sm:h-full px-8 pb-14">
-        <div className="flex sm:items-end sm:gap-24 w-full max-sm:h-full max-sm:flex-col max-sm:justify-between">
+      <div className="flex justify-between px-8  pb-8 sm:pb-14 w-full">
+        <div className="flex sm:items-end sm:gap-24 w-full max-sm:flex-col max-sm:gap-6">
           
           <div
             className={`text-2xl w-full  text-white flex ${showExpanded ? "sm:items-center max-sm:flex-col sm:gap-11" : "flex-col gap-1.5"}`}
@@ -55,14 +55,13 @@ const ProjectCard = ({
                 case study
               </span>
             )}
-
             <span
               className={`icon-arrow-up-right sm:group-hover:text-3xl transition-all duration-300 text-primary-100 ${showExpanded ? "text-3xl max-sm:text-base" : "text-xl max-sm:text-base"}`}
             ></span>
           </Link>
         </div>
-
       </div>
+
     </div>
   );
 };

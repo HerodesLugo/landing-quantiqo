@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const LODE_DATA: PortfolioOverviewProps = {
-  title: "LODE.",
+  title: "LODE",
   description:
     "For LODE, we produced a cinematic launch video focused on storytelling and atmosphere. The piece combines motion, rhythm, and visual narrative to introduce the project with clarity and impact—designed to capture attention, communicate its vision, and set the tone for its market presence.",
   infoCard: {
@@ -53,7 +53,8 @@ export const LODE_DATA: PortfolioOverviewProps = {
 
 export const LODE_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/LODE/acelera-decorator.webp",
+  decoratorSrc: "",
+  decoratorMobileSrc: "",
   items: [
     {
       title: "Challenge",

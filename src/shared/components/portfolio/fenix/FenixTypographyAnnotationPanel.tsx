@@ -52,7 +52,7 @@ const FenixTypographyAnnotationPanel = () => (
     <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_250px] gap-x-8 items-start w-full">
       {/* Fila 3: Title */}
       <div className="max-w-md mb-4 md:mb-0 mt-4">
-        <h2 className="text-[28px] md:text-[32px] leading-none font-medium text-black tracking-normal font-space-grotesk">
+        <h2 className="text-[28px] xl:text-[32px] leading-none font-medium text-black tracking-normal font-space-grotesk">
           Features Overview
         </h2>
       </div>

@@ -10,7 +10,7 @@ const TagLabel = ({ text }: TagLabelProps) => {
       <span className="text-[#AFBFC2]">
       <Quantiqo />
       </span>
-      <span className="tracking-wide shrink-0">{text}</span>
+      <span className="tracking-wide">{text}</span>
     </li>
   );
 };

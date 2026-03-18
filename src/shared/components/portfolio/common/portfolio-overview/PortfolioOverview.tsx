@@ -47,8 +47,7 @@ const PortfolioOverview = ({
   const groups = tagGroups ?? TAG_GROUPS;
 
   return (
-    <section className="relative w-full flex flex-col-reverse max-md:items-end md:flex-row justify-between pb-10 md:pb-16 xl:pb-24">
-      
+    <section className="relative w-full flex flex-col-reverse max-xl:items-end xl:flex-row justify-between xl:pb-24">      
       <div className="px-6 md:px-10 xl:px-14 py-8 md:py-12 xl:py-16 flex flex-col gap-6 md:gap-8 xl:gap-10">
         <div className="flex flex-col gap-4 md:gap-6 w-full">
           <h2 className="text-base-900 text-2xl md:text-3xl xl:text-5xl font-bold uppercase tracking-[-1px]">
@@ -59,11 +58,11 @@ const PortfolioOverview = ({
           </p>
         </div>
 
-        <div className="flex flex-wrap md:flex-nowrap items-start gap-y-6">
+        <div className="flex flex-wrap xl:flex-nowrap items-start gap-y-6">
           {groups.map((group, index) => (
             <div key={group.title} className="flex items-start">
               {index > 0 && (
-                <div className="self-stretch w-px bg-dark/10 mx-5 md:mx-8 2xl:mr-10 max-md:hidden" />
+                <div className="self-stretch w-px bg-dark/10 mx-5 md:mx-8 2xl:mr-10 max-xl:hidden" />
               )}
               <TagGroup title={group.title} tags={group.tags} columns={group.columns} />
             </div>

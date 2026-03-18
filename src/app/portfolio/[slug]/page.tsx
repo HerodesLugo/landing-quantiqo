@@ -49,7 +49,7 @@ const PortfolioPage = async ({ params }: PortfolioPageProps) => {
       <div className="max-w-[120rem] mx-auto">
         <ProjectComponent />
         <div className="relative">
-        <Footer isActive={true} className="relative" />
+          <Footer isActive={true} className="relative" />
         </div>
       </div>
     </main>

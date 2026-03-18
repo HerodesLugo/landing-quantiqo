@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 const DualPhonesBanner = () => (
-  <div className="relative hidden md:flex items-center h-[76.875rem] justify-center overflow-hidden">
-    <div className="absolute">
+  <div className="relative hidden md:flex items-center 2xl:h-[76.875rem] justify-center overflow-hidden">
+    <div className="absolute ">
       <Image
         src="/images/portfolios/portalfi/portalfi-decorator.webp"
         alt=""
         height={900}
-        className="w-[95rem]"
+        className="2xl:w-[95rem] w-[62rem]"
         width={1920}
       />
     </div>

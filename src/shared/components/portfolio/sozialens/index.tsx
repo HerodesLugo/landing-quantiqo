@@ -9,29 +9,46 @@ import TypographyShowcase from "@/shared/components/portfolio/sozialens/typograp
 import ProductBanner from "@/shared/components/portfolio/sozialens/product-banner/ProductBanner";
 import LayeredBanner from "@/shared/components/portfolio/sozialens/layered-banner/LayeredBanner";
 import FinalBanner from "@/shared/components/portfolio/sozialens/final-banner/FinalBanner";
+import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const Sozialens = () => {
   return (
     <>
       <HeroPortfolio src="/images/portfolios/sozialens/hero.webp" />
-      <PortfolioOverview {...SOZIALENS_DATA} />
-      <HeroPortfolio src="/images/portfolios/sozialens/banner-1.webp" />
-      <SozialensVision />
+      <ScrollReveal variant="fadeUp">
+        <PortfolioOverview {...SOZIALENS_DATA} />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <HeroPortfolio src="/images/portfolios/sozialens/banner-1.webp" />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp">
+        <SozialensVision />
+      </ScrollReveal>
 
-      <DualBanner />
-      <FullWidthBanner />
-      <div className="hidden md:block">
+      <ScrollReveal variant="staggerChildren">
+        <DualBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <FullWidthBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp" className="hidden 2xl:block">
         <FontView
           fontName="DM Sans"
           fontClass="font-['DM Sans']"
           gradientClass="from-[#105FC9] to-[#AED0FF]"
         />
         <TypographyShowcase />
-      </div>
+      </ScrollReveal>
 
-      <ProductBanner />
-      <LayeredBanner />
-      <FinalBanner />
+      <ScrollReveal variant="scaleIn">
+        <ProductBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <LayeredBanner />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <FinalBanner />
+      </ScrollReveal>
     </>
   );
 };

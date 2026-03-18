@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const LayeredBanner = () => {
   return (
-    <div className="md:h-[75.4375rem] max-md:mt-5 relative overflow-hidden">
+    <div className="2xl:h-[75.4375rem] mt-5 relative overflow-hidden">
       <Image
         src="/images/portfolios/sozialens/banner-4.webp"
         alt=""

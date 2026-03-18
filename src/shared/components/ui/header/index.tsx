@@ -6,21 +6,39 @@ import { useState } from "react";
 import HamburguerIcon from "@/shared/components/ui/icon/Hamburguer";
 import TalkButton from "@/shared/components/ui/button/TalkButton";
 import Navigation from "@/shared/components/ui/header/Navigation2";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
-  const { sectionActiveName , navigateTo} = useSectionStore();
+  const { sectionActiveName, navigateTo } = useSectionStore();
+  const pathname = usePathname();
+  const router = useRouter();
+  const isPortfolioPage = pathname.includes("/portfolio");
 
   const handleToggle = () => setToggleMenu((prev) => !prev);
 
+  const handleLogoClick = () => {
+    if (isPortfolioPage) {
+      navigateTo("HOME");
+      router.push("/");
+    } else {
+      navigateTo("HOME");
+    }
+  };
 
   return (
     <header
-      className={`fixed right-0 left-0 sm:h-28 flex items-center max-sm:py-10 py-5 max-sm:px-5 sm:max-w-[calc(100%-8.25rem)] mx-auto z-[100] box-border duration-300 justify-between transition-all ${
-        sectionActiveName == "FOOTER" && "opacity-0 pointer-events-none"
+      className={`fixed top-0 right-0 left-0 sm:h-28 flex items-center max-sm:py-4 py-5 max-sm:px-5 mx-auto z-[100] box-border duration-300 justify-between transition-all ${
+        !isPortfolioPage && sectionActiveName == "FOOTER"
+          ? "opacity-0 pointer-events-none"
+          : ""
+      } ${
+        isPortfolioPage
+          ? "w-full backdrop-blur-xl b md:bg-dark/10 px-5 sm:px-10 xl:px-[4.125rem]"
+          : "sm:max-w-[calc(100%-8.25rem)]"
       }`}
     >
-      <button className="cursor-pointer" onClick={() => navigateTo("HOME")}>
+      <button className="cursor-pointer" onClick={handleLogoClick}>
         <Logo className="h-[3.3125rem] w-[3.75rem] max-sm:w-[2rem] max-sm:h-[1.8125rem] " />
       </button>
 
@@ -28,7 +46,11 @@ const Header: React.FC = () => {
         <Navigation />
         <button
           onClick={handleToggle}
-          className="cursor-pointer text-white sm:text-base-200 hover:text-primary-200 transition-colors duration-300 max-sm:border border-base-purple-200 rounded-[7.1875rem] max-sm:px-3.5 max-sm:py-2.5"
+          className={`cursor-pointer transition-colors duration-300 max-sm:border rounded-[7.1875rem] max-sm:px-3.5 max-sm:py-2.5 hover:text-primary-200 ${
+            isPortfolioPage
+              ? "text-white/60 border-white/60"
+              : "text-white sm:text-base-200 border-base-purple-200"
+          }`}
         >
           <HamburguerIcon className="max-sm:size-4" />
         </button>

@@ -2,12 +2,12 @@
 const TypographySpecComponent = () => {
   return (
     <div className="w-full h-[46.25rem] flex flex-row overflow-hidden">
-      <div className="w-1/2 h-full bg-[#BBEB42] text-gray-950 font-host p-16 flex flex-col justify-between">
+      <div className="w-1/2 h-full bg-[#BBEB42] text-gray-950 font-host p-6 lg:p-10 xl:p-16 flex flex-col justify-between">
         
         {/* Parte superior del panel izquierdo */}
         <div className="flex flex-col gap-10">
           <div className="flex flex-row justify-between items-start">
-            <h1 className="text-[120px] font-black leading-[0.85] tracking-tighter uppercase">
+            <h1 className="text-[60px] lg:text-[90px] xl:text-[120px] font-black leading-[0.85] tracking-tighter uppercase">
               HOST<br />GROTESK
             </h1>
             <span className="text-xs font-mono uppercase tracking-[0.2em] pt-4 text-gray-800">MAIN</span>
@@ -49,7 +49,7 @@ const TypographySpecComponent = () => {
       </div>
 
       {/* Panel derecho - Cardo (Negro) */}
-      <div className="w-1/2 h-full bg-black text-white font-cardo p-16 flex flex-col justify-between">
+      <div className="w-1/2 h-full bg-black text-white font-cardo p-6 lg:p-10 xl:p-16 flex flex-col justify-between">
         
         {/* Parte superior del panel derecho */}
         <div className="flex flex-col gap-10">
@@ -96,7 +96,7 @@ const TypographySpecComponent = () => {
           {/* Etiqueta "SECONDARY" */}
           <span className="text-xs font-mono uppercase tracking-[0.2em] pb-4 text-gray-400">SECONDARY</span>
           {/* Título principal serif */}
-          <h1 className="text-[120px] font-bold font-cardo leading-[0.85] tracking-tight">
+          <h1 className="text-[60px] lg:text-[90px] xl:text-[120px] font-bold font-cardo leading-[0.85] tracking-tight">
             Cardo
           </h1>
         </div>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const GarboBentoGrid = () => {
   return (
-    <div className="grid grid-cols-2  h-[113.375rem]">
+    <div className="grid grid-cols-2 max-md:h-[28rem] 2xl:h-[113.375rem] gap-5 md:gap-0">
       <div className="bg-[#EBE8E3] overflow-hidden">
         <Image
           src="/images/portfolios/garbo/bento-grid-1.png"
@@ -25,7 +25,7 @@ const GarboBentoGrid = () => {
         <Image
           src="/images/portfolios/garbo/bento-grid-3.webp"
           alt=""
-          className=" size-full "
+          className=" size-full object-cover"
           height={7668}
           width={6124}
         />

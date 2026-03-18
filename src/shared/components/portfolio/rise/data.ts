@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const RISE_LABS_DATA: PortfolioOverviewProps = {
-  title: "RISE LABS.",
+  title: "RISE LABS",
   description:
     "Rise Labs is a creative and strategic hub focused on building innovative products in the DeFi and Web3 ecosystem. It develops brands, platforms, and tools designed to empower users, manage digital assets, and shape the future of decentralized finance.",
   infoCard: {

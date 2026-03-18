@@ -17,7 +17,7 @@ const EarnBanner = () => (
 
     {/* Gradient glow */}
     <div className="absolute inset-0 flex justify-center items-center">
-      <div className="size-[93.125rem] origin-top-left opacity-10 bg-gradient-to-bl from-blue-700 to-blue-200 blur-[150.15px]" />
+      <div className="size-[37.5rem] origin-top-left opacity-10 bg-gradient-to-bl from-blue-700 to-blue-200 blur-[150.15px]" />
     </div>
 
     {/* Banner image + watermark */}

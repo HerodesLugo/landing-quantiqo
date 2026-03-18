@@ -9,6 +9,7 @@ import FenixTypographySection from "./FenixTypographySection";
 import FenixBentoGrid from "./FenixBentoGrid";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
 import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const Fenix = () => {
   return (
@@ -18,17 +19,26 @@ const Fenix = () => {
         height={3240}
         src="/images/portfolios/fenix/hero.webp"
       />
-      <PortfolioOverview {...FENIX_DATA} />
-      <ProjectVideo
-        src={VIDEO_ASSETS.fenix.video1}
-        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622]"
-        videoClassName="w-full h-full object-cover"
-      />
-      <FenixVisionLayout />
+      <ScrollReveal variant="fadeUp">
+        <PortfolioOverview {...FENIX_DATA} />
+      </ScrollReveal>
+      
+      <ScrollReveal variant="fadeIn">
+        <ProjectVideo
+          src={VIDEO_ASSETS.fenix.video1}
+          containerClassName="max-md:h-[13.75rem] xl:h-[69rem] bg-[#141622]"
+          videoClassName="w-full h-full object-cover"
+        />
+      </ScrollReveal>
 
-      <div className="hidden md:block">
+      <ScrollReveal variant="fadeUp">
+        <FenixVisionLayout />
+      </ScrollReveal>
+      <ScrollReveal variant="staggerChildren">
         <FenixImageGrid />
+      </ScrollReveal>
 
+      <ScrollReveal variant="fadeUp" className="hidden 2xl:block">
         <FontView
           fontName="Poppins"
           fontClass="font-['Poppins']"
@@ -36,22 +46,28 @@ const Fenix = () => {
         />
 
         <FenixTypographySection />
+      </ScrollReveal>
 
+      <ScrollReveal variant="staggerChildren">
         <FenixBentoGrid />
-
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp">
         <SectionLabel title="website" subtitle="UI / UX and Final Launch" />
-      </div>
-
-      <ProjectVideo
-        src={VIDEO_ASSETS.fenix.video2}
-        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] mt-11"
-        videoClassName="w-full h-full object-cover"
-      />
-      <HeroPortfolio
-        width={5760}
-        height={3240}
-        src="/images/portfolios/fenix/banner-3.webp"
-      />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <ProjectVideo
+          src={VIDEO_ASSETS.fenix.video2}
+          containerClassName="max-md:h-[13.75rem] xl:h-[69rem] bg-[#141622] md:mt-11 max-md:my-5"
+          videoClassName="w-full h-full object-cover"
+        />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <HeroPortfolio
+          width={5760}
+          height={3240}
+          src="/images/portfolios/fenix/banner-3.webp"
+        />
+      </ScrollReveal>
       <div className="mb-11"></div>
     </>
   );

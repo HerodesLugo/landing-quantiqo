@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const NestPlatformGrid = () => (
-  <div className="w-full  py-16 max-md:hidden">
+  <div className="w-full  py-16 max-2xl:hidden">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:grid-rows-2 lg:h-[42.5rem] px-10">
       <div className="bg-[#121B14] relative col-span-1 md:col-span-1 lg:col-span-1 md:row-span-2 flex items-center justify-center overflow-hidden h-[10rem] md:h-auto">
         <Image

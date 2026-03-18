@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const AURION_DATA: PortfolioOverviewProps = {
-  title: "AURION.",
+  title: "AURION",
   description:
     "Aurion is a next-generation decentralized exchange on the MegaETH blockchain, designed for high-speed execution and ultra-secure trading. More than a DEX, Aurion is a robust financial protocol built natively for the MegaETH layer.",
   infoCard: {
@@ -20,7 +20,8 @@ export const AURION_DATA: PortfolioOverviewProps = {
 
 export const AURION_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/AURION/acelera-decorator.webp",
+  decoratorSrc: "",
+  decoratorMobileSrc: "",
   items: [
     {
       title: "Challenge",

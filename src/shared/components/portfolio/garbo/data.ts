@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const GARBO_DATA: PortfolioOverviewProps = {
-  title: "GARBO.",
+  title: "GARBO",
   description:
     "Garbo is a cutting-edge software platform that enables real-time virtualization of mobile devices on ARM-over-ARM architecture. This solution provides complete control for security research, cyber intelligence, and advanced testing tasks, allowing users to create and orchestrate thousands of virtual terminals. Garbo hired us to revamp their branding, pitch and brand assets, website, product,  site and visual identity. Along with motion and 3d resources for marketing and other uses.",
   infoCard: {
@@ -24,7 +24,8 @@ export const GARBO_DATA: PortfolioOverviewProps = {
 
 export const GARBO_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/GARBO/acelera-decorator.webp",
+  decoratorSrc: "",
+  decoratorMobileSrc:"",
   items: [
     {
       title: "Challenge",

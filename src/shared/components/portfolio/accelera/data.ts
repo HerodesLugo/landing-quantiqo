@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const ACCELERA_DATA: PortfolioOverviewProps = {
-  title: "ACCELERA.",
+  title: "ACCELERA",
   description:
     "Accelera is a stablecoin ecosystem that blends cutting-edge tech, financial stability, and crypto native culture. Its aesthetic fuses dark elegance, interstellar inspiration, and on-chain visuals, connecting with a new generation of DeFi users.\n\nAccelera hired us to revamp their branding, pitch and brand assets, website, product, site and visual identity. Along with motion and 3d resources for marketing and other uses.",
   infoCard: {

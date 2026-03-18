@@ -12,6 +12,7 @@ import LinusWebsiteSection from "./LinusWebsiteSection";
 import LinusNftSection from "./LinusNftSection";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
 import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const Linus = () => {
   return (
@@ -21,28 +22,33 @@ const Linus = () => {
         height={3240}
         src="/images/portfolios/linus/hero.webp"
       />
-      <PortfolioOverview {...LINUS_DATA} />
-      {/* <HeroPortfolio
-        width={5760}
-        height={3240}
-        src="/images/portfolios/linus/banner-1.webp"
-      /> */}
-      <ProjectVideo
-        src={VIDEO_ASSETS.linus.video1}
-        containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] my-11"
-        videoClassName="w-full h-full object-cover"
-      />
-      <LinusVisionLayout />
+      <ScrollReveal variant="fadeUp">
+        <PortfolioOverview {...LINUS_DATA} />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeIn">
+        <ProjectVideo
+          src={VIDEO_ASSETS.linus.video1}
+          containerClassName="max-md:h-[269px]  xl:h-[69rem] bg-[#141622] my-5 mxd:my-11"
+          videoClassName="w-full h-full object-cover"
+        />
+      </ScrollReveal>
+      <ScrollReveal variant="fadeUp">
+        <LinusVisionLayout />
+      </ScrollReveal>
 
-      <div className="hidden md:block">
+      <ScrollReveal variant="staggerChildren">
         <LinusBentoGrid />
+      </ScrollReveal>
 
+      <ScrollReveal variant="fadeIn" className="mb-5 md:mb-0">
         <HeroPortfolio
           width={5760}
           height={3240}
           src="/images/portfolios/linus/banner-2.webp"
         />
+      </ScrollReveal>
 
+      <ScrollReveal variant="fadeUp" className="hidden 2xl:block">
         <FontView
           fontName="DM Sans"
           fontClass="font-['DM Sans']"
@@ -50,43 +56,52 @@ const Linus = () => {
         />
 
         <LinusTypographySection />
+      </ScrollReveal>
 
+      <ScrollReveal variant="staggerChildren" className="mb-5 md:mb-0">
         <LinusImageGrid />
+      </ScrollReveal>
 
-        <div className="my-11">
-          <HeroPortfolio
-            width={5760}
-            height={3240}
-            src="/images/portfolios/linus/banner-3.webp"
-          />
-        </div>
+      <ScrollReveal variant="fadeIn" className="my-5 md:my-11">
+        <HeroPortfolio
+          width={5760}
+          height={3240}
+          src="/images/portfolios/linus/banner-3.webp"
+        />
+      </ScrollReveal>
 
+      <ScrollReveal variant="staggerChildren" className="mb-5 md:mb-0">
         <LinusImageCollage />
+      </ScrollReveal>
 
-        <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5">
+        <ScrollReveal variant="fadeUp">
           <LinusWebsiteSection />
+        </ScrollReveal>
 
+        <ScrollReveal variant="fadeIn">
           <ProjectVideo
             src={VIDEO_ASSETS.linus.video2}
-            containerClassName="h-[28rem] md:h-[50rem] xl:h-[75rem] bg-[#141622] my-11"
+            containerClassName="max-md:h-[269px] xl:h-[75rem] bg-[#141622] my-5 md:my-11"
             videoClassName="w-full h-full object-cover"
           />
+        </ScrollReveal>
 
-          <div className="flex flex-col mb-11">
-            <div className="overflow-hidden flex justify-center">
-              <Image
-                src="/images/portfolios/linus/banner-7.webp"
-                className="w-full xl:w-[96rem] h-auto xl:h-[55.375rem] object-cover"
-                width={5760}
-                height={3240}
-                alt="banner"
-              />
-            </div>
-            <div className="flex flex-col gap-11">
-              <LinusNftSection />
-            </div>
+        <ScrollReveal variant="staggerChildren" className="flex flex-col gap-5 md:gap-0 mb-11">
+          <div className="overflow-hidden flex justify-center ">
+            <Image
+              src="/images/portfolios/linus/banner-7.webp"
+              className="w-full 2xl:w-[96rem] h-auto 2xl:h-[55.375rem] object-cover max-2xl:px-10 "
+              width={5760}
+              height={3240}
+              alt="banner"
+            />
           </div>
-        </div>
+          <div className="flex flex-col gap-5 md:gap-11 px-7 max-md:p-0">
+            <LinusNftSection />
+          </div>
+        </ScrollReveal>
+        
       </div>
     </>
   );

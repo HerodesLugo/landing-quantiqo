@@ -20,17 +20,17 @@ const PRODUCTS: ProductItem[] = [
 ];
 
 const ProductCard = ({ imageSrc, title, subtitle }: ProductItem) => (
-  <div className="md:w-1/2  md:h-[43rem]  w-full flex flex-col gap-9">
+  <div className="md:w-1/2  2xl:h-[43rem]  w-full flex flex-col gap-5 mt-5">
     <div className="bg-dark">
       <Image
         src={imageSrc}
-        className="h-full object-cover"
+        className="h-full object-cover size-full"
         alt=""
         height={903}
         width={1569}
       />
     </div>
-    <div className="flex flex-col px-5">
+    <div className="flex flex-col px-5 ">
       <div className="w-96 justify-start text-black text-2xl md:text-4xl font-semibold font-['Host_Grotesk'] uppercase tracking-[3.60px]">
         {title}
       </div>
@@ -42,7 +42,7 @@ const ProductCard = ({ imageSrc, title, subtitle }: ProductItem) => (
 );
 
 const ProductShowcase = () => (
-  <div className="flex md:h-[50rem] items-center gap-5 md:px-5 my-5 max-md:flex-col">
+  <div className="flex 2xl:h-[50rem] items-center 2xl:gap-5 md:px-5   my-5 max-md:flex-col">
     {PRODUCTS.map((product) => (
       <ProductCard key={product.title} {...product} />
     ))}

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 const LinusImageGrid = () => (
-  <div className="grid grid-cols-2 h-[39.125rem] gap-5 mt-11">
-    <div className="bg-accelera">
+  <div className="grid grid-cols-2 max-md:h-[12rem] xl:h-[39.125rem] gap-5 mt-5 md:mt-11">
+    <div >
       <Image
         src="/images/portfolios/linus/grid-1.webp"
         alt=""
@@ -11,7 +11,7 @@ const LinusImageGrid = () => (
         className="size-full object-cover"
       />
     </div>
-    <div className="bg-accelera">
+    <div >
       <Image
         src="/images/portfolios/linus/grid-2.webp"
         alt=""

@@ -47,7 +47,7 @@ const TypographyPreviewPanel: React.FC<TypographyPreviewPanelProps> = ({
     <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_250px] gap-x-8 gap-y-2 items-center w-full relative z-10 shrink-0">
       {/* Title 1 */}
       <div className="max-w-full">
-        <div className="text-black text-[52px] md:text-[64px] font-normal leading-[1.1] tracking-normal">
+        <div className="text-black text-[52px] md:text-[48px] xl:text-[64px] font-normal leading-[1.1] tracking-normal">
           {title1}
         </div>
       </div>
@@ -56,7 +56,7 @@ const TypographyPreviewPanel: React.FC<TypographyPreviewPanelProps> = ({
 
       {/* Title 2 */}
       <div className="max-w-full">
-        <div className="text-black text-[52px] md:text-[64px] font-normal leading-[1.1] tracking-normal">
+        <div className="text-black text-[52px] md:text-[48px] xl:text-[64px] font-normal leading-[1.1] tracking-normal">
           {title2}
         </div>
       </div>
@@ -77,7 +77,7 @@ const TypographyPreviewPanel: React.FC<TypographyPreviewPanelProps> = ({
 
       {/* Title 3 */}
       <div className="max-w-full">
-        <div className="text-black text-[52px] md:text-[64px] font-normal leading-[1.1] tracking-normal md:mb-4">
+        <div className="text-black text-[52px] md:text-[48px] xl:text-[64px] font-normal leading-[1.1] tracking-normal md:mb-4">
           {title3}
         </div>
       </div>
@@ -113,7 +113,7 @@ const TypographyPreviewPanel: React.FC<TypographyPreviewPanelProps> = ({
     <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_250px] gap-x-8 items-start w-full relative z-10 shrink-0 pb-6 md:pb-0">
       {/* "Features Overview" */}
       <div className="max-w-md mb-4 md:mb-0 md:mt-4">
-        <h2 className="text-[28px] md:text-[32px] leading-none font-normal text-black tracking-normal">
+        <h2 className="text-[28px] xl:text-[32px] leading-none font-normal text-black tracking-normal">
           Features Overview
         </h2>
       </div>

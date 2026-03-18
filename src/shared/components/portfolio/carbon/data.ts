@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const CARBON_DATA: PortfolioOverviewProps = {
-  title: "CARBON.",
+  title: "CARBON",
   description:
     "Carbon is an on-chain trading platform focused on strategic BTC accumulation. Its design blends speed, clarity, and stability, positioning $CARBON as a cycle-resistant asset.",
   infoCard: {
@@ -24,7 +24,7 @@ export const CARBON_DATA: PortfolioOverviewProps = {
 
 export const CARBON_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/CARBON/acelera-decorator.webp",
+  decoratorSrc: "",
   decoratorMobileSrc: "",
   items: [
     {

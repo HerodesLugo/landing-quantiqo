@@ -4,7 +4,7 @@ import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-
 import { FontVariant } from "@/shared/types/FonVariant";
 
 export const INTENTX_DATA: PortfolioOverviewProps = {
-  title: "INTENTX.",
+  title: "INTENTX",
   description:
     "IntentX is a decentralized (DeFi) platform specializing in over-the-counter (OTC) derivatives that enables leveraged perpetual futures trading, delivering an experience comparable to centralized exchanges (CEX) but entirely on-chain, non-custodial, and permissionless.",
   infoCard: {
@@ -24,7 +24,8 @@ export const INTENTX_DATA: PortfolioOverviewProps = {
 
 export const INTENTX_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/INTENTX/acelera-decorator.webp",
+  decoratorSrc: "",
+  decoratorMobileSrc: "",
   items: [
     {
       title: "Challenge",

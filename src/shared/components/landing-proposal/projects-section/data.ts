@@ -48,7 +48,7 @@ export const PROJECTS: IProject[] = [
     id: 7,
     title: "Rise Labs",
     img: "/images/portfolios/rise-labs/hero.webp",
-    description: `Rise Labs is a creative and strategic hub focused on building innovative products in the DeFi and Web3 ecosystem. It develops brands, platforms, and tools designed to empower users, manage digital assets, and shape the future of decentralized finance.`,
+    description: `Rise Labs is a creative hub building innovative DeFi and Web3 products designed to empower users, manage digital assets, and shape the future of decentralized finance.`,
     source: "portfolio/rise-labs",
   },
   {
@@ -62,16 +62,14 @@ export const PROJECTS: IProject[] = [
     id: 9,
     title: "Linus",
     img: "/images/portfolios/linus/hero.webp",
-    description: `Linus is a Web3-native brand rooted in culture, community, and creativity. At its core is Pengmilio, a bold and playful character leading one of the most vibrant movements in the Linea ecosystem. Linus has become a space where people connect through innovation, humor, and shared values.
-
-Now, the brand is scaling—reaching broader audiences, deepening its cultural impact, and building a self sustaining ecosystem where culture moves crypto forward.`,
+    description: `Linus is a Web3-native brand rooted in culture and community. Led by the character Pengmilio, it fosters a vibrant movement in the Linea ecosystem where people connect through innovation and shared values.`,
     source: "portfolio/linus",
   },
   {
     id: 10,
     title: "Lode",
     img: "/images/portfolios/lode/hero.webp",
-    description: `For LODE, we produced a cinematic launch video focused on storytelling and atmosphere. The piece combines motion, rhythm, and visual narrative to introduce the project with clarity and impact—designed to capture attention, communicate its vision, and set the tone for its market presence.`,
+    description: `A cinematic launch video for LODE focused on storytelling and atmosphere, combining motion and visual narrative to introduce the project with clarity and impact.`,
     source: "portfolio/lode",
   },
   {
@@ -92,9 +90,7 @@ Now, the brand is scaling—reaching broader audiences, deepening its cultural i
     id: 13,
     title: "Sozialens",
     img: "/images/portfolios/sozialens/hero.webp",
-    description: `Sozialens is a platform that connects businesses with thematic social media accounts to boost visibility without relying on traditional influencers. It offers an intuitive interface, customizable ad campaigns, and transparent metrics—all with a secure and efficient approach to reaching broad and targeted audiences.
-
-Sozialens hired us to revamp their branding, pitch and brand assets, website, product, site and visual identity. Along with motion and 3d resources for marketing and other uses.`,
+    description: `Sozialens connects businesses with thematic social media accounts to boost visibility. We developed their full visual identity, branding, and motion resources to enable secure and efficient marketing.`,
     source: "portfolio/sozialens",
   },
 ];

@@ -6,6 +6,8 @@ export interface NavMenuItem {
   label: string;
   navTarget?: NavigationTarget;
   subMenu?: SubMenuData;
+  /** When on /portfolio, use router.back() instead of router.push('/') */
+  isBackNavigation?: boolean;
 }
 
 export const NAV_MENU: NavMenuItem[] = [
@@ -13,6 +15,7 @@ export const NAV_MENU: NavMenuItem[] = [
     id: 1,
     label: "work",
     navTarget: "PROJECTS",
+    isBackNavigation: true,
   },
   {
     id: 2,

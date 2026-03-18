@@ -11,38 +11,38 @@ const FontVariantRow = ({ variant }: { variant: FontVariant }) => {
   const fontStyle = { fontFamily: variant.typeFont || "Satoshi" };
 
   return (
-    <div className="flex flex-col xl:flex-row  justify-between items-start xl:items-center w-full gap-8 xl:gap-16 z-10 relative">
-      
-      <div className="flex flex-col justify-between h-full w-1/2  ">
-        <div 
+    <div className="flex flex-col 2xl:flex-row justify-between items-start 2xl:items-center w-full gap-8 2xl:gap-16 z-10 relative">
+
+      <div className="flex flex-col justify-between h-full 2xl:w-1/2">
+        <div
           className={`justify-start ${variant.nameColor || 'text-neutral-400'} text-base font-normal`}
           style={fontStyle}
         >
           {variant.typeFont}
         </div>
-        <div 
-          className={`justify-start text-zinc-800 text-[3.5rem] leading-none xl:text-6xl ${variant.weight}`}
+        <div
+          className={`justify-start text-zinc-800 text-[3.5rem] leading-none 2xl:text-6xl ${variant.weight}`}
           style={fontStyle}
         >
           {variant.label}
         </div>
       </div>
-      
-      <div className="flex flex-col  justify-start items-start h-full gap-1 w-1/2 overflow-hidden shrink-0">
-        <div 
-          className={`text-zinc-800 text-xl xl:text-2xl break-all ${variant.weight}`}
+
+      <div className="flex flex-col justify-start items-start h-full gap-1 2xl:w-1/2 overflow-hidden 2xl:shrink-0">
+        <div
+          className={`text-zinc-800 text-xl 2xl:text-2xl break-all ${variant.weight}`}
           style={fontStyle}
         >
           ABCDEFGHIJKLMNOPQRSTUVWXYZ
         </div>
-        <div 
-          className={`text-zinc-800 text-xl xl:text-2xl break-all ${variant.weight}`}
+        <div
+          className={`text-zinc-800 text-xl 2xl:text-2xl break-all ${variant.weight}`}
           style={fontStyle}
         >
           abcdefghijklmnopqrstuvwxyz
         </div>
-        <div 
-          className={`text-zinc-800 text-xl xl:text-2xl break-all ${variant.weight}`}
+        <div
+          className={`text-zinc-800 text-xl 2xl:text-2xl break-all ${variant.weight}`}
           style={fontStyle}
         >
           1234567890!@$#%
