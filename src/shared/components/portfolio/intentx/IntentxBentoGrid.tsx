@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const IntentxBentoGrid = () => (
   <>
@@ -6,7 +7,7 @@ const IntentxBentoGrid = () => (
     <div className="flex md:hidden flex-col gap-5 w-full max-md:mb-5">
       <div className="h-[220px] overflow-hidden">
         <Image
-          src="/images/portfolios/intentx/bento-grid-2.webp"
+          src={IMAGE_ASSETS.intentx.bentoGridTwo}
           alt=""
           className="size-full object-cover"
           width={2478}
@@ -16,7 +17,7 @@ const IntentxBentoGrid = () => (
       <div className="flex gap-5 h-[220px]">
         <div className="w-1/2 overflow-hidden">
           <Image
-            src="/images/portfolios/intentx/bento-grid-3.webp"
+            src={IMAGE_ASSETS.intentx.bentoGridThree}
             alt=""
             className="size-full object-cover"
             width={2478}
@@ -25,7 +26,7 @@ const IntentxBentoGrid = () => (
         </div>
         <div className="w-1/2 overflow-hidden">
           <Image
-            src="/images/portfolios/intentx/bento-grid-1.webp"
+            src={IMAGE_ASSETS.intentx.bentoGridOne}
             alt=""
             className="size-full object-cover"
             width={2478}
@@ -35,7 +36,7 @@ const IntentxBentoGrid = () => (
       </div>
       <div className="h-[220px] overflow-hidden">
         <Image
-          src="/images/portfolios/intentx/bento-grid-4.webp"
+          src={IMAGE_ASSETS.intentx.bentoGridFour}
           alt=""
           className="size-full object-cover"
           width={2478}
@@ -50,7 +51,7 @@ const IntentxBentoGrid = () => (
       <div className="col-span-5 flex flex-col gap-5 h-full">
         <div className="bg-[#1F2937] w-full flex-[55]">
           <Image
-            src="/images/portfolios/intentx/bento-grid-1.webp"
+            src={IMAGE_ASSETS.intentx.bentoGridOne}
             alt=""
             className="size-full object-cover"
             width={2478}
@@ -59,7 +60,7 @@ const IntentxBentoGrid = () => (
         </div>
         <div className="bg-[#1E3A5F] w-full flex-[45]">
           <Image
-            src="/images/portfolios/intentx/bento-grid-3.webp"
+            src={IMAGE_ASSETS.intentx.bentoGridThree}
             alt=""
             className="size-full object-cover"
             width={2478}
@@ -72,7 +73,7 @@ const IntentxBentoGrid = () => (
       <div className="col-span-7 flex flex-col gap-5 h-full">
         <div className="bg-[#0F172A] w-full flex-[45]">
           <Image
-            src="/images/portfolios/intentx/bento-grid-2.webp"
+            src={IMAGE_ASSETS.intentx.bentoGridTwo}
             alt=""
             className="size-full object-cover"
             width={2478}
@@ -81,7 +82,7 @@ const IntentxBentoGrid = () => (
         </div>
         <div className="bg-[#111827] w-full flex-[55]">
           <Image
-            src="/images/portfolios/intentx/bento-grid-4.webp"
+            src={IMAGE_ASSETS.intentx.bentoGridFour}
             alt=""
             className="size-full object-cover"
             width={2478}

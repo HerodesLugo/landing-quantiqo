@@ -28,10 +28,10 @@ export const SidebarNav = ({ isActive }: SidebarNavProps) => {
               href={href}
               tabIndex={isActive ? 0 : -1}
               onClick={(e) => toggleSection(label, e)}
-              className="menu-link rounded-[10px] sm:h-14 inline-flex items-center gap-2.5 focus:outline-none"
+              className="menu-link rounded-[10px] sm:h-9 xl:h-14 inline-flex items-center gap-2.5 focus:outline-none"
             >
               <div
-                className={`flex items-center gap-4 justify-start text-4xl uppercase sm:tracking-[4.8px] transition-all duration-300 max-sm:text-lg font-light text-white group-hover:text-primary-200 group-hover:translate-x-2`}
+                className={`flex items-center gap-4 justify-start xl:text-4xl uppercase sm:tracking-[4.8px] transition-all duration-300 max-sm:text-lg text-xl font-light text-white group-hover:text-primary-200 group-hover:translate-x-2`}
               >
                 {label}
                 {dropdown && (

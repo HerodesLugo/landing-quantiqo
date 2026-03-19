@@ -18,12 +18,12 @@ const Solutions = ({ isActive }: SolutionsProps) => {
   );
 
   return (
-    <UiSection>
+    <UiSection >
       <div
         ref={containerRef}
-        className="flex max-sm:flex-col h-full   sm:items-center relative sm:justify-between sm:pt-10 sm:pr-20 "
+        className="flex max-sm:flex-col h-full    sm:items-center relative sm:justify-between sm:pt-10 sm:pr-20 "
       >
-        <div className="flex flex-col max-sm:gap-6 max-sm:h-full">
+        <div className="flex flex-col max-sm:gap-6 max-sm:h-full w-full">
           <SolutionsHeader />
           <div className="block sm:hidden h-full">
             <SolutionsAccordion />

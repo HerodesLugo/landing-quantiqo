@@ -24,12 +24,6 @@ const INSTRUMENT_SANS = Instrument_Sans({
   display: "swap",
 });
 
-const DM_SANS_FONT = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-});
-
 const BUNGEE_FONT = Bungee({
   subsets: ["latin"],
   variable: "--font-bungee",
@@ -40,6 +34,12 @@ const BUNGEE_FONT = Bungee({
 const PLUS_JAKARTA_SANS = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-plus-jakarta",
+  display: "swap",
+});
+
+const DM_SANS_FONT = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
@@ -64,9 +64,27 @@ const SPACE_GROTESK = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "Quantiqo Labs",
+  title: {
+    default: "Quantiqo Labs",
+    template: "%s | Quantiqo Labs",
+  },
+  description:
+    "Quantiqo Labs designs and builds high-performance digital products — branding, web apps, and interactive experiences for ambitious companies.",
+  metadataBase: new URL("https://quantiqolabs.com"),
   openGraph: {
-    description: "",
+    type: "website",
+    siteName: "Quantiqo Labs",
+    title: "Quantiqo Labs",
+    description:
+      "Quantiqo Labs designs and builds high-performance digital products — branding, web apps, and interactive experiences for ambitious companies.",
+    images: [{ url: "/og-default.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Quantiqo Labs",
+    description:
+      "Quantiqo Labs designs and builds high-performance digital products — branding, web apps, and interactive experiences for ambitious companies.",
+    images: ["/og-default.png"],
   },
 };
 

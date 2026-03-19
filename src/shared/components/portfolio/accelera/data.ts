@@ -2,6 +2,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const ACCELERA_DATA: PortfolioOverviewProps = {
   title: "ACCELERA",
@@ -16,7 +17,7 @@ export const ACCELERA_DATA: PortfolioOverviewProps = {
     ],
     websiteUrl: "https://accelera.io",
     websiteLabel: "Accelera",
-    logoSrc: "/images/portfolios/accelera/accelera-logo-overview.webp",
+    logoSrc: IMAGE_ASSETS.accelera.logoOverview,
   },
   buttonLabel: "ACCELERA",
   buttonUrl: PROJECT_URLS.accelera,
@@ -24,8 +25,8 @@ export const ACCELERA_DATA: PortfolioOverviewProps = {
 
 export const ACCELERA_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/accelera/acelera-decorator.webp",
-  decoratorMobileSrc: "/images/portfolios/accelera/decorator-mobile.webp",
+  decoratorSrc: IMAGE_ASSETS.accelera.decorator,
+  decoratorMobileSrc: IMAGE_ASSETS.accelera.decoratorMobile,
   items: [
     {
       title: "Challenge",

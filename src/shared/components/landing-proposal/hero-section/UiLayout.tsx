@@ -94,13 +94,13 @@ const UiLayout = ({ scrollDown, isActive }: UiLayoutProps) => {
             </div>
           </div>
 
-          <div className="flex max-sm:flex-col  max-sm:w-full sm:items-center gap-5 max-sm:max-w-[23.75rem]">
+          <div className="flex max-xl:flex-col   max-sm:w-full xl:items-center gap-5 max-sm:max-w-[23.75rem] max-xl:max-w-[80%]">
             <div className="bottom-element will-change-transform">
               <TalkButton className="h-16 flex relative overflow-hidden xl:w-[16.875rem] w-[13rem] max-xl:text-base max-sm:h-14 ">
                 {"Let's Talk "}
               </TalkButton>
             </div>
-            <div className="sm:w-[23.75vw] justify-start bottom-element will-change-transform">
+            <div className="xl:w-[23.75vw] justify-start bottom-element will-change-transform">
               <span className="text-white text-base font-bold ">
                 With us you get a full-suite of high-end professionals
               </span>
@@ -113,6 +113,7 @@ const UiLayout = ({ scrollDown, isActive }: UiLayoutProps) => {
               </span>
             </div>
           </div>
+
         </div>
       </div>
 

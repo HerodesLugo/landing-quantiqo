@@ -282,9 +282,7 @@
   /* Fonts */
   --font-satoshi: 'Satoshi', sans-serif;
   --font-host: var(--font-host, 'Host Grotesk', sans-serif);
-  --font-instrument-sans: var(--font-instrument-sans, 'Instrument Sans', sans-serif);
   --font-dm-sans: var(--font-dm-sans, 'DM Sans', sans-serif);
-  --font-bungee: var(--font-bungee, 'Bungee', cursive);
   --font-cardo: var(--font-cardo, 'Cardo', serif);
   --font-poppins: var(--font-poppins, 'Poppins', sans-serif);
   --font-space-grotesk: var(--font-space-grotesk, 'Space Grotesk', sans-serif);

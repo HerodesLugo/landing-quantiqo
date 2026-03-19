@@ -2,6 +2,7 @@ import { AURION_DATA } from "@/shared/components/portfolio/aurion/data";
 import HeroPortfolio from "@/shared/components/portfolio/common/HeroPortfolio";
 import PortfolioOverview from "@/shared/components/portfolio/common/portfolio-overview/PortfolioOverview";
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 import AurionVisionLayout from "./AurionVisionLayout";
 import AurionBentoGrid from "./AurionBentoGrid";
 import AurionProductShowcase from "./AurionProductShowcase";
@@ -13,7 +14,7 @@ const Aurion = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/aurion/hero.webp"
+        src={IMAGE_ASSETS.aurion.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...AURION_DATA} />
@@ -22,7 +23,7 @@ const Aurion = () => {
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/aurion/banner-1.webp"
+          src={IMAGE_ASSETS.aurion.bannerOne}
         />
       </ScrollReveal>
 
@@ -36,7 +37,7 @@ const Aurion = () => {
 
       <ScrollReveal variant="fadeIn" className="max-md:h-[14rem] xl:h-[67.5rem] flex items-center justify-center mb-5 md:mb-10">
         <Image
-          src="/images/portfolios/aurion/banner-2.webp"
+          src={IMAGE_ASSETS.aurion.bannerTwo}
           className="object-cover size-full"
           width={7680}
           height={4316}
@@ -50,7 +51,7 @@ const Aurion = () => {
 
       <ScrollReveal variant="fadeIn" className="max-md:h-[14rem] xl:h-[67.5rem] flex items-center justify-center mb-5 md:mb-10">
         <Image
-          src="/images/portfolios/aurion/banner-3.webp"
+          src={IMAGE_ASSETS.aurion.bannerThree}
           className="object-cover size-full"
           width={7680}
           height={4316}

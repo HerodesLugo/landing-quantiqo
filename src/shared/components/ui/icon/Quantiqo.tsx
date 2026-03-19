@@ -7,7 +7,7 @@ const Quantiqo = () => {
       viewBox="0 0 24 23"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="shrink-0 max-sm:size-4 max-2xl:size-5"
+      className="shrink-0 max-xl:size-4 max-2xl:size-5"
     >
       <path
         fillRule="evenodd"

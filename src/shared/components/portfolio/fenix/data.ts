@@ -2,9 +2,10 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const FENIX_DATA: PortfolioOverviewProps = {
-  title: "FENIX FINANCES",
+  title: "FENIX FINANCE",
   description:
     "Fenix Finance is a marketplace where protocols compete for liquidity, users earn by voting and providing funds, and traders enjoy efficient exchange. All of this is made possible by the native yield (automatic interest) offered by the Blast network.",
   infoCard: {
@@ -15,10 +16,10 @@ export const FENIX_DATA: PortfolioOverviewProps = {
       { value: "+5K", label: "USERS" },
     ],
     websiteUrl: "https://FENIX.io",
-    websiteLabel: "FENIX FINANCES",
-    logoSrc: "/images/portfolios/fenix/logo-overview.webp",
+    websiteLabel: "FENIX FINANCE",
+    logoSrc: IMAGE_ASSETS.fenix.logoOverview,
   },
-  buttonLabel: "FENIX FINANCES",
+  buttonLabel: "FENIX FINANCE",
   buttonUrl: PROJECT_URLS.fenix,
 };
 

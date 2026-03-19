@@ -1,6 +1,7 @@
 import HeroPortfolio from "@/shared/components/portfolio/common/HeroPortfolio";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 import PortfolioOverview from "@/shared/components/portfolio/common/portfolio-overview/PortfolioOverview";
 import {
   ACCELERA_DATA,
@@ -21,7 +22,7 @@ import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/Scr
 const Accelera = () => {
   return (
     <>
-      <HeroPortfolio src="/images/portfolios/accelera/accelera-hero.webp" />
+      <HeroPortfolio src={IMAGE_ASSETS.accelera.hero} />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...ACCELERA_DATA} />
       </ScrollReveal>
@@ -39,7 +40,7 @@ const Accelera = () => {
         <AcceleraBentoGrid />
       </ScrollReveal>
       <ScrollReveal variant="fadeIn" className="max-md:my-5">
-        <HeroPortfolio src="/images/portfolios/accelera/banner-2-accelera.webp" />
+        <HeroPortfolio src={IMAGE_ASSETS.accelera.bannerTwo} />
       </ScrollReveal>
       <ScrollReveal variant="fadeUp" className="hidden 2xl:block">
         <FontView
@@ -54,7 +55,7 @@ const Accelera = () => {
         <TwoImageGrid />
       </ScrollReveal>
       <ScrollReveal variant="fadeIn" className="md:my-5">
-        <HeroPortfolio src="/images/portfolios/accelera/accelera-banner-5.webp" />
+        <HeroPortfolio src={IMAGE_ASSETS.accelera.bannerFive} />
       </ScrollReveal>
       <ScrollReveal variant="fadeIn">
         <OverflowBanner />

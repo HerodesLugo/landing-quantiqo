@@ -1,13 +1,14 @@
 import Image from "next/image";
 import SectionLabel from "@/shared/components/portfolio/common/SectionLabel";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const LinusImageCollage = () => (
-  <div className="md:h-[70rem]">
-    <div className="flex flex-col md:flex-row w-full md:h-[60.3125rem] gap-5">
+  <div className="xl:h-[70rem]">
+    <div className="flex flex-col xl:flex-row w-full xl:h-[60.3125rem] gap-5">
       {/* Columna Izquierda */}
-      <div className="flex-1 h-[14rem] md:h-auto overflow-hidden relative">
+      <div className="flex-1 h-[14rem] xl:h-auto overflow-hidden relative">
         <Image
-          src="/images/portfolios/linus/postcard.webp"
+          src={IMAGE_ASSETS.linus.postcard}
           alt=""
           width={2745}
           height={3682}
@@ -18,9 +19,9 @@ const LinusImageCollage = () => (
       {/* Columna Derecha */}
       <div className="flex-1 flex flex-col gap-5 min-w-0">
         {/* Imagen Superior Derecha */}
-        <div className="flex-1 h-[14rem] md:h-auto bg-amber-300 overflow-hidden relative min-h-0">
+        <div className="flex-1 h-[14rem] xl:h-auto bg-amber-300 overflow-hidden relative min-h-0">
           <Image
-            src="/images/portfolios/linus/dick.webp"
+            src={IMAGE_ASSETS.linus.dick}
             alt=""
             width={2745}
             height={3682}
@@ -29,10 +30,10 @@ const LinusImageCollage = () => (
         </div>
 
         {/* Fila Inferior Derecha (2 imágenes) */}
-        <div className="flex-1 flex h-[10rem] md:h-auto min-h-0">
+        <div className="flex-1 flex h-[10rem] xl:h-auto min-h-0">
           <div className="flex-1 bg-accelera overflow-hidden relative min-w-0">
             <Image
-              src="/images/portfolios/linus/fight.webp"
+              src={IMAGE_ASSETS.linus.fight}
               alt=""
               width={2745}
               height={3682}
@@ -42,7 +43,7 @@ const LinusImageCollage = () => (
 
           <div className="flex-1 bg-amber-100 overflow-hidden relative min-w-0">
             <Image
-              src="/images/portfolios/linus/wine.webp"
+              src={IMAGE_ASSETS.linus.wine}
               alt=""
               width={2745}
               height={3682}

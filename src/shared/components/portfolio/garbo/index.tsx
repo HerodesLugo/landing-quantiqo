@@ -7,8 +7,9 @@ import GarboBentoGrid from "./GarboBentoGrid";
 import GarboImageGrid from "./GarboImageGrid";
 import GarboVisionLayout from "./GarboVisionLayout";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const Garbo = () => {
   return (
@@ -16,7 +17,7 @@ const Garbo = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/garbo/hero.webp"
+        src={IMAGE_ASSETS.garbo.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...GARBO_DATA} />
@@ -24,7 +25,7 @@ const Garbo = () => {
       <ScrollReveal variant="fadeIn">
         <ProjectVideo
           src={VIDEO_ASSETS.garbo.launch}
-          containerClassName="h-[28rem] md:h-[48rem] xl:h-[69rem] bg-[#141622] mb-5 md:mb-11"
+          containerClassName="max-sm:h-[13.75rem]  xl:h-[69rem] bg-[#141622] max-ms:mb-5 xl:mb-11"
           videoClassName="w-full h-full object-cover"
         />
       </ScrollReveal>
@@ -43,7 +44,7 @@ const Garbo = () => {
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/garbo/banner-2.webp"
+          src={IMAGE_ASSETS.garbo.bannerTwo}
         />
       </ScrollReveal>
       <ScrollReveal variant="staggerChildren">

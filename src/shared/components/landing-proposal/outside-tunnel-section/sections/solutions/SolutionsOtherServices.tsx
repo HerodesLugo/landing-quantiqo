@@ -20,7 +20,7 @@ export const SolutionsOtherServices = () => {
         </div>
       </div>
 
-      <TalkButton className="anim-button h-16 flex relative overflow-hidden sm:w-[16.875rem] w-[13rem] max-sm:text-base max-sm:h-14 ">
+      <TalkButton className="anim-button h-16 flex relative overflow-hidden xl:w-[16.875rem] w-[13rem] max-xl:text-base max-xl:h-14 ">
         {"Let's Talk "}{" "}
       </TalkButton>
     </div>

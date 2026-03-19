@@ -7,13 +7,14 @@ import NestBentoGrid from "./NestBentoGrid";
 import NestPlatformGrid from "./NestPlatformGrid";
 import NestProductShowcase from "./NestProductShowcase";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const Nest = () => {
   return (
     <>
-      <HeroPortfolio src="/images/portfolios/nest/hero.webp" />
+      <HeroPortfolio src={IMAGE_ASSETS.nest.hero} />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...NEST_DATA} />
       </ScrollReveal>
@@ -32,7 +33,7 @@ const Nest = () => {
 
         <div className="max-md:h-[16rem] xl:h-[43.9375rem] max-md:mt-5 overflow-hidden">
           <Image
-            src="/images/portfolios/nest/cartel.webp"
+            src={IMAGE_ASSETS.nest.cartel}
             width={1920}
             height={703}
             alt="cartel"
@@ -42,7 +43,7 @@ const Nest = () => {
 
         <div className="h-[18rem] xl:h-[43.9375rem] flex justify-center items-center overflow-hidden max-md:hidden ">
           <Image
-            src="/images/portfolios/nest/banner-avatar.webp"
+            src={IMAGE_ASSETS.nest.bannerAvatar}
             className="w-full xl:w-[75.8125rem] object-cover h-full"
             width={1920}
             height={703}
@@ -51,7 +52,7 @@ const Nest = () => {
         </div>
         <div className="max-md:h-[14rem] xl:h-[68.5rem] max-md:hidden">
           <Image
-            src="/images/portfolios/nest/banner.webp"
+            src={IMAGE_ASSETS.nest.banner}
             width={1957}
             height={1096}
             alt="banner"
@@ -74,7 +75,7 @@ const Nest = () => {
       <ScrollReveal variant="fadeIn">
         <div className="max-md:h-[30rem] max-md:p-10 2xl:h-[116.875rem] flex items-center justify-center overflow-hidden max-2xl:p-20">
           <Image
-            src="/images/portfolios/nest/banner-3.webp"
+            src={IMAGE_ASSETS.nest.bannerThree}
             className="w-full 2xl:w-[102.875rem] 2xl:h-[108.75rem] max-md:object-cover md:object-top"
             width={7680}
             height={4316}

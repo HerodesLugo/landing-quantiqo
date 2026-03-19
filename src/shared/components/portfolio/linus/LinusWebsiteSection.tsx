@@ -1,11 +1,12 @@
 import Image from "next/image";
 import SectionLabel from "@/shared/components/portfolio/common/SectionLabel";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const LinusWebsiteSection = () => (
   <div className="flex flex-col">
     <div className="max-md:h-[14rem] xl:h-[67.5rem]">
       <Image
-        src="/images/portfolios/linus/banner-4.webp"
+        src={IMAGE_ASSETS.linus.bannerFour}
         className="object-cover size-full"
         width={5760}
         height={3240}

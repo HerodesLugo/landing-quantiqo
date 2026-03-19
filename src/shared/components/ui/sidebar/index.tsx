@@ -28,7 +28,7 @@ const Sidebar = ({ isActive, setToggleMenu }: SidebarProps) => {
         <SidebarBackground />
 
         {/* --- MAIN CONTENT --- */}
-        <div className="flex items-center max-sm:flex-col relative z-50 justify-between h-full max-sm:mt-2.5">
+        <div className="flex xl:items-center max-xl:flex-col relative z-50 justify-between h-full max-sm:mt-2.5">
           <SidebarNav isActive={isActive} />
           <SidebarContent />
         </div>

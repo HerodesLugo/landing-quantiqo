@@ -1,12 +1,13 @@
 import Image from "next/image";
 import SectionLabel from "@/shared/components/portfolio/common/SectionLabel";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const LinusNftSection = () => (
   <>
     <div className="flex flex-col md:flex-row h-auto xl:h-[38.625rem] gap-5">
       <div className=" flex-1">
         <Image
-          src="/images/portfolios/linus/nfts.webp"
+          src={IMAGE_ASSETS.linus.nfts}
           className="size-full object-cover"
           width={2748}
           height={1854}
@@ -16,7 +17,7 @@ const LinusNftSection = () => (
 
       <div className="flex-1 ">
         <Image
-          src="/images/portfolios/linus/cards.webp"
+          src={IMAGE_ASSETS.linus.cards}
           className="size-full object-cover"
           width={2748}
           height={1854}

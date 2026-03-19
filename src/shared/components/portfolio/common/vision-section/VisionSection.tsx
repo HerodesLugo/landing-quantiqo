@@ -13,10 +13,10 @@ const VisionSection = ({
   const mobileDecorator = decoratorMobileSrc ?? decoratorSrc;
 
   return (
-    <section className="flex w-full flex-col max-md:gap-5 justify-between md:min-h-[42rem] xl:min-h-[64.75rem] pt-8 md:pt-20 xl:pt-56 px-6 md:px-16 xl:px-28 pb-10 md:pb-16 xl:pb-20 relative ">
+    <section className="flex w-full flex-col max-xl:gap-5 justify-between xl:min-h-[64.75rem] pt-8 md:pt-20 xl:pt-56 px-6 md:px-16 xl:px-28 pb-10 md:pb-16 xl:pb-20 relative ">
       {/* Desktop decorator — hidden on mobile */}
       {decoratorSrc && (
-        <div className="md:absolute  -top-10 md:-top-20 right-0 md:flex justify-center pointer-events-none opacity-60 md:opacity-100 hidden">
+        <div className="xl:absolute  -top-10 md:-top-20 right-0 xl:flex justify-center pointer-events-none opacity-60 md:opacity-100 hidden">
           <Image
             src={decoratorSrc}
             alt=""
@@ -32,7 +32,7 @@ const VisionSection = ({
       </h2>
 
       <div
-        className={`flex flex-col gap-8 ${isColumn ? "md:flex-col" : "xl:flex-row"} md:gap-10 xl:gap-14`}
+        className={`flex  flex-col gap-8 ${isColumn ? "md:flex-col" : "xl:flex-row"} md:gap-10 xl:gap-14`}
       >
         {items.map((item) => (
           <VisionItem key={item.title} title={item.title} body={item.body} />
@@ -41,7 +41,7 @@ const VisionSection = ({
 
       {/* Mobile decorator — hidden on md+ */}
       {mobileDecorator && (
-        <div className="flex justify-center mt-6 pointer-events-none md:hidden">
+        <div className="flex justify-center mt-6 pointer-events-none xl:hidden">
           <Image
             src={mobileDecorator}
             alt=""

@@ -7,6 +7,7 @@ import HamburguerIcon from "@/shared/components/ui/icon/Hamburguer";
 import TalkButton from "@/shared/components/ui/button/TalkButton";
 import Navigation from "@/shared/components/ui/header/Navigation2";
 import { usePathname, useRouter } from "next/navigation";
+import { useHeaderVisibility } from "@/shared/hooks/useHeaderVisibility";
 
 const Header: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
@@ -14,6 +15,7 @@ const Header: React.FC = () => {
   const pathname = usePathname();
   const router = useRouter();
   const isPortfolioPage = pathname.includes("/portfolio");
+  const isHidden = useHeaderVisibility(isPortfolioPage);
 
   const handleToggle = () => setToggleMenu((prev) => !prev);
 
@@ -34,7 +36,7 @@ const Header: React.FC = () => {
           : ""
       } ${
         isPortfolioPage
-          ? "w-full backdrop-blur-xl b md:bg-dark/10 px-5 sm:px-10 xl:px-[4.125rem]"
+          ? `w-full px-5 sm:px-10 xl:px-[4.125rem] ${isHidden ? "-translate-y-full" : "translate-y-0"}`
           : "sm:max-w-[calc(100%-8.25rem)]"
       }`}
     >

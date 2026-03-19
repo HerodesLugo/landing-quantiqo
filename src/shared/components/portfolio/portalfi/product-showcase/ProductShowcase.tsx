@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 type ProductItem = {
   imageSrc: string;
@@ -8,12 +9,12 @@ type ProductItem = {
 
 const PRODUCTS: ProductItem[] = [
   {
-    imageSrc: "/images/portfolios/portalfi/portalfi-product-1.webp",
+    imageSrc: IMAGE_ASSETS.portalfi.product1,
     title: "website",
     subtitle: "UI / UX and Final Launch",
   },
   {
-    imageSrc: "/images/portfolios/portalfi/portalfi-product-2.webp",
+    imageSrc: IMAGE_ASSETS.portalfi.product2,
     title: "product / app",
     subtitle: "UI / UX and Final Launch",
   },

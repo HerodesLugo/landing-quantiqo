@@ -1,6 +1,7 @@
 import Image from "next/image";
 import VisionSection from "@/shared/components/portfolio/common/vision-section/VisionSection";
 import { NEST_VISION_DATA } from "./data";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const NestVisionLayout = () => (
   <div className="relative w-full flex items-center justify-center max-2xl:flex-col">
@@ -8,7 +9,7 @@ const NestVisionLayout = () => (
 
     <div className="w-full  justify-end flex h-full max-2xl:justify-center items-end flex-col gap-8 max-xl:relative max-2xl:absolute">
       <Image
-        src="/images/portfolios/nest/vision-1.webp"
+        src={IMAGE_ASSETS.nest.visionOne}
         alt="logo"
         className="
         
@@ -24,7 +25,7 @@ const NestVisionLayout = () => (
         width={1151}
       />
       <Image
-        src="/images/portfolios/nest/vision-2.webp"
+        src={IMAGE_ASSETS.nest.visionTwo}
         alt="logo"
         className="
         max-2xl:w-[32rem] 

@@ -3,6 +3,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const PORTAL_FI_DATA: PortfolioOverviewProps = {
   title: "portalfi",
@@ -16,8 +17,8 @@ export const PORTAL_FI_DATA: PortfolioOverviewProps = {
       { value: "37%", label: "Growth Expectations" },
     ],
     websiteUrl: "https://portal-fi.com",
-    websiteLabel: "Portal-Fi.com",
-    logoSrc: "/images/portfolios/portalfi/icon-overview.webp",
+    websiteLabel: "PortalFI",
+    logoSrc: IMAGE_ASSETS.portalfi.iconOverview,
   },
   buttonLabel: "PORTAL-FI",
   buttonUrl: PROJECT_URLS.portalfi,
@@ -25,7 +26,7 @@ export const PORTAL_FI_DATA: PortfolioOverviewProps = {
 
 export const PORTAL_FI_VISION_DATA: VisionSectionProps = {
   heading: "vision enhance.",
-  decoratorSrc: "/images/portfolios/portalfi/decorator.webp",
+  decoratorSrc: IMAGE_ASSETS.portalfi.decorator,
   items: [
     {
       title: "Challenge",
@@ -39,11 +40,11 @@ export const PORTAL_FI_VISION_DATA: VisionSectionProps = {
 };
 
 export const PORTAL_FI_BENTO_DATA: ProjectBentoGridProps = {
-  squareImg: "/images/portfolios/portalfi/portalfi-square.webp",
-  phonesImg: "/images/portfolios/portalfi/portalfi-phones.webp",
-  cardsImg: "/images/portfolios/portalfi/cards-pillow.webp",
-  smallSquareImg: "/images/portfolios/portalfi/portalfi-32x32.webp",
-  devicesImg: "/images/portfolios/portalfi/portalfi-devices.webp",
+  squareImg: IMAGE_ASSETS.portalfi.square,
+  phonesImg: IMAGE_ASSETS.portalfi.phones,
+  cardsImg: IMAGE_ASSETS.portalfi.cardsPillow,
+  smallSquareImg: IMAGE_ASSETS.portalfi.smallSquare,
+  devicesImg: IMAGE_ASSETS.portalfi.devices,
 };
 
 export const FONT_VARIANTS_PORTALFI: FontVariant[] = [

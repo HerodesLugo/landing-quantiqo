@@ -2,6 +2,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const GARBO_DATA: PortfolioOverviewProps = {
   title: "GARBO",
@@ -16,7 +17,7 @@ export const GARBO_DATA: PortfolioOverviewProps = {
     ],
     websiteUrl: "https://GARBO.io",
     websiteLabel: "GARBO",
-    logoSrc: "/images/portfolios/garbo/logo-overview.webp",
+    logoSrc: IMAGE_ASSETS.garbo.logoOverview,
   },
   buttonLabel: "GARBO",
   buttonUrl: PROJECT_URLS.garbo,

@@ -1,7 +1,7 @@
 export const SolutionsHeader = () => {
   return (
-    <header className="flex flex-col 2xl:gap-7  sm:mb-12 gap-2.5">
-      <h2 className="anim-title will-change-transform text-5xl font-medium uppercase tracking-[5px] text-white max-xl:text-2xl">
+    <header className="flex flex-col 2xl:gap-7 sm:mb-12 gap-2.5">
+      <h2 className="anim-title will-change-transform text-5xl font-medium uppercase tracking-[5px] text-white max-xl:text-2xl ">
         SOLUTIONS
       </h2>
 
@@ -14,8 +14,7 @@ export const SolutionsHeader = () => {
             AI-driven efficiency to consistently exceed expectations.
           </span>
         </p>
-      </div>
-
+      </div>      
     </header>
   );
 };

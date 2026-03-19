@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const FeaturedCardsImage = () => (
   <div className="2xl:h-[42.625rem] my-28 relative max-md:hidden max-2xl:px-10">
     <div className="max-w-[101.25rem]  mx-auto">
       <Image
-        src="/images/portfolios/portalfi/portalfi-cards.webp"
+        src={IMAGE_ASSETS.portalfi.cards}
         className="h-full object-cover"
         alt=""
         height={2508}

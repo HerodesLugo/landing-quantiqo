@@ -1,12 +1,11 @@
 import Image from "next/image";
-
-
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const ImageGalleryStrip = () => (
   <div className="h-full w-full flex gap-5 max-xl:flex-col">
-    <div className="h-[39.1875rem] w-full max-md:h-[12.5rem] xl:w-1/4">
+    <div className="2xl:h-[39.1875rem] w-full max-md:h-[12.5rem] xl:w-1/4">
       <Image
-        src="/images/portfolios/portalfi/portalfi_tunnel.webp"
+        src={IMAGE_ASSETS.portalfi.tunnel}
         className="h-full object-cover"
         alt=""
         height={2508}
@@ -14,9 +13,9 @@ const ImageGalleryStrip = () => (
       />
     </div>
 
-    <div className="h-[39.1875rem] w-full max-md:h-[12.5rem] xl:w-1/4">
+    <div className="2xl:h-[39.1875rem] w-full max-md:h-[12.5rem] xl:w-1/4">
       <Image
-        src="/images/portfolios/portalfi/portalfi-standard-card.webp"
+        src={IMAGE_ASSETS.portalfi.standardCard}
         className="h-full object-cover"
         alt=""
         height={2508}
@@ -24,9 +23,9 @@ const ImageGalleryStrip = () => (
       />
     </div>
 
-    <div className="h-[39.1875rem] w-full max-md:h-[12.5rem] xl:w-1/2">
+    <div className="2xl:h-[39.1875rem] w-full max-md:h-[12.5rem] xl:w-1/2">
       <Image
-        src="/images/portfolios/portalfi/portalfi-card.webp"
+        src={IMAGE_ASSETS.portalfi.card}
         className="h-full object-cover"
         alt=""
         height={2508}

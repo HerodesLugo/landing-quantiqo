@@ -9,7 +9,14 @@ export const getTargetPosition = (index: number, expanded: boolean) => {
   
   const gap = 40; // gap-10 = 40px
   const isMobile = screenWidth < 640;
-  const collapsedWidth = isMobile ? 360 : 795; 
+  const isTablet = screenWidth >= 640 && screenWidth < 1280;
+  
+  let collapsedWidth = 795;
+  if (isMobile) {
+    collapsedWidth = 360;
+  } else if (isTablet) {
+    collapsedWidth = 600;
+  }
   
   const slideWidth = expanded ? screenWidth : collapsedWidth;
   const currentPos = index * (slideWidth + gap);

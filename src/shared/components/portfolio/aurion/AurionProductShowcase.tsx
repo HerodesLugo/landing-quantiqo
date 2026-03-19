@@ -1,5 +1,6 @@
 import SectionLabel from "@/shared/components/portfolio/common/SectionLabel";
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const AurionProductShowcase = () => {
   return (
@@ -7,7 +8,7 @@ const AurionProductShowcase = () => {
       <div className="flex flex-col w-full md:w-1/2 gap-5 md:gap-8">
         <div className="max-md:h-[14rem] xl:h-[37.6875rem]">
           <Image
-            src="/images/portfolios/aurion/website.webp"
+            src={IMAGE_ASSETS.aurion.website}
             className="object-cover size-full"
             width={7680}
             height={4316}
@@ -22,7 +23,7 @@ const AurionProductShowcase = () => {
       <div className="flex flex-col w-full md:w-1/2 gap-5 md:gap-8">
         <div className="max-md:h-[14rem] xl:h-[37.6875rem]">
           <Image
-            src="/images/portfolios/aurion/product.webp"
+            src={IMAGE_ASSETS.aurion.product}
             className="object-cover size-full"
             width={7680}
             height={4316}

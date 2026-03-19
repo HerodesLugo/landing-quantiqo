@@ -10,6 +10,7 @@ import IntentxProductGrid from "@/shared/components/portfolio/intentx/IntentxPro
 import IntentxFinalGrid from "@/shared/components/portfolio/intentx/IntentxFinalGrid";
 import Image from "next/image";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const Intentx = () => {
   return (
@@ -17,7 +18,7 @@ const Intentx = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/intentx/hero.webp"
+        src={IMAGE_ASSETS.intentx.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...INTENTX_DATA} />
@@ -42,7 +43,7 @@ const Intentx = () => {
       </ScrollReveal>
       <ScrollReveal variant="fadeIn" className="max-xl:px-10 xl:h-[46.875rem] mt-5 md:mt-11 flex justify-center relative z-50">
         <Image
-          src="/images/portfolios/intentx/tablet.webp"
+          src={IMAGE_ASSETS.intentx.tablet}
           alt=""
           width={5760}
           height={3240}
@@ -57,7 +58,7 @@ const Intentx = () => {
       </ScrollReveal>
       <ScrollReveal variant="fadeIn" className="2xl:h-[62.1875rem] flex justify-center overflow-hidden">
         <Image
-          src="/images/portfolios/intentx/banner-2.webp"
+          src={IMAGE_ASSETS.intentx.bannerTwo}
           alt=""
           width={5760}
           height={3240}

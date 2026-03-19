@@ -1,5 +1,6 @@
 import TypographyPreviewPanel from "@/shared/components/portfolio/common/typography-section/TypographyPreviewPanel";
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const IntentxTypographySection = () => (
   <div className="grid grid-cols-3 gap-5 mb-11">
@@ -30,7 +31,7 @@ const IntentxTypographySection = () => (
         1234567890()$#@%^*+?/
       </div>
       <Image
-        src="/images/portfolios/intentx/hands.webp"
+        src={IMAGE_ASSETS.intentx.hands}
         alt=""
         width={2725}
         height={1594}

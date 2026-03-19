@@ -1,14 +1,15 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const RiseBentoGrid = () => {
   return (
-    <div className="flex flex-col gap-4 md:gap-8 py-8">
+    <div className="flex flex-col gap-4 xl:gap-8 py-8">
       {/* Mobile layout */}
-      <div className="flex md:hidden flex-col gap-4">
-        <div className="flex gap-4 h-[12rem]">
+      <div className="flex xl:hidden flex-col gap-4">
+        <div className="flex gap-4 xl:h-[12rem]">
           <div className="w-1/2">
             <Image
-              src="/images/portfolios/rise-labs/bento-grid-1.webp"
+              src={IMAGE_ASSETS.rise.bentoGridOne}
               alt=""
               className="size-full object-cover"
               height={395}
@@ -17,7 +18,7 @@ const RiseBentoGrid = () => {
           </div>
           <div className="w-1/2">
             <Image
-              src="/images/portfolios/rise-labs/bento-grid-2.webp"
+              src={IMAGE_ASSETS.rise.bentoGridTwo}
               alt=""
               className="size-full object-cover"
               height={1187}
@@ -25,28 +26,28 @@ const RiseBentoGrid = () => {
             />
           </div>
         </div>
-        <div className="h-[14rem]">
+        <div className="xl:h-[14rem]">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-5.webp"
+            src={IMAGE_ASSETS.rise.bentoGridFive}
             alt=""
             className="size-full object-cover"
             height={1187}
             width={2816}
           />
         </div>
-        <div className="h-[14rem]">
+        <div className="xl:h-[14rem]">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-7.webp"
+            src={IMAGE_ASSETS.rise.bentoGridSeven}
             alt=""
             className="size-full object-cover"
             height={1505}
             width={2716}
           />
         </div>
-        <div className="flex gap-4 h-[12rem]">
+        <div className="flex gap-4 xl:h-[12rem]">
           <div className="w-1/2">
             <Image
-              src="/images/portfolios/rise-labs/bento-grid-8.webp"
+              src={IMAGE_ASSETS.rise.bentoGridEight}
               alt=""
               className="size-full object-cover"
               height={1418}
@@ -55,7 +56,7 @@ const RiseBentoGrid = () => {
           </div>
           <div className="w-1/2">
             <Image
-              src="/images/portfolios/rise-labs/bento-grid-9.webp"
+              src={IMAGE_ASSETS.rise.bentoGridNine}
               alt=""
               className="size-full object-cover"
               height={1418}
@@ -66,10 +67,10 @@ const RiseBentoGrid = () => {
       </div>
 
       {/* Desktop layout */}
-      <div className="hidden md:flex gap-8 h-[27.5rem]">
+      <div className="hidden xl:flex gap-8 h-[27.5rem]">
         <div className="w-1/4">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-1.webp"
+            src={IMAGE_ASSETS.rise.bentoGridOne}
             alt=""
             className="size-full object-cover"
             height={395}
@@ -78,7 +79,7 @@ const RiseBentoGrid = () => {
         </div>
         <div className="w-1/4">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-2.webp"
+            src={IMAGE_ASSETS.rise.bentoGridTwo}
             alt=""
             className="size-full object-cover"
             height={1187}
@@ -87,7 +88,7 @@ const RiseBentoGrid = () => {
         </div>
         <div className="w-1/2">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-3.webp"
+            src={IMAGE_ASSETS.rise.bentoGridThree}
             alt=""
             className="size-full object-cover"
             height={1187}
@@ -95,10 +96,10 @@ const RiseBentoGrid = () => {
           />
         </div>
       </div>
-      <div className="hidden md:flex gap-8 h-[27.5rem]">
+      <div className="hidden xl:flex gap-8 h-[27.5rem]">
         <div className="w-1/4">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-4.webp"
+            src={IMAGE_ASSETS.rise.bentoGridFour}
             alt=""
             className="size-full object-cover"
             height={1187}
@@ -107,7 +108,7 @@ const RiseBentoGrid = () => {
         </div>
         <div className="w-1/2">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-5.webp"
+            src={IMAGE_ASSETS.rise.bentoGridFive}
             alt=""
             className="size-full object-cover"
             height={1187}
@@ -116,7 +117,7 @@ const RiseBentoGrid = () => {
         </div>
         <div className="w-1/4">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-6.webp"
+            src={IMAGE_ASSETS.rise.bentoGridSix}
             alt=""
             className="size-full object-cover"
             height={1187}
@@ -124,10 +125,10 @@ const RiseBentoGrid = () => {
           />
         </div>
       </div>
-      <div className="hidden md:flex gap-8 h-[27.5rem]">
+      <div className="hidden xl:flex gap-8 h-[27.5rem]">
         <div className="w-1/2">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-7.webp"
+            src={IMAGE_ASSETS.rise.bentoGridSeven}
             alt=""
             className="size-full object-cover"
             height={1505}
@@ -136,7 +137,7 @@ const RiseBentoGrid = () => {
         </div>
         <div className="w-1/4">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-8.webp"
+            src={IMAGE_ASSETS.rise.bentoGridEight}
             alt=""
             className="size-full object-cover"
             height={1418}
@@ -145,7 +146,7 @@ const RiseBentoGrid = () => {
         </div>
         <div className="w-1/4">
           <Image
-            src="/images/portfolios/rise-labs/bento-grid-9.webp"
+            src={IMAGE_ASSETS.rise.bentoGridNine}
             alt=""
             className="size-full object-cover"
             height={1418}

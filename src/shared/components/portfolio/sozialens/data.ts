@@ -2,6 +2,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const SOZIALENS_DATA: PortfolioOverviewProps = {
   title: "SOZIALENS",
@@ -16,7 +17,7 @@ export const SOZIALENS_DATA: PortfolioOverviewProps = {
     ],
     websiteUrl: "",
     websiteLabel: "SOZIALENS",
-    logoSrc: "/images/portfolios/sozialens/logo-overview.webp",
+    logoSrc: IMAGE_ASSETS.sozialens.logoOverview,
     logoClassName: "h-[230px] w-[130px] object-fill"
   },
   buttonLabel: "SOZIALENS",

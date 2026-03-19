@@ -2,6 +2,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const LODE_DATA: PortfolioOverviewProps = {
   title: "LODE",
@@ -15,7 +16,7 @@ export const LODE_DATA: PortfolioOverviewProps = {
     ],
     websiteUrl: "https://LODE.io",
     websiteLabel: "LODE",
-    logoSrc: "/images/portfolios/lode/logo-overview.webp",
+    logoSrc: IMAGE_ASSETS.lode.logoOverview,
   },
   tagGroups: [
     {

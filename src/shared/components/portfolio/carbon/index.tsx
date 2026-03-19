@@ -12,9 +12,10 @@ import CarbonVisionLayout from "./CarbonVisionLayout";
 import CarbonBentoGrid from "./CarbonBentoGrid";
 import CarbonProductSection from "./CarbonProductSection";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
 import SectionLabel from "@/shared/components/portfolio/common/SectionLabel";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const Carbon = () => {
   return (
@@ -22,7 +23,7 @@ const Carbon = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/carbon/hero.webp"
+        src={IMAGE_ASSETS.carbon.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...CARBON_DATA} />
@@ -38,9 +39,9 @@ const Carbon = () => {
       <ScrollReveal variant="fadeUp">
         <CarbonVisionLayout />
       </ScrollReveal>
-      <ScrollReveal variant="fadeIn" className="h-[20rem] md:h-[92.375rem]">
+      <ScrollReveal variant="fadeIn" className="max-sm:h-[20rem] xl:h-[92.375rem]">
         <Image
-          src="/images/portfolios/carbon/banner-2.webp"
+          src={IMAGE_ASSETS.carbon.bannerTwo}
           alt=""
           className="object-cover size-full"
           height={7668}
@@ -74,9 +75,9 @@ const Carbon = () => {
           />
         </div>
       </ScrollReveal>
-      <ScrollReveal variant="fadeIn" className="h-[14rem] md:h-[67.5rem] flex items-center justify-center mb-5 md:mb-10">
+      <ScrollReveal variant="fadeIn" className="max-sm:h-[14rem] xl:h-[67.5rem] flex items-center justify-center mb-5 md:mb-10">
         <Image
-          src="/images/portfolios/carbon/banner-3.webp"
+          src={IMAGE_ASSETS.carbon.bannerThree}
           className="object-cover size-full"
           width={7680}
           height={4316}
@@ -101,7 +102,7 @@ const Carbon = () => {
       <ScrollReveal variant="fadeUp" className="my-5 md:my-11 flex flex-col gap-5 max-md:px-0 px-7">
         <div>
           <Image
-            src="/images/portfolios/carbon/banner-6.webp"
+            src={IMAGE_ASSETS.carbon.bannerSix}
             alt=""
             className="object-cover w-full max-md:h-[14rem] xl:h-[69.125rem]"
             width={2748}

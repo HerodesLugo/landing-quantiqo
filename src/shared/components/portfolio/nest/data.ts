@@ -2,6 +2,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const NEST_DATA: PortfolioOverviewProps = {
   title: "NEST",
@@ -15,7 +16,7 @@ export const NEST_DATA: PortfolioOverviewProps = {
     ],
     websiteUrl: "https://NEST.io",
     websiteLabel: "NEST",
-    logoSrc: "/images/portfolios/nest/logo-overview.webp",
+    logoSrc: IMAGE_ASSETS.nest.logoOverview,
     logoClassName: "size-[15rem]"
   },
   buttonLabel: "NEST",

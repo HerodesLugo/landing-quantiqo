@@ -143,13 +143,18 @@ const Backed = ({ isActive }: BackedProps) => {
         </div>
 
         <div className="text-center justify-start  my-16 2xl:my-20   max-sm:w-[16.875rem] max-sm:mx-auto">
-          <div className="text-white max-sm:text-3xl text-5xl 2xl:text-6xl font-normal 2xl:leading-20 leading-8 uppercase sm:tracking-[12.80px] tracking-[5.6px]">
-            {splitText("Backed by our experience,")}
-            <br />
+          <div className="text-white max-sm:text-3xl text-6xl font-normal 2xl:leading-20 max-sm:leading-8 uppercase sm:tracking-[12.80px] tracking-[5.6px]">
+            {splitText("Backed by our")}
+            <br className="xl:hidden" />
+            <span className="hidden xl:inline">{splitText(" ")}</span>
+            {splitText("experience,")}
           </div>
 
-          <div className="text-white max-sm:text-3xl text-5xl 2xl:text-6xl font-bold sm:leading-20 leading-8 uppercase sm:tracking-[12.80px] tracking-[5.6px]">
-            {splitText("prepared for the future.")}
+          <div className="text-white max-sm:text-3xl text-6xl font-bold max-sm:leading-8 xl:leading-20 uppercase sm:tracking-[12.80px] tracking-[5.6px]">
+            {splitText("prepared for")}
+            <br className="xl:hidden" />
+            <span className="hidden xl:inline">{splitText(" ")}</span>
+            {splitText("the future.")}
           </div>
         </div>
 

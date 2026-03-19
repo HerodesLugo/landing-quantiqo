@@ -2,6 +2,7 @@ import Image from "next/image";
 import { IProject } from "./data";
 import Link from "next/link";
 import ArrowLeftAlt from "@/shared/components/ui/icon/ArrowLeftAlt";
+import { CARD_BLUR_DATA_URL } from "@/shared/utils/shimmer";
 
 interface ProjectCardProps extends IProject {
   showExpanded: boolean;
@@ -29,34 +30,36 @@ const ProjectCard = ({
           src={img}
           alt="images"
           className="object-cover h-full w-full absolute rounded-[1.5rem]"
-          quality={100}
+          quality={75}
           height={1080}
           width={1920}
+          placeholder="blur"
+          blurDataURL={CARD_BLUR_DATA_URL}
         />
       </div>
 
-      <div className="flex justify-between px-8  pb-8 sm:pb-14 w-full">
-        <div className="flex sm:items-end sm:gap-24 w-full max-sm:flex-col max-sm:gap-6">
+      <div className="flex justify-between px-8  pb-8 xl:pb-14 w-full">
+        <div className="flex xl:items-end xl:gap-24 w-full max-xl:flex-col max-xl:gap-6">
           
           <div
-            className={`text-2xl w-full  text-white flex ${showExpanded ? "sm:items-center max-sm:flex-col sm:gap-11" : "flex-col gap-1.5"}`}
+            className={`text-2xl w-full  text-white flex ${showExpanded ? "xl:items-center max-xl:flex-col xl:gap-11" : "flex-col gap-1.5"}`}
           >
             <span className="uppercase font-semibold tracking-[4px]">
               {title}
             </span>
-            <span className="2xl:text-base font-normal  sm:max-w-[46.5rem] sm:line-clamp-2 text-sm">
+            <span className="2xl:text-base font-normal  xl:max-w-[46.5rem] xl:line-clamp-2 text-sm max-xl:text-base max-sm:text-sm">
               {description}
             </span>
           </div>
 
-          <Link target="_blank" href={source} className="flex items-end sm:gap-5  max-sm:justify-end gap-2">
+          <Link target="_blank" href={source} className="flex items-end xl:gap-5  max-xl:justify-end gap-2">
             {showExpanded && (
-              <span className="uppercase sm:whitespace-nowrap tracking-[3.6px] text-base text-primary-100 font-bold">
+              <span className="uppercase xl:whitespace-nowrap tracking-[3.6px] text-base text-primary-100 font-bold">
                 case study
               </span>
             )}
             <span
-              className={`icon-arrow-up-right sm:group-hover:text-3xl transition-all duration-300 text-primary-100 ${showExpanded ? "text-3xl max-sm:text-base" : "text-xl max-sm:text-base"}`}
+              className={`icon-arrow-up-right xl:group-hover:text-3xl transition-all duration-300 text-primary-100 ${showExpanded ? "text-3xl max-xl:text-base" : "text-xl max-xl:text-base"}`}
             ></span>
           </Link>
         </div>

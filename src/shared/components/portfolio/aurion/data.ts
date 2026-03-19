@@ -2,6 +2,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const AURION_DATA: PortfolioOverviewProps = {
   title: "AURION",
@@ -12,7 +13,7 @@ export const AURION_DATA: PortfolioOverviewProps = {
     stats: [],
     websiteUrl: "https://AURION.io",
     websiteLabel: "AURION",
-    logoSrc: "/images/portfolios/aurion/logo-overview.webp",
+    logoSrc: IMAGE_ASSETS.aurion.logoOverview,
   },
   buttonLabel: "AURION",
   buttonUrl: PROJECT_URLS.aurion,

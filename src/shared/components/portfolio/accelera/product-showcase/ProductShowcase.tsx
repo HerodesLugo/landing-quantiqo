@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const ProductShowcase = () => {
   return (
@@ -6,7 +7,7 @@ const ProductShowcase = () => {
       <div className="md:w-1/2 md:overflow-hidden flex flex-col gap-9 max-md:gap-0">
         <div className="bg-[#1A1F22] h-full">
           <Image
-            src="/images/portfolios/accelera/accelera-laptops.png"
+            src={IMAGE_ASSETS.accelera.laptops}
             alt=""
             className="size-full"
             height={1080}
@@ -26,7 +27,7 @@ const ProductShowcase = () => {
       <div className="md:w-1/2 overflow-hidden flex flex-col gap-9 max-md:gap-0">
         <div className="bg-dark h-full overflow-hidden">
           <Image
-            src="/images/portfolios/accelera/accelera-platform.webp"
+            src={IMAGE_ASSETS.accelera.platform}
             alt=""
             className="size-full md:ml-8 md:mt-8"
             height={1080}

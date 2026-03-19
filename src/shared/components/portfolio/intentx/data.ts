@@ -2,6 +2,7 @@ import { PortfolioOverviewProps } from "@/shared/components/portfolio/common/por
 import { PROJECT_URLS } from "@/shared/constant/projectUrls";
 import { VisionSectionProps } from "@/shared/components/portfolio/common/vision-section/types";
 import { FontVariant } from "@/shared/types/FonVariant";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 export const INTENTX_DATA: PortfolioOverviewProps = {
   title: "INTENTX",
@@ -16,7 +17,7 @@ export const INTENTX_DATA: PortfolioOverviewProps = {
     ],
     websiteUrl: "https://INTENTX.io",
     websiteLabel: "INTENTX",
-    logoSrc: "/images/portfolios/intentx/logo-overview.webp",
+    logoSrc: IMAGE_ASSETS.intentx.logoOverview,
   },
   buttonLabel: "INTENTX",
   buttonUrl: PROJECT_URLS.intentx,

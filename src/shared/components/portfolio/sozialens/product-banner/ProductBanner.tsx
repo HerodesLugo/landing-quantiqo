@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const ProductBanner = () => {
   return (
     <div className="flex flex-col gap-9 max-md:gap-5">
       <Image
-        src="/images/portfolios/sozialens/banner-3.webp"
+        src={IMAGE_ASSETS.sozialens.bannerThree}
         alt=""
         width={3840}
         height={2192}

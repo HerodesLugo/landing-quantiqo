@@ -1,5 +1,6 @@
 import HeroPortfolio from "@/shared/components/portfolio/common/HeroPortfolio";
 import PortfolioOverview from "@/shared/components/portfolio/common/portfolio-overview/PortfolioOverview";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 import FontView from "@/shared/components/portfolio/common/FontView";
 import { SOZIALENS_DATA } from "@/shared/components/portfolio/sozialens/data";
 import SozialensVision from "@/shared/components/portfolio/sozialens/vision-section/SozialensVision";
@@ -14,12 +15,12 @@ import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/Scr
 const Sozialens = () => {
   return (
     <>
-      <HeroPortfolio src="/images/portfolios/sozialens/hero.webp" />
+      <HeroPortfolio src={IMAGE_ASSETS.sozialens.hero} />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...SOZIALENS_DATA} />
       </ScrollReveal>
       <ScrollReveal variant="fadeIn">
-        <HeroPortfolio src="/images/portfolios/sozialens/banner-1.webp" />
+        <HeroPortfolio src={IMAGE_ASSETS.sozialens.bannerOne} />
       </ScrollReveal>
       <ScrollReveal variant="fadeUp">
         <SozialensVision />

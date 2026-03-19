@@ -8,7 +8,7 @@ interface SidebarFooterProps {
 
 export const SidebarFooter = ({ isActive }: SidebarFooterProps) => {
   return (
-    <div className="flex justify-between sm:items-center relative z-50   max-sm:flex-col gap-5 ">
+    <div className="flex justify-between sm:items-center relative z-50   max-xl:flex-col gap-5 ">
       
       <div className="flex sm:items-center sm:gap-36 footer-item max-sm:flex-col gap-5">
         

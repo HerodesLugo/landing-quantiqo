@@ -10,7 +10,7 @@ import EarnBanner from "@/shared/components/portfolio/portalfi/earn-banner/EarnB
 import FeaturedCardsImage from "@/shared/components/portfolio/portalfi/featured-cards-image/FeaturedCardsImage";
 import FontView from "@/shared/components/portfolio/common/FontView";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
 import HeroPortfolio from "@/shared/components/portfolio/common/HeroPortfolio";
 import ImageGalleryStrip from "@/shared/components/portfolio/portalfi/image-gallery-strip/ImageGalleryStrip";
 import PortfolioOverview from "@/shared/components/portfolio/common/portfolio-overview/PortfolioOverview";
@@ -22,16 +22,17 @@ import ProjectGridGallery from "@/shared/components/portfolio/portalfi/project-g
 import ThreePhonesBanner from "@/shared/components/portfolio/portalfi/three-phones-banner/ThreePhonesBanner";
 import FinalBanner from "@/shared/components/portfolio/portalfi/final-banner/FinalBanner";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const Portalfi = () => {
   return (
     <div className="font-satoshi">
-      <HeroPortfolio src="/images/portfolios/portalfi/hero.webp" />
+      <HeroPortfolio src={IMAGE_ASSETS.portalfi.hero} />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...PORTAL_FI_DATA} />
       </ScrollReveal>
       <ScrollReveal variant="fadeIn">
-        <HeroPortfolio src="/images/portfolios/portalfi/banner.webp" />
+        <HeroPortfolio src={IMAGE_ASSETS.portalfi.banner} />
       </ScrollReveal>
       <ScrollReveal variant="fadeUp">
         <VisionSection {...PORTAL_FI_VISION_DATA} />

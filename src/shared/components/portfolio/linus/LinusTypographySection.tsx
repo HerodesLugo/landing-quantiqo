@@ -1,5 +1,6 @@
 import TypographyAnnotationPanel from "@/shared/components/portfolio/common/typography-section/TypographyAnnotationPanel";
 import FontAlphabetPanel from "@/shared/components/portfolio/common/typography-section/FontAlphabetPanel";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const LinusTypographySection = () => (
   <div className="grid grid-cols-3 gap-5  mb-11">
@@ -10,7 +11,7 @@ const LinusTypographySection = () => (
       <FontAlphabetPanel
         fontName="Bungee"
         fontClass="font-['Bungee']"
-        imageSrc="/images/portfolios/linus/pegmilio-smoke.webp"
+        imageSrc={IMAGE_ASSETS.linus.pegmilioSmoke}
         imageWidth={2725}
         imageHeight={1594}
         imageClassName="w-[46.6875rem] object-cover absolute bottom-0 right-0"

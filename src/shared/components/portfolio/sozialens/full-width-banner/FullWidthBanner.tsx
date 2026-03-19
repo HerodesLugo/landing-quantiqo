@@ -1,10 +1,11 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const FullWidthBanner = () => {
   return (
     <div className="xl:h-[68.5rem] my-5 w-full overflow-hidden">
       <Image
-        src="/images/portfolios/sozialens/banner-2.webp"
+        src={IMAGE_ASSETS.sozialens.bannerTwo}
         alt=""
         width={3840}
         height={2192}

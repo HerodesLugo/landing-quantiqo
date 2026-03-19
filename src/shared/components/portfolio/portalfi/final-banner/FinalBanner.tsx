@@ -1,11 +1,10 @@
 import Image from "next/image";
-
-
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const FinalBanner = () => (
   <div className="relative 2xl:h-[64.5rem] max-md:mb-11">
     <Image
-      src="/images/portfolios/portalfi/portalfi-banner-3.webp"
+      src={IMAGE_ASSETS.portalfi.bannerThree}
       alt=""
       className="object-cover"
       height={4128}

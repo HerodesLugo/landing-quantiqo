@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const CarbonBentoGrid = () => (
   <div className="flex flex-col gap-5 md:gap-6 max-md:px-0 px-7">
@@ -6,7 +7,7 @@ const CarbonBentoGrid = () => (
     <div className="flex md:hidden flex-col gap-5">
       <div className="h-[14rem]">
         <Image
-          src="/images/portfolios/carbon/bento-grid-1.webp"
+          src={IMAGE_ASSETS.carbon.bentoGridOne}
           alt=""
           className="object-cover size-full"
           width={2748}
@@ -16,7 +17,7 @@ const CarbonBentoGrid = () => (
       <div className="flex gap-5 h-[12rem]">
         <div className="w-1/2">
           <Image
-            src="/images/portfolios/carbon/bento-grid-2.webp"
+            src={IMAGE_ASSETS.carbon.bentoGridTwo}
             alt=""
             className="object-cover size-full"
             width={2748}
@@ -25,7 +26,7 @@ const CarbonBentoGrid = () => (
         </div>
         <div className="w-1/2">
           <Image
-            src="/images/portfolios/carbon/bento-grid-3.webp"
+            src={IMAGE_ASSETS.carbon.bentoGridThree}
             alt=""
             className="object-cover size-full"
             width={2748}
@@ -41,7 +42,7 @@ const CarbonBentoGrid = () => (
       <div className="flex flex-col gap-6">
         <div className="2xl:max-h-[31.0625rem] h-full flex-1">
           <Image
-            src="/images/portfolios/carbon/bento-grid-1.webp"
+            src={IMAGE_ASSETS.carbon.bentoGridOne}
             alt=""
             className="object-cover size-full"
             width={2748}
@@ -50,7 +51,7 @@ const CarbonBentoGrid = () => (
         </div>
         <div className="xl:max-h-[23.9375rem] h-full flex-1">
           <Image
-            src="/images/portfolios/carbon/bento-grid-2.webp"
+            src={IMAGE_ASSETS.carbon.bentoGridTwo}
             alt=""
             className="object-cover size-full"
             width={2748}
@@ -61,7 +62,7 @@ const CarbonBentoGrid = () => (
 
       <div className=" h-full min-h-0 overflow-hidden flex">
         <Image
-          src="/images/portfolios/carbon/bento-grid-3.webp"
+          src={IMAGE_ASSETS.carbon.bentoGridThree}
           alt=""
           className="object-cover size-full"
           width={2748}

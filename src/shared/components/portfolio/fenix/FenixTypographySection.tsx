@@ -1,5 +1,6 @@
 import FenixTypographyAnnotationPanel from "./FenixTypographyAnnotationPanel";
 import FontAlphabetPanel from "@/shared/components/portfolio/common/typography-section/FontAlphabetPanel";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const FenixTypographySection = () => (
   <div className="grid grid-cols-3 gap-5  mb-11">
@@ -10,7 +11,7 @@ const FenixTypographySection = () => (
       <FontAlphabetPanel
         fontName="Space Grotesk"
         fontClass="font-space-grotesk"
-        imageSrc="/images/portfolios/fenix/fenix-hands.webp"
+        imageSrc={IMAGE_ASSETS.fenix.fenixHands}
         imageWidth={2725}
         imageHeight={1594}
         imageClassName="w-[46.6875rem] object-cover absolute bottom-0 right-0"

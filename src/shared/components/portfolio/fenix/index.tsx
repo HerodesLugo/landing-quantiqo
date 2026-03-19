@@ -8,8 +8,9 @@ import FenixImageGrid from "./FenixImageGrid";
 import FenixTypographySection from "./FenixTypographySection";
 import FenixBentoGrid from "./FenixBentoGrid";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const Fenix = () => {
   return (
@@ -17,7 +18,7 @@ const Fenix = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/fenix/hero.webp"
+        src={IMAGE_ASSETS.fenix.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...FENIX_DATA} />
@@ -65,7 +66,7 @@ const Fenix = () => {
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/fenix/banner-3.webp"
+          src={IMAGE_ASSETS.fenix.bannerThree}
         />
       </ScrollReveal>
       <div className="mb-11"></div>

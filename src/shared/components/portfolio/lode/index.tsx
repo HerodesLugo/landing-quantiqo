@@ -7,8 +7,9 @@ import LodeBentoGrid from "./LodeBentoGrid";
 import LodeImageGrid from "./LodeImageGrid";
 import LodeVisionLayout from "./LodeVisionLayout";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const Lode = () => {
   return (
@@ -16,7 +17,7 @@ const Lode = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/lode/hero.webp"
+        src={IMAGE_ASSETS.lode.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...LODE_DATA} />
@@ -25,7 +26,7 @@ const Lode = () => {
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/lode/banner-1.webp"
+          src={IMAGE_ASSETS.lode.bannerOne}
         />
       </ScrollReveal>
       <ScrollReveal variant="fadeUp">
@@ -57,7 +58,7 @@ const Lode = () => {
         <Image
           width={5760}
           height={3240}
-          src="/images/portfolios/lode/banner-2.webp"
+          src={IMAGE_ASSETS.lode.bannerTwo}
           alt=""
           className="w-full 2xl:w-[96.9375rem] h-auto 2xl:h-[71.1875rem] object-cover"
         />

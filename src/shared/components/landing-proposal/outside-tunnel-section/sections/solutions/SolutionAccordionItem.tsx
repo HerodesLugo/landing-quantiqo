@@ -6,37 +6,13 @@ interface SolutionAccordionItemProps {
   solution: SolutionItem;
   isExpanded?: boolean;
   onClick?: () => void;
-  isMobileSlider?: boolean;
 }
 
 export const SolutionAccordionItem = ({
   solution,
   isExpanded = false,
   onClick,
-  isMobileSlider,
 }: SolutionAccordionItemProps) => {
-  if (isMobileSlider) {
-    return (
-      <div className="flex flex-col bg-amber-800 anim-accordion-title will-change-transform items-start  sm:w-full">
-        <div className="flex items-center gap-2 sm:mb-6">
-          <div className="text-left uppercase tracking-[3px] text-white text-2xl font-normal">
-            {solution.title}
-          </div>
-        </div>
-
-        <div className="flex flex-col w-full items-start gap-5">
-          <div className="text-left text-base-300 text-[10px] font-light leading-relaxed">
-            {solution.description}
-          </div>
-          <div className="grid grid-cols-2 gap-y-3 m:gap-x-4 sm:gap-y-6 w-full">
-            {solution.points.map((point) => (
-              <QuantiqoLabel key={point} label={point} classNameLabel="text-[.625rem]" />
-            ))}
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="flex flex-col items-start sm:items-end anim-accordion-title will-change-transform">
@@ -46,7 +22,7 @@ export const SolutionAccordionItem = ({
       >
         <div
           className={clsx(
-            "text-left sm:text-right uppercase tracking-[3px] transition-all duration-300 max-sm:text-lg",
+            "text-left sm:text-right uppercase tracking-[3px] transition-all duration-300 max-xl:text-lg",
             isExpanded
               ? "text-primary-100 text-4xl font-normal tracking-[4.04px]"
               : "text-base-300 text-2xl font-light",
@@ -90,7 +66,7 @@ export const SolutionAccordionItem = ({
           <div className="text-left sm:text-right text-base-300 text-sm font-light ">
             {solution.description}
           </div>
-          <div className="grid grid-cols-3 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-3 sm:grid-cols-2 gap-3 xl:gap-6">
             {solution.points.map((point) => (
               <QuantiqoLabel classNameLabel="" key={point} label={point} />
             ))}

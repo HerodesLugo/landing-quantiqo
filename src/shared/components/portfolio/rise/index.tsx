@@ -10,6 +10,7 @@ import RiseVisionLayout from "./RiseVisionLayout";
 import RiseBentoGrid from "./RiseBentoGrid";
 import RiseProductShowcase from "./RiseProductShowcase";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const RiseLabs = () => {
   return (
@@ -17,7 +18,7 @@ const RiseLabs = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/rise-labs/hero.webp"
+        src={IMAGE_ASSETS.rise.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...RISE_LABS_DATA} />
@@ -26,7 +27,7 @@ const RiseLabs = () => {
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/rise-labs/banner-1.webp"
+          src={IMAGE_ASSETS.rise.bannerOne}
         />
       </ScrollReveal>
       <ScrollReveal variant="fadeUp">
@@ -66,8 +67,8 @@ const RiseLabs = () => {
 
       <ScrollReveal variant="fadeIn" className="h-[24rem] md:h-[70rem] flex items-center justify-center">
         <Image
-          src="/images/portfolios/rise-labs/banner-2.webp"
-          className=" md:w-[56rem] h-[20rem] w-[17.9375rem] md:h-[60.5rem] object-top"
+          src={IMAGE_ASSETS.rise.bannerTwo}
+          className=" xl:w-[56rem] max-sm:h-[20rem] max-sm:w-[17.9375rem] xl:h-[60.5rem] object-top"
           width={7680}
           height={4316}
           alt="banner"
@@ -76,9 +77,9 @@ const RiseLabs = () => {
       <ScrollReveal variant="scaleIn">
         <RiseProductShowcase />
       </ScrollReveal>
-      <ScrollReveal variant="fadeIn" className="h-[20rem] md:h-[75.1875rem] border mb-11 max-md:my-11">
+      <ScrollReveal variant="fadeIn" className="max-ms:h-[20rem] xl:h-[75.1875rem] border mb-11 max-xl:my-11">
         <Image
-          src="/images/portfolios/rise-labs/banner-final.webp"
+          src={IMAGE_ASSETS.rise.bannerFinal}
           className="object-cover size-full object-top"
           width={7680}
           height={4316}

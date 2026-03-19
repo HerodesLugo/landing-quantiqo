@@ -2,6 +2,7 @@ import HeroPortfolio from "@/shared/components/portfolio/common/HeroPortfolio";
 import PortfolioOverview from "@/shared/components/portfolio/common/portfolio-overview/PortfolioOverview";
 import FontView from "@/shared/components/portfolio/common/FontView";
 import Image from "next/image";
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 import { LINUS_DATA } from "@/shared/components/portfolio/linus/data";
 import LinusVisionLayout from "./LinusVisionLayout";
 import LinusBentoGrid from "./LinusBentoGrid";
@@ -11,7 +12,7 @@ import LinusImageCollage from "./LinusImageCollage";
 import LinusWebsiteSection from "./LinusWebsiteSection";
 import LinusNftSection from "./LinusNftSection";
 import ProjectVideo from "@/shared/components/portfolio/common/ProjectVideo";
-import { VIDEO_ASSETS } from "@/shared/constants/videoAssets";
+import { VIDEO_ASSETS } from "@/shared/constant/videoAssets";
 import ScrollReveal from "@/shared/components/portfolio/common/scroll-reveal/ScrollReveal";
 
 const Linus = () => {
@@ -20,7 +21,7 @@ const Linus = () => {
       <HeroPortfolio
         width={5760}
         height={3240}
-        src="/images/portfolios/linus/hero.webp"
+        src={IMAGE_ASSETS.linus.hero}
       />
       <ScrollReveal variant="fadeUp">
         <PortfolioOverview {...LINUS_DATA} />
@@ -44,7 +45,7 @@ const Linus = () => {
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/linus/banner-2.webp"
+          src={IMAGE_ASSETS.linus.bannerTwo}
         />
       </ScrollReveal>
 
@@ -66,7 +67,7 @@ const Linus = () => {
         <HeroPortfolio
           width={5760}
           height={3240}
-          src="/images/portfolios/linus/banner-3.webp"
+          src={IMAGE_ASSETS.linus.bannerThree}
         />
       </ScrollReveal>
 
@@ -90,7 +91,7 @@ const Linus = () => {
         <ScrollReveal variant="staggerChildren" className="flex flex-col gap-5 md:gap-0 mb-11">
           <div className="overflow-hidden flex justify-center ">
             <Image
-              src="/images/portfolios/linus/banner-7.webp"
+              src={IMAGE_ASSETS.linus.bannerSeven}
               className="w-full 2xl:w-[96rem] h-auto 2xl:h-[55.375rem] object-cover max-2xl:px-10 "
               width={5760}
               height={3240}

@@ -1,13 +1,12 @@
 import Image from "next/image";
-
-
+import { IMAGE_ASSETS } from "@/shared/constant/imageAssets";
 
 const EarnBanner = () => (
   <div className=" hidden md:flex justify-center overflow-hidden relative">
     {/* Curve overlay */}
     <div className="absolute inset-0 flex items-center">
       <Image
-        src="/images/portfolios/portalfi/portalfi-line-courve.webp"
+        src={IMAGE_ASSETS.portalfi.lineCurve}
         className="mix-blend-color-dodge w-full mb-40"
         alt=""
         height={2508}
@@ -26,7 +25,7 @@ const EarnBanner = () => (
         Earn
       </div>
       <Image
-        src="/images/portfolios/portalfi/banner-portalfi-2.webp"
+        src={IMAGE_ASSETS.portalfi.bannerTwo}
         height={903}
         width={1569}
         className="h-full object-cover relative z-10"
